@@ -176,7 +176,7 @@
               </select></label
             ><button id="reset" type="button">Reset filters</button
             ><a class="button secondary" href="evidence.csv" download
-              >Download aggregate CSV</a
+              >Download all counts (CSV)</a
             >
           </div>
           <p id="filter-summary" role="status"></p>
@@ -201,7 +201,6 @@
               resolve the complaint.
             </p>
           </div>
-          <div class="metrics" id="model-metrics"></div>
           <div class="comparison panel" aria-labelledby="comparison-heading">
             <h3 id="comparison-heading">Does the model beat a simple guess?</h3>
             <p>
@@ -214,6 +213,7 @@
           <p id="routing-summary"></p>
           <details>
             <summary>How the model was tested · detailed results</summary>
+            <div class="metrics" id="model-metrics"></div>
             <p>
               TF-IDF turns words into numeric features; logistic regression uses
               those features to choose a category. We compare predictions with
@@ -236,6 +236,11 @@
               <p>
                 These are made-up examples, separate from the real test data.
                 The trained model runs in your browser.
+              </p>
+              <p>
+                Start with the home-loan message, then try the vague message.
+                Notice when the model asks for a person to review its
+                suggestion.
               </p>
               <label
                 >Example<select id="example">

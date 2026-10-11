@@ -22,7 +22,9 @@ def validate(url: str) -> dict:
     with sync_playwright() as p:
         browser = p.chromium.launch()
         for name, width, height in [("desktop", 1440, 1000), ("mobile", 390, 844)]:
-            context = browser.new_context(viewport={"width": width, "height": height})
+            context = browser.new_context(
+                viewport={"width": width, "height": height}, reduced_motion="reduce"
+            )
             page = context.new_page()
             errors = []
             page.on("pageerror", lambda error, errors=errors: errors.append(str(error)))
@@ -32,12 +34,14 @@ def validate(url: str) -> dict:
             assert page.locator(".recommendation").count() == 3
             assert page.locator("#trend-chart .trend-svg").count() == 1
             assert page.locator("#accuracy-comparison .bar-fill").count() == 2
+            page.screenshot(path=str(output / f"{name}-overview.png"))
             for finding in page.locator("[data-priority]").all():
                 finding.click()
                 assert page.locator("#product").input_value() != ""
                 assert page.locator("#issue").input_value() != ""
                 assert page.locator("#issue-table tbody tr").count() == 1
                 assert page.locator("#trend-chart path").count() == 1
+            page.screenshot(path=str(output / f"{name}-evidence.png"))
             page.locator("#reset").click()
             page.screenshot(path=str(output / f"{name}.png"), full_page=True)
             page.locator("#product").select_option("Mortgage")
@@ -53,6 +57,8 @@ def validate(url: str) -> dict:
                 browser_result = page.evaluate("(text) => infer(model,text)", text)
                 assert abs(browser_result["confidence"] - predict(text)["confidence"]) < 1e-10
                 assert browser_result["review"] == predict(text)["review"]
+            page.locator("nav a[href='#routing']").click()
+            page.screenshot(path=str(output / f"{name}-model.png"))
             page.get_by_text("See cases flagged for human review", exact=True).click()
             first_case = page.locator("#queue tbody tr").first.inner_text()
             page.locator("#queue-next").click()
