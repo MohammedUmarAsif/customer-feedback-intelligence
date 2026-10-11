@@ -8,11 +8,23 @@ import numpy as np
 import pandas as pd
 from fastapi.testclient import TestClient
 
+from insights import priority_guidance
 from pipeline import SAFE, choose_threshold, deduplicate, map_labels, safe_text, split_for, wilson
 from serving import EXAMPLES, MODEL, app, predict
 
 ROOT = Path(__file__).parents[1]
 DATA = json.loads((ROOT / "site/data.json").read_text())
+
+
+def test_priority_guidance_survives_ranking_changes():
+    for row in reversed(DATA["insights"]["priorities"]):
+        assert priority_guidance(row["product"], row["issue"]) == (
+            row["recommendation"],
+            row["next_check"],
+        )
+    unknown = priority_guidance("Mortgage", "A newly dominant issue")
+    assert "debt-ownership" not in unknown[0]
+    assert "local" in unknown[1]
 
 
 def test_exclusion_and_month_reconciliation():

@@ -12,6 +12,31 @@ from pipeline import wilson
 ROOT = Path(__file__).parent
 
 
+def priority_guidance(product: str, issue: str) -> tuple[str, str]:
+    """Attach editorial guidance to the evidence identity, never its current rank."""
+    guidance = {
+        ("Debt collection", "Attempts to collect debt not owed"): (
+            "Investigate debt-ownership verification and the evidence provided before collection attempts.",
+            "Review a local random sample for mistaken identity, disputed balance, and missing ownership documentation; compare against account-level verification logs.",
+        ),
+        ("Checking or savings account", "Managing an account"): (
+            "Investigate account-management handoffs, access restrictions, and the clarity of customer status updates.",
+            "Code a local random sample into access, balance, and service-status reasons; compare handoff times and repeat contacts with operational logs.",
+        ),
+        ("Credit card", "Problem with a purchase shown on your statement"): (
+            "Investigate the purchase-dispute journey and whether evidence requirements are clear.",
+            "Separate unauthorized purchases from merchant disputes in a local sample; check evidence requests, response time, and repeat contacts against transaction exposure.",
+        ),
+    }
+    return guidance.get(
+        (product, issue),
+        (
+            "Audit the handling and dispute journey for this recurring issue.",
+            "Have a human review a bounded random case sample locally; compare operational contact reasons and transaction exposure before testing a process change.",
+        ),
+    )
+
+
 def build_insights() -> None:
     bundle = json.loads((ROOT / "site/data.json").read_text())
     evidence = pd.read_csv(ROOT / "reports/evidence.csv")
@@ -67,34 +92,13 @@ def build_insights() -> None:
         row["evidence_quality"] = "Sample association; selected narratives; no exposure denominator"
     priorities = rows[:3]
     for row in priorities:
-        row["recommendation"] = "Audit the handling and dispute journey for this recurring issue."
+        row["recommendation"], row["next_check"] = priority_guidance(row["product"], row["issue"])
         row["alternative"] = (
             "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume."
-        )
-        row["next_check"] = (
-            "Have a human review a bounded random case sample locally; compare operational contact reasons and transaction exposure before testing a process change."
         )
         row["hypothesis"] = (
             "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
         )
-    priorities[0]["recommendation"] = (
-        "Investigate debt-ownership verification and the evidence provided before collection attempts."
-    )
-    priorities[0]["next_check"] = (
-        "Review a local random sample for mistaken identity, disputed balance, and missing ownership documentation; compare against account-level verification logs."
-    )
-    priorities[1]["recommendation"] = (
-        "Investigate account-management handoffs, access restrictions, and the clarity of customer status updates."
-    )
-    priorities[1]["next_check"] = (
-        "Code a local random sample into access, balance, and service-status reasons; compare handoff times and repeat contacts with operational logs."
-    )
-    priorities[2]["recommendation"] = (
-        "Investigate the purchase-dispute journey and whether evidence requirements are clear."
-    )
-    priorities[2]["next_check"] = (
-        "Separate unauthorized purchases from merchant disputes in a local sample; check evidence requests, response time, and repeat contacts against transaction exposure."
-    )
     report = {
         "denominators": denominators,
         "issues": rows,

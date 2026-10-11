@@ -2,7 +2,7 @@
 
 **[Customer Feedback Intelligence](https://MohammedUmarAsif.github.io/customer-feedback-intelligence/)**
 
-- Analyzed 10,950 usable CFPB complaint narratives with Python and DuckDB; chronological text-only routing matched 71 labels per 100 versus 25 for a majority baseline, sending 50% to human review. Built an evidence-linked dashboard to prioritize debt-verification, account-management and purchase-dispute investigations.
+- Analyzed 10,950 public customer complaints with Python and SQL, identifying three investigation priorities. Built an interactive case study and text classifier achieving 70.8% accuracy versus a 25.4% baseline on unseen June data, with 49.9% of cases flagged for human review.
 
 ## Traceability
 

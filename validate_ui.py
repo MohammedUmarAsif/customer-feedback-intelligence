@@ -30,7 +30,15 @@ def validate(url: str) -> dict:
             assert response.status == 200
             page.locator("#content").wait_for(state="visible")
             assert page.locator(".recommendation").count() == 3
-            assert page.locator("#trend-chart .main-svg").count() > 0
+            assert page.locator("#trend-chart .trend-svg").count() == 1
+            assert page.locator("#accuracy-comparison .bar-fill").count() == 2
+            for finding in page.locator("[data-priority]").all():
+                finding.click()
+                assert page.locator("#product").input_value() != ""
+                assert page.locator("#issue").input_value() != ""
+                assert page.locator("#issue-table tbody tr").count() == 1
+                assert page.locator("#trend-chart path").count() == 1
+            page.locator("#reset").click()
             page.screenshot(path=str(output / f"{name}.png"), full_page=True)
             page.locator("#product").select_option("Mortgage")
             page.locator("#issue").select_option("Trouble during payment process")
@@ -45,6 +53,12 @@ def validate(url: str) -> dict:
                 browser_result = page.evaluate("(text) => infer(model,text)", text)
                 assert abs(browser_result["confidence"] - predict(text)["confidence"]) < 1e-10
                 assert browser_result["review"] == predict(text)["review"]
+            page.get_by_text("See cases flagged for human review", exact=True).click()
+            first_case = page.locator("#queue tbody tr").first.inner_text()
+            page.locator("#queue-next").click()
+            assert page.locator("#queue tbody tr").first.inner_text() != first_case
+            page.locator("#queue-prev").click()
+            assert page.locator("#queue tbody tr").first.inner_text() == first_case
             page.locator("#queue-filter").select_option("errors")
             assert page.locator("#queue tbody tr").count() > 0
             assert page.evaluate("document.documentElement.scrollWidth <= innerWidth + 1")
@@ -54,13 +68,29 @@ def validate(url: str) -> dict:
                     "viewport": name,
                     "width": width,
                     "height": height,
-                    "flows": "filters/reset/4 routing examples/review filter",
+                    "flows": "3 finding links/filters/reset/4 routing examples/review filter/pagination",
                     "browser_errors": errors,
                     "horizontal_page_overflow": False,
                     "inference_max_tolerance": 1e-10,
                 }
             )
             context.close()
+        # A missing example model must not take the analytical story offline.
+        context = browser.new_context()
+        page = context.new_page()
+        page.route("**/model.json", lambda route: route.abort())
+        page.goto(url, wait_until="networkidle")
+        assert page.locator("#content").is_visible()
+        assert page.locator("#predict").is_disabled()
+        assert "could not load" in page.locator("#prediction").inner_text()
+        context.close()
+        context = browser.new_context()
+        page = context.new_page()
+        page.route("**/data.json", lambda route: route.abort())
+        page.goto(url, wait_until="networkidle")
+        assert page.locator("#retry").is_visible()
+        assert not page.locator("#content").is_visible()
+        context.close()
         browser.close()
     report = {
         "url": url,

@@ -11,11 +11,11 @@ def render() -> str:
     audit = json.loads((ROOT / "reports/audit.json").read_text())
     model = json.loads((ROOT / "reports/metrics.json").read_text())
     bullet = (
-        f"Analyzed {audit['usable']:,} usable CFPB complaint narratives with Python and DuckDB; "
-        f"chronological text-only routing matched {100 * model['accuracy']:.0f} labels per 100 "
-        f"versus {100 * model['majority']['accuracy']:.0f} for a majority baseline, sending "
-        f"{100 * model['review'] / model['test_rows']:.0f}% to human review. Built an evidence-linked "
-        "dashboard to prioritize debt-verification, account-management and purchase-dispute investigations."
+        f"Analyzed {audit['usable']:,} public customer complaints with Python and SQL, "
+        "identifying three investigation priorities. Built an interactive case study and "
+        f"text classifier achieving {100 * model['accuracy']:.1f}% accuracy versus a "
+        f"{100 * model['majority']['accuracy']:.1f}% baseline on unseen June data, with "
+        f"{100 * model['review'] / model['test_rows']:.1f}% of cases flagged for human review."
     )
     assert 35 <= len(bullet.split()) <= 45
     return f"**[Customer Feedback Intelligence]({LIVE})**\n\n- {bullet}\n"

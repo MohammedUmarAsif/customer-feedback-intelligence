@@ -4,11 +4,11 @@
 
 Which recurring complaints merit investigation next, what evidence supports the recommendation, and which automated routing predictions need review?
 
-This completed public-data portfolio prototype connects official historical CFPB complaint data to transparent investigation hypotheses and a chronological routing baseline. It is intended to demonstrate a transferable analytical workflow for customer-insights and operational roles. It is not a TAMM engagement, a representative customer survey, a Japanese-language benchmark or an enterprise deployment.
+A research-led case study in turning customer feedback into decisions. It analyzes 10,950 public complaints, identifies three recurring issues to investigate, and tests a model that suggests a product category for a new message. The public site walks through the problem, findings, experiment, and next validation step. The source data concerns US financial products; the analytical workflow is transferable to other customer-service settings.
 
 **AI-assisted development by Mohammed Umar Asif Sayed; human review and reproduction status documented separately.** See [contributions](docs/contributions.md).
 
-![Dashboard showing evidence-linked complaint investigations](docs/dashboard-desktop.png)
+![The guided customer-feedback case study](docs/audit/05-after-overview.png)
 
 ## What the frozen release shows
 
@@ -102,4 +102,4 @@ The [official CFPB archive](https://www.consumerfinance.gov/foia-requests/foia-e
 
 Complaints and available narratives are self-selected. Monthly sampling is unweighted. Counts are sample counts, not failure rates without exposure denominators. Timely response is not satisfaction or resolution. Published product choices are imperfect routing proxies. Six months and one locked test month cannot establish seasonality or long-term stability. Near-duplicate detection is approximate. Restricted generic vocabulary improves publication privacy but loses semantic detail. Rare classes perform unevenly. Embedding comparisons, LoRA, human adjudication, operational pilots, timed usability and independent human reproduction have not been run. No savings, adoption, customers served or live complaint reductions are claimed.
 
-Code: MIT. CFPB data: official public-use statements, described in the data card. Vendored Plotly.js: MIT, retained notice and [licence](site/vendor/LICENSE-plotly).
+Code: MIT. CFPB data: official public-use statements, described in the data card. Charts are lightweight native SVG generated from the frozen evidence; no external chart library is loaded.
