@@ -1,0 +1,2880 @@
+{
+  "denominators": {
+    "early": 5469,
+    "recent": 5481,
+    "total": 10950
+  },
+  "issues": [
+    {
+      "product": "Debt collection",
+      "issue": "Attempts to collect debt not owed",
+      "n": 1417,
+      "early": 746,
+      "recent": 671,
+      "evidence_id": "E001",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.12940639269406393,
+      "change_pp": -1.3982277379103376,
+      "share_wilson": [
+        0.1232492498786398,
+        0.13582347580327989
+      ],
+      "change_block_interval": [
+        -3.0135255642229826,
+        0.1268228904208163
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate debt-ownership verification and the evidence provided before collection attempts.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Review a local random sample for mistaken identity, disputed balance, and missing ownership documentation; compare against account-level verification logs.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Managing an account",
+      "n": 1141,
+      "early": 557,
+      "recent": 584,
+      "evidence_id": "E002",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.10420091324200913,
+      "change_pp": 0.47031269343865145,
+      "share_wilson": [
+        0.09861648673062506,
+        0.11006295957431331
+      ],
+      "change_block_interval": [
+        -0.6216077941137349,
+        1.6937757667778914
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate account-management handoffs, access restrictions, and the clarity of customer status updates.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Code a local random sample into access, balance, and service-status reasons; compare handoff times and repeat contacts with operational logs.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem with a purchase shown on your statement",
+      "n": 698,
+      "early": 341,
+      "recent": 357,
+      "evidence_id": "E003",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.06374429223744292,
+      "change_pp": 0.2782664253903395,
+      "share_wilson": [
+        0.05931973685400038,
+        0.06847484436397158
+      ],
+      "change_block_interval": [
+        -0.3005900143875522,
+        0.7442303186485248
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate the purchase-dispute journey and whether evidence requirements are clear.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Separate unauthorized purchases from merchant disputes in a local sample; check evidence requests, response time, and repeat contacts against transaction exposure.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Debt collection",
+      "issue": "False statements or representation",
+      "n": 576,
+      "early": 287,
+      "recent": 289,
+      "evidence_id": "E004",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0526027397260274,
+      "change_pp": 0.02500034277891916,
+      "share_wilson": [
+        0.04857605906883947,
+        0.05694323198974223
+      ],
+      "change_block_interval": [
+        -0.5888582721124573,
+        0.41884992863027715
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt collection",
+      "issue": "Written notification about debt",
+      "n": 476,
+      "early": 238,
+      "recent": 238,
+      "evidence_id": "E005",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.04347031963470319,
+      "change_pp": -0.009527752732398087,
+      "share_wilson": [
+        0.0398083473834636,
+        0.04745250911824078
+      ],
+      "change_block_interval": [
+        -0.3108958810718501,
+        0.30338637559324866
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Trouble during payment process",
+      "n": 369,
+      "early": 167,
+      "recent": 202,
+      "evidence_id": "E006",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.033698630136986304,
+      "change_pp": 0.6318841641443643,
+      "share_wilson": [
+        0.0304788448725166,
+        0.037245486653329114
+      ],
+      "change_block_interval": [
+        0.34076831876181657,
+        0.9570741995481732
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Problem with a lender or other company charging your account",
+      "n": 344,
+      "early": 168,
+      "recent": 176,
+      "evidence_id": "E007",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.031415525114155254,
+      "change_pp": 0.13923329413143454,
+      "share_wilson": [
+        0.028308996623717556,
+        0.03485072626290883
+      ],
+      "change_block_interval": [
+        -0.3502627756447479,
+        0.6498452790253493
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Closing an account",
+      "n": 310,
+      "early": 154,
+      "recent": 156,
+      "evidence_id": "E008",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.028310502283105023,
+      "change_pp": 0.030324675188200464,
+      "share_wilson": [
+        0.0253654616193617,
+        0.031586393517926394
+      ],
+      "change_block_interval": [
+        -0.45255845476679313,
+        0.6095430901848587
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt collection",
+      "issue": "Took or threatened to take negative or legal action",
+      "n": 284,
+      "early": 147,
+      "recent": 137,
+      "evidence_id": "E009",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.025936073059360732,
+      "change_pp": -0.18833324676289093,
+      "share_wilson": [
+        0.02312110379567989,
+        0.029083558356820114
+      ],
+      "change_block_interval": [
+        -0.6317258343894901,
+        0.10334849111202984
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Fraud or scam",
+      "n": 284,
+      "early": 129,
+      "recent": 155,
+      "evidence_id": "E010",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.025936073059360732,
+      "change_pp": 0.4692017894961129,
+      "share_wilson": [
+        0.02312110379567989,
+        0.029083558356820114
+      ],
+      "change_block_interval": [
+        -0.13839230748175016,
+        1.0426343445233255
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Other features, terms, or problems",
+      "n": 281,
+      "early": 141,
+      "recent": 140,
+      "evidence_id": "E011",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.025662100456621005,
+      "change_pp": -0.023889438836380977,
+      "share_wilson": [
+        0.022862544672291693,
+        0.028794364443501988
+      ],
+      "change_block_interval": [
+        -0.21895902408713663,
+        0.21543072667253893
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Fees or interest",
+      "n": 236,
+      "early": 112,
+      "recent": 124,
+      "evidence_id": "E012",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.021552511415525114,
+      "change_pp": 0.2144545016279746,
+      "share_wilson": [
+        0.018995625873848704,
+        0.024444987691350194
+      ],
+      "change_block_interval": [
+        -0.08744525730185783,
+        0.508500533880402
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Dealing with your lender or servicer",
+      "n": 228,
+      "early": 118,
+      "recent": 110,
+      "evidence_id": "E013",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.020821917808219178,
+      "change_pp": -0.15068261044011538,
+      "share_wilson": [
+        0.018310677616009227,
+        0.023669261184639488
+      ],
+      "change_block_interval": [
+        -0.4085416365600045,
+        0.12895644916223956
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Incorrect information on your report",
+      "n": 214,
+      "early": 107,
+      "recent": 107,
+      "evidence_id": "E014",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.01954337899543379,
+      "change_pp": -0.004283485472128534,
+      "share_wilson": [
+        0.017114098944822274,
+        0.022309659017863626
+      ],
+      "change_block_interval": [
+        -0.31672386953320897,
+        0.34518855775629403
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Managing the loan or lease",
+      "n": 209,
+      "early": 96,
+      "recent": 113,
+      "evidence_id": "E015",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.01908675799086758,
+      "change_pp": 0.3063192519753323,
+      "share_wilson": [
+        0.016687430437946932,
+        0.021823405796895096
+      ],
+      "change_block_interval": [
+        -0.4442930593645287,
+        1.062331231077424
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Struggling to pay mortgage",
+      "n": 183,
+      "early": 83,
+      "recent": 100,
+      "evidence_id": "E016",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.016712328767123287,
+      "change_pp": 0.3068396754439089,
+      "share_wilson": [
+        0.014475180400388223,
+        0.019288462849665716
+      ],
+      "change_block_interval": [
+        -0.22787353040115646,
+        0.8569704031745515
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Getting a credit card",
+      "n": 176,
+      "early": 89,
+      "recent": 87,
+      "evidence_id": "E017",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.016073059360730592,
+      "change_pp": -0.04005259079312845,
+      "share_wilson": [
+        0.013881600540172036,
+        0.018603952290900488
+      ],
+      "change_block_interval": [
+        -0.6328790399731687,
+        0.5560080351665158
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt collection",
+      "issue": "Communication tactics",
+      "n": 175,
+      "early": 93,
+      "recent": 82,
+      "evidence_id": "E018",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.01598173515981735,
+      "change_pp": -0.20441633357062647,
+      "share_wilson": [
+        0.013796880048178826,
+        0.018506088437324923
+      ],
+      "change_block_interval": [
+        -0.6976502445388068,
+        0.1494623406162205
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Unauthorized transactions or other transaction problem",
+      "n": 166,
+      "early": 68,
+      "recent": 98,
+      "evidence_id": "E019",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.015159817351598173,
+      "change_pp": 0.5446231598651822,
+      "share_wilson": [
+        0.013035299752891503,
+        0.017624409622493294
+      ],
+      "change_block_interval": [
+        0.15838775005514066,
+        0.9893639730176109
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Other transaction problem",
+      "n": 158,
+      "early": 94,
+      "recent": 64,
+      "evidence_id": "E020",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.014429223744292237,
+      "change_pp": -0.551108436935134,
+      "share_wilson": [
+        0.012359779380517013,
+        0.0168392552303176
+      ],
+      "change_block_interval": [
+        -1.055795144708144,
+        -0.0771564737503859
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Closing your account",
+      "n": 151,
+      "early": 76,
+      "recent": 75,
+      "evidence_id": "E021",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.013789954337899544,
+      "change_pp": -0.0212873214934994,
+      "share_wilson": [
+        0.011769894060020943,
+        0.016151050131832264
+      ],
+      "change_block_interval": [
+        -0.28948752903813263,
+        0.23923238863606325
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Repossession",
+      "n": 149,
+      "early": 85,
+      "recent": 64,
+      "evidence_id": "E022",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.01360730593607306,
+      "change_pp": -0.38654453128510685,
+      "share_wilson": [
+        0.011601571438511604,
+        0.015954204062204054
+      ],
+      "change_block_interval": [
+        -0.6149881451354647,
+        -0.17804989406024624
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Opening an account",
+      "n": 131,
+      "early": 63,
+      "recent": 68,
+      "evidence_id": "E023",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.011963470319634703,
+      "change_pp": 0.08870217696139351,
+      "share_wilson": [
+        0.010091399553900676,
+        0.014177857726577071
+      ],
+      "change_block_interval": [
+        -0.18038550176910548,
+        0.3301140985979792
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Problem caused by your funds being low",
+      "n": 123,
+      "early": 63,
+      "recent": 60,
+      "evidence_id": "E024",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.011232876712328766,
+      "change_pp": -0.05725658968702835,
+      "share_wilson": [
+        0.009423233124316303,
+        0.013385349391611259
+      ],
+      "change_block_interval": [
+        -0.3410015744484088,
+        0.29009370315640803
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem when making payments",
+      "n": 109,
+      "early": 50,
+      "recent": 59,
+      "evidence_id": "E025",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00995433789954338,
+      "change_pp": 0.1622019837541809,
+      "share_wilson": [
+        0.008259157276511024,
+        0.01199324440145372
+      ],
+      "change_block_interval": [
+        -0.16880453390860917,
+        0.49373749982269244
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Charged fees or interest you didn't expect",
+      "n": 108,
+      "early": 51,
+      "recent": 57,
+      "evidence_id": "E026",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.009863013698630137,
+      "change_pp": 0.10742741368651668,
+      "share_wilson": [
+        0.008176288409684235,
+        0.011893528922711734
+      ],
+      "change_block_interval": [
+        -0.24348343576558046,
+        0.4523221959649209
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Advertising and marketing, including promotional offers",
+      "n": 102,
+      "early": 43,
+      "recent": 59,
+      "evidence_id": "E027",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.009315068493150684,
+      "change_pp": 0.29019613259309107,
+      "share_wilson": [
+        0.007679933447264327,
+        0.011294377811719006
+      ],
+      "change_block_interval": [
+        -0.02121433698277428,
+        0.6060132572299696
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Problems at the end of the loan or lease",
+      "n": 100,
+      "early": 42,
+      "recent": 58,
+      "evidence_id": "E028",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0091324200913242,
+      "change_pp": 0.2902361651675968,
+      "share_wilson": [
+        0.007514822841843558,
+        0.011094319726002229
+      ],
+      "change_block_interval": [
+        -0.07203341551740139,
+        0.6740761496731388
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt collection",
+      "issue": "Electronic communications",
+      "n": 99,
+      "early": 58,
+      "recent": 41,
+      "evidence_id": "E029",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00904109589041096,
+      "change_pp": -0.3124842684492371,
+      "share_wilson": [
+        0.007432334291901141,
+        0.010994223930375874
+      ],
+      "change_block_interval": [
+        -0.6892194746029023,
+        0.09289139422579444
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Trouble accessing funds in your mobile or digital wallet",
+      "n": 94,
+      "early": 52,
+      "recent": 42,
+      "evidence_id": "E030",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.008584474885844748,
+      "change_pp": -0.18453015218483282,
+      "share_wilson": [
+        0.007020586250086218,
+        0.010493050244346932
+      ],
+      "change_block_interval": [
+        -0.385528781145361,
+        -0.042511551568200946
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Struggling to repay your loan",
+      "n": 89,
+      "early": 48,
+      "recent": 41,
+      "evidence_id": "E031",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.008127853881278539,
+      "change_pp": -0.12963548439365113,
+      "share_wilson": [
+        0.006610063784337217,
+        0.009990650982252066
+      ],
+      "change_block_interval": [
+        -0.2821179410304596,
+        0.02098719234725349
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Trouble using your card",
+      "n": 86,
+      "early": 44,
+      "recent": 42,
+      "evidence_id": "E032",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.007853881278538814,
+      "change_pp": -0.03825112494036395,
+      "share_wilson": [
+        0.006364380742100688,
+        0.00968858098778228
+      ],
+      "change_block_interval": [
+        -0.22871673637847884,
+        0.14250902077330707
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Improper use of your report",
+      "n": 83,
+      "early": 47,
+      "recent": 36,
+      "evidence_id": "E033",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.007579908675799087,
+      "change_pp": -0.2025748351433561,
+      "share_wilson": [
+        0.006119200368540086,
+        0.009386008324636562
+      ],
+      "change_block_interval": [
+        -0.4092009397478129,
+        -0.005776460740471428
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Incorrect information on your report",
+      "n": 80,
+      "early": 40,
+      "recent": 40,
+      "evidence_id": "E034",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0073059360730593605,
+      "change_pp": -0.001601302980235031,
+      "share_wilson": [
+        0.005874549639209485,
+        0.009082906017260844
+      ],
+      "change_block_interval": [
+        -0.3866279274229383,
+        0.40056235474704316
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Applying for a mortgage or refinancing an existing mortgage",
+      "n": 78,
+      "early": 41,
+      "recent": 37,
+      "evidence_id": "E035",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.007123287671232876,
+      "change_pp": -0.07462071887895183,
+      "share_wilson": [
+        0.005711757851767491,
+        0.008880529113565292
+      ],
+      "change_block_interval": [
+        -0.4023676904250413,
+        0.26572949943792196
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 75,
+      "early": 44,
+      "recent": 31,
+      "evidence_id": "E036",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00684931506849315,
+      "change_pp": -0.2389444290819439,
+      "share_wilson": [
+        0.005468056805899447,
+        0.008576477122727019
+      ],
+      "change_block_interval": [
+        -0.43842971711094103,
+        -0.03914156170097601
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Money was not available when promised",
+      "n": 69,
+      "early": 39,
+      "recent": 30,
+      "evidence_id": "E037",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.006301369863013699,
+      "change_pp": -0.1657648828852037,
+      "share_wilson": [
+        0.0049825373516485544,
+        0.007966490503565274
+      ],
+      "change_block_interval": [
+        -0.4368671638941336,
+        0.07275993140926874
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Closing on a mortgage",
+      "n": 67,
+      "early": 28,
+      "recent": 39,
+      "evidence_id": "E038",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.006118721461187215,
+      "change_pp": 0.1995723920554154,
+      "share_wilson": [
+        0.004821298555542101,
+        0.007762560608534182
+      ],
+      "change_block_interval": [
+        -0.01280854211104859,
+        0.41328940855590607
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt collection",
+      "issue": "Threatened to contact someone or share information improperly",
+      "n": 64,
+      "early": 40,
+      "recent": 24,
+      "evidence_id": "E039",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.005844748858447489,
+      "change_pp": -0.29351883627707864,
+      "share_wilson": [
+        0.0045800495773688854,
+        0.007456056550001078
+      ],
+      "change_block_interval": [
+        -0.5353298662564939,
+        -0.0755292904711635
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem when making payments",
+      "n": 63,
+      "early": 29,
+      "recent": 34,
+      "evidence_id": "E040",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.005753424657534247,
+      "change_pp": 0.09006328449459328,
+      "share_wilson": [
+        0.004499803124236784,
+        0.007353718657564406
+      ],
+      "change_block_interval": [
+        -0.10521810797409153,
+        0.2856994860209735
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 61,
+      "early": 22,
+      "recent": 39,
+      "evidence_id": "E041",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.005570776255707763,
+      "change_pp": 0.3092816624887671,
+      "share_wilson": [
+        0.004339577027067924,
+        0.007148776063595721
+      ],
+      "change_block_interval": [
+        0.14031334452328706,
+        0.4848377231574599
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Getting a loan or lease",
+      "n": 52,
+      "early": 30,
+      "recent": 22,
+      "evidence_id": "E042",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.004748858447488584,
+      "change_pp": -0.14715974388359812,
+      "share_wilson": [
+        0.003623423684434971,
+        0.006221670296109717
+      ],
+      "change_block_interval": [
+        -0.3696650740421672,
+        0.11084373652869915
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Struggling to pay your loan",
+      "n": 51,
+      "early": 24,
+      "recent": 27,
+      "evidence_id": "E043",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.004657534246575342,
+      "change_pp": 0.053773755705017155,
+      "share_wilson": [
+        0.0035443959942538846,
+        0.006118113640722031
+      ],
+      "change_block_interval": [
+        -0.13730691215478233,
+        0.23378069048646138
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Prepaid card",
+      "issue": "Problem with a purchase or transfer",
+      "n": 51,
+      "early": 26,
+      "recent": 25,
+      "evidence_id": "E044",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.004657534246575342,
+      "change_pp": -0.019285692768205437,
+      "share_wilson": [
+        0.0035443959942538846,
+        0.006118113640722031
+      ],
+      "change_block_interval": [
+        -0.20672640593594088,
+        0.14456696664869395
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Managing, opening, or closing your mobile wallet account",
+      "n": 48,
+      "early": 17,
+      "recent": 31,
+      "evidence_id": "E045",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.004383561643835616,
+      "change_pp": 0.25474728786813833,
+      "share_wilson": [
+        0.003308049140977357,
+        0.00580670745729224
+      ],
+      "change_block_interval": [
+        0.04113565506755043,
+        0.4703796439660242
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Prepaid card",
+      "issue": "Trouble using the card",
+      "n": 48,
+      "early": 28,
+      "recent": 20,
+      "evidence_id": "E046",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.004383561643835616,
+      "change_pp": -0.14707967873458638,
+      "share_wilson": [
+        0.003308049140977357,
+        0.00580670745729224
+      ],
+      "change_block_interval": [
+        -0.380896260281593,
+        0.04339580207839083
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Getting the loan",
+      "n": 43,
+      "early": 13,
+      "recent": 30,
+      "evidence_id": "E047",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.003926940639269407,
+      "change_pp": 0.30964195565932,
+      "share_wilson": [
+        0.0029168273853425975,
+        0.0052850074850831355
+      ],
+      "change_block_interval": [
+        0.1480299157188037,
+        0.49206621517481014
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with additional add-on products or services",
+      "n": 42,
+      "early": 19,
+      "recent": 23,
+      "evidence_id": "E048",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0038356164383561643,
+      "change_pp": 0.07221876440859924,
+      "share_wilson": [
+        0.002839026747628117,
+        0.0051802237772288415
+      ],
+      "change_block_interval": [
+        -0.13243465523455814,
+        0.2831383623824857
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with the payoff process at the end of the loan",
+      "n": 39,
+      "early": 21,
+      "recent": 18,
+      "evidence_id": "E049",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.003561643835616438,
+      "change_pp": -0.055575221557781565,
+      "share_wilson": [
+        0.002606607164911642,
+        0.004864890323238999
+      ],
+      "change_block_interval": [
+        -0.33044925593857216,
+        0.17552738442877147
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Struggling to pay your loan",
+      "n": 35,
+      "early": 20,
+      "recent": 15,
+      "evidence_id": "E050",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0031963470319634705,
+      "change_pp": -0.09202488064538115,
+      "share_wilson": [
+        0.0022992450912980612,
+        0.004441915014577489
+      ],
+      "change_block_interval": [
+        -0.3768509036264113,
+        0.15958255626214005
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Confusing or missing disclosures",
+      "n": 32,
+      "early": 14,
+      "recent": 18,
+      "evidence_id": "E051",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0029223744292237444,
+      "change_pp": 0.07241892728112863,
+      "share_wilson": [
+        0.0020708889224635395,
+        0.004122518146705692
+      ],
+      "change_block_interval": [
+        -0.1095288251150033,
+        0.25777052710521453
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Incorrect information on your report",
+      "n": 31,
+      "early": 20,
+      "recent": 11,
+      "evidence_id": "E052",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0028310502283105023,
+      "change_pp": -0.16500426396959209,
+      "share_wilson": [
+        0.00199523171000173,
+        0.004015591013598729
+      ],
+      "change_block_interval": [
+        -0.25354286446059154,
+        -0.0881369270116073
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Incorrect information on your report",
+      "n": 31,
+      "early": 16,
+      "recent": 15,
+      "evidence_id": "E053",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0028310502283105023,
+      "change_pp": -0.01888536702314672,
+      "share_wilson": [
+        0.00199523171000173,
+        0.004015591013598729
+      ],
+      "change_block_interval": [
+        -0.18163182043458376,
+        0.11602948604996642
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Problem with customer service",
+      "n": 27,
+      "early": 10,
+      "recent": 17,
+      "evidence_id": "E054",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.002465753424657534,
+      "change_pp": 0.12731359507231035,
+      "share_wilson": [
+        0.0016952169078261578,
+        0.003585268433499209
+      ],
+      "change_block_interval": [
+        -0.032108014483056294,
+        0.26154498661105297
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Prepaid card",
+      "issue": "Unexpected or other fees",
+      "n": 26,
+      "early": 10,
+      "recent": 16,
+      "evidence_id": "E055",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.002374429223744292,
+      "change_pp": 0.10906874924125759,
+      "share_wilson": [
+        0.0016209355390998056,
+        0.0034769654566567877
+      ],
+      "change_block_interval": [
+        0.03814569108253553,
+        0.17937933968318728
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Struggling to pay your bill",
+      "n": 25,
+      "early": 15,
+      "recent": 10,
+      "evidence_id": "E056",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00228310502283105,
+      "change_pp": -0.09182471777285177,
+      "share_wilson": [
+        0.0015469750721603859,
+        0.0033683415780274345
+      ],
+      "change_block_interval": [
+        -0.24635257420973522,
+        0.07034659855957956
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Didn't provide services promised",
+      "n": 24,
+      "early": 17,
+      "recent": 7,
+      "evidence_id": "E057",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.002191780821917808,
+      "change_pp": -0.18312901207712717,
+      "share_wilson": [
+        0.001473354191137906,
+        0.003259378113481142
+      ],
+      "change_block_interval": [
+        -0.27198725620574876,
+        -0.09881818605684448
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Problem with customer service",
+      "n": 24,
+      "early": 14,
+      "recent": 10,
+      "evidence_id": "E058",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.002191780821917808,
+      "change_pp": -0.07353983936729319,
+      "share_wilson": [
+        0.001473354191137906,
+        0.003259378113481142
+      ],
+      "change_block_interval": [
+        -0.21796002209152476,
+        0.0790067095749196
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Other service problem",
+      "n": 22,
+      "early": 11,
+      "recent": 11,
+      "evidence_id": "E059",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.002009132420091324,
+      "change_pp": -0.0004403583195646335,
+      "share_wilson": [
+        0.0013272156560350822,
+        0.00304034795744642
+      ],
+      "change_block_interval": [
+        -0.1381268638145504,
+        0.18128038927490453
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Unexpected or other fees",
+      "n": 20,
+      "early": 12,
+      "recent": 8,
+      "evidence_id": "E060",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0018264840182648401,
+      "change_pp": -0.07345977421828144,
+      "share_wilson": [
+        0.0011827126495022153,
+        0.0028196822728417405
+      ],
+      "change_block_interval": [
+        -0.16848489469885672,
+        0.012971442087889246
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Prepaid card",
+      "issue": "Problem getting a card or closing an account",
+      "n": 19,
+      "early": 10,
+      "recent": 9,
+      "evidence_id": "E061",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001735159817351598,
+      "change_pp": -0.01864517157611149,
+      "share_wilson": [
+        0.0011111471752010362,
+        0.0027086634015741472
+      ],
+      "change_block_interval": [
+        -0.1657151576923912,
+        0.16399416909620992
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 17,
+      "early": 11,
+      "recent": 6,
+      "evidence_id": "E062",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0015525114155251142,
+      "change_pp": -0.09166458747482825,
+      "share_wilson": [
+        0.0009695668581904185,
+        0.0024850750274472196
+      ],
+      "change_block_interval": [
+        -0.15155205725656645,
+        -0.056368404283998724
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Confusing or missing disclosures",
+      "n": 16,
+      "early": 5,
+      "recent": 11,
+      "evidence_id": "E063",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0014611872146118722,
+      "change_pp": 0.10926891211378698,
+      "share_wilson": [
+        0.0008996383533983631,
+        0.002372419186670502
+      ],
+      "change_block_interval": [
+        0.014665561500248957,
+        0.22416128318265316
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Incorrect information on your report",
+      "n": 16,
+      "early": 9,
+      "recent": 7,
+      "evidence_id": "E064",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0014611872146118722,
+      "change_pp": -0.036849984832658327,
+      "share_wilson": [
+        0.0008996383533983631,
+        0.002372419186670502
+      ],
+      "change_block_interval": [
+        -0.10900849007804737,
+        0.055545087272182915
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 16,
+      "early": 10,
+      "recent": 6,
+      "evidence_id": "E065",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0014611872146118722,
+      "change_pp": -0.07337970906926966,
+      "share_wilson": [
+        0.0008996383533983631,
+        0.002372419186670502
+      ],
+      "change_block_interval": [
+        -0.1854978485548504,
+        0.03771675894438044
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Improper use of your report",
+      "n": 15,
+      "early": 10,
+      "recent": 5,
+      "evidence_id": "E066",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0013698630136986301,
+      "change_pp": -0.0916245549003224,
+      "share_wilson": [
+        0.000830352533303407,
+        0.0022591206611966854
+      ],
+      "change_block_interval": [
+        -0.14412186279193956,
+        -0.02286590204838724
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Unauthorized withdrawals or charges",
+      "n": 15,
+      "early": 10,
+      "recent": 5,
+      "evidence_id": "E067",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0013698630136986301,
+      "change_pp": -0.0916245549003224,
+      "share_wilson": [
+        0.000830352533303407,
+        0.0022591206611966854
+      ],
+      "change_block_interval": [
+        -0.14861582027488868,
+        -0.020265437200440842
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Improper use of your report",
+      "n": 14,
+      "early": 6,
+      "recent": 8,
+      "evidence_id": "E068",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0012785388127853881,
+      "change_pp": 0.03624949621507019,
+      "share_wilson": [
+        0.0007617707383293131,
+        0.002145118110602006
+      ],
+      "change_block_interval": [
+        -0.07490605436970386,
+        0.16393896227464957
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Loan payment wasn't credited to your account",
+      "n": 13,
+      "early": 8,
+      "recent": 5,
+      "evidence_id": "E069",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001187214611872146,
+      "change_pp": -0.05505479808920518,
+      "share_wilson": [
+        0.00069396474990425,
+        0.0020303397534582966
+      ],
+      "change_block_interval": [
+        -0.1708510403089669,
+        0.051117900487384675
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Getting a loan",
+      "n": 13,
+      "early": 8,
+      "recent": 5,
+      "evidence_id": "E070",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001187214611872146,
+      "change_pp": -0.05505479808920518,
+      "share_wilson": [
+        0.00069396474990425,
+        0.0020303397534582966
+      ],
+      "change_block_interval": [
+        -0.11394064622990865,
+        0.014320544490006555
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Charged upfront or unexpected fees",
+      "n": 12,
+      "early": 7,
+      "recent": 5,
+      "evidence_id": "E071",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001095890410958904,
+      "change_pp": -0.036769919683646596,
+      "share_wilson": [
+        0.0006270194626465208,
+        0.0019147006951472523
+      ],
+      "change_block_interval": [
+        -0.1478025847834457,
+        0.08613861347372362
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Debt or credit management",
+      "issue": "Confusing or misleading advertising or marketing",
+      "n": 12,
+      "early": 5,
+      "recent": 7,
+      "evidence_id": "E072",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001095890410958904,
+      "change_pp": 0.036289528789576087,
+      "share_wilson": [
+        0.0006270194626465208,
+        0.0019147006951472523
+      ],
+      "change_block_interval": [
+        -0.11188956969825829,
+        0.19531789727338808
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Incorrect information on your report",
+      "n": 12,
+      "early": 2,
+      "recent": 10,
+      "evidence_id": "E073",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.001095890410958904,
+      "change_pp": 0.14587870149941007,
+      "share_wilson": [
+        0.0006270194626465208,
+        0.0019147006951472523
+      ],
+      "change_block_interval": [
+        0.056341224698222656,
+        0.26824972266410835
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Lost or stolen money order",
+      "n": 10,
+      "early": 5,
+      "recent": 5,
+      "evidence_id": "E074",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0009132420091324201,
+      "change_pp": -0.00020016287252937887,
+      "share_wilson": [
+        0.0004961392635560917,
+        0.001680412203100136
+      ],
+      "change_block_interval": [
+        -0.11841265541122174,
+        0.10775809547902385
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Wrong amount charged or received",
+      "n": 10,
+      "early": 5,
+      "recent": 5,
+      "evidence_id": "E075",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0009132420091324201,
+      "change_pp": -0.00020016287252937887,
+      "share_wilson": [
+        0.0004961392635560917,
+        0.001680412203100136
+      ],
+      "change_block_interval": [
+        -0.12002217482213706,
+        0.09154534505044619
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 9,
+      "early": 1,
+      "recent": 8,
+      "evidence_id": "E076",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0008219178082191781,
+      "change_pp": 0.12767388824286321,
+      "share_wilson": [
+        0.00043248001145668787,
+        0.001561487109630767
+      ],
+      "change_block_interval": [
+        0.0,
+        0.24004399890002748
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 9,
+      "early": 7,
+      "recent": 2,
+      "evidence_id": "E077",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0008219178082191781,
+      "change_pp": -0.09150445717680478,
+      "share_wilson": [
+        0.00043248001145668787,
+        0.001561487109630767
+      ],
+      "change_block_interval": [
+        -0.2068719908726461,
+        -0.00046408759553672515
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Received a loan you didn't apply for",
+      "n": 9,
+      "early": 4,
+      "recent": 5,
+      "evidence_id": "E078",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0008219178082191781,
+      "change_pp": 0.01808471553302923,
+      "share_wilson": [
+        0.00043248001145668787,
+        0.001561487109630767
+      ],
+      "change_block_interval": [
+        -0.053792754560017995,
+        0.09260634273135675
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Confusing or misleading advertising or marketing",
+      "n": 8,
+      "early": 6,
+      "recent": 2,
+      "evidence_id": "E079",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0007305936073059361,
+      "change_pp": -0.07321957877124617,
+      "share_wilson": [
+        0.0003702503852252547,
+        0.0014411323902934273
+      ],
+      "change_block_interval": [
+        -0.11288805268109124,
+        -0.0012138032054691012
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Problem adding money",
+      "n": 8,
+      "early": 7,
+      "recent": 1,
+      "evidence_id": "E080",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0007305936073059361,
+      "change_pp": -0.1097493030078575,
+      "share_wilson": [
+        0.0003702503852252547,
+        0.0014411323902934273
+      ],
+      "change_block_interval": [
+        -0.14894805436603983,
+        -0.07089802162257164
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 8,
+      "early": 5,
+      "recent": 3,
+      "evidence_id": "E081",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0007305936073059361,
+      "change_pp": -0.03668985453463483,
+      "share_wilson": [
+        0.0003702503852252547,
+        0.0014411323902934273
+      ],
+      "change_block_interval": [
+        -0.18833668076642146,
+        0.09134088417975886
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Can't stop withdrawals from your bank account",
+      "n": 8,
+      "early": 2,
+      "recent": 6,
+      "evidence_id": "E082",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0007305936073059361,
+      "change_pp": 0.07289931817519917,
+      "share_wilson": [
+        0.0003702503852252547,
+        0.0014411323902934273
+      ],
+      "change_block_interval": [
+        -0.0365697568111172,
+        0.18031013342949875
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Can't contact lender or servicer",
+      "n": 7,
+      "early": 4,
+      "recent": 3,
+      "evidence_id": "E083",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.0006392694063926941,
+      "change_pp": -0.018404976129076225,
+      "share_wilson": [
+        0.0003096972934186717,
+        0.0013191011365312373
+      ],
+      "change_block_interval": [
+        -0.11288805268109124,
+        0.09260634273135675
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Incorrect information on your report",
+      "n": 6,
+      "early": 3,
+      "recent": 3,
+      "evidence_id": "E084",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000547945205479452,
+      "change_pp": -0.00012009772351762732,
+      "share_wilson": [
+        0.0002511482047740467,
+        0.0011950658796070894
+      ],
+      "change_block_interval": [
+        -0.05928735052116299,
+        0.05466472303206997
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Getting a line of credit",
+      "n": 6,
+      "early": 5,
+      "recent": 1,
+      "evidence_id": "E085",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000547945205479452,
+      "change_pp": -0.07317954619674029,
+      "share_wilson": [
+        0.0002511482047740467,
+        0.0011950658796070894
+      ],
+      "change_block_interval": [
+        -0.14739750139828853,
+        -0.016961366822160227
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Issues with repayment",
+      "n": 6,
+      "early": 2,
+      "recent": 4,
+      "evidence_id": "E086",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000547945205479452,
+      "change_pp": 0.0364096265130937,
+      "share_wilson": [
+        0.0002511482047740467,
+        0.0011950658796070894
+      ],
+      "change_block_interval": [
+        -0.03180406245168321,
+        0.09026900162484203
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Vehicle was repossessed or sold the vehicle",
+      "n": 6,
+      "early": 1,
+      "recent": 5,
+      "evidence_id": "E087",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000547945205479452,
+      "change_pp": 0.07293935074970503,
+      "share_wilson": [
+        0.0002511482047740467,
+        0.0011950658796070894
+      ],
+      "change_block_interval": [
+        -0.0182848784055586,
+        0.18542627311073404
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Improper use of your report",
+      "n": 5,
+      "early": 2,
+      "recent": 3,
+      "evidence_id": "E088",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00045662100456621003,
+      "change_pp": 0.01816478068204098,
+      "share_wilson": [
+        0.00019505359482525263,
+        0.0010685761439871105
+      ],
+      "change_block_interval": [
+        -0.0562524528389966,
+        0.09134088417975886
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 4,
+      "early": 1,
+      "recent": 3,
+      "evidence_id": "E089",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00036529680365296805,
+      "change_pp": 0.03644965908759958,
+      "share_wilson": [
+        0.0001420633763686308,
+        0.0009389820168749598
+      ],
+      "change_block_interval": [
+        -0.0182848784055586,
+        0.09015506671474938
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Problem with fraud alerts or security freezes",
+      "n": 4,
+      "early": 2,
+      "recent": 2,
+      "evidence_id": "E090",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00036529680365296805,
+      "change_pp": -8.006514901175155e-05,
+      "share_wilson": [
+        0.0001420633763686308,
+        0.0009389820168749598
+      ],
+      "change_block_interval": [
+        -0.06834158267383172,
+        0.055391432791728215
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problems receiving the advance",
+      "n": 4,
+      "early": 4,
+      "recent": 0,
+      "evidence_id": "E091",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00036529680365296805,
+      "change_pp": -0.0731395136222344,
+      "share_wilson": [
+        0.0001420633763686308,
+        0.0009389820168749598
+      ],
+      "change_block_interval": [
+        -0.11409013120365087,
+        -0.05243838489774515
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 4,
+      "early": 1,
+      "recent": 3,
+      "evidence_id": "E092",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00036529680365296805,
+      "change_pp": 0.03644965908759958,
+      "share_wilson": [
+        0.0001420633763686308,
+        0.0009389820168749598
+      ],
+      "change_block_interval": [
+        -0.03592599245554159,
+        0.13017765432620365
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Improper use of your report",
+      "n": 3,
+      "early": 1,
+      "recent": 2,
+      "evidence_id": "E093",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": 0.01820481325654685,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.0182848784055586,
+        0.05466472303206997
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Problem with fraud alerts or security freezes",
+      "n": 3,
+      "early": 2,
+      "recent": 1,
+      "evidence_id": "E094",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": -0.018324910980064477,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.07185198491108317,
+        0.03692762186115214
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 3,
+      "early": 1,
+      "recent": 2,
+      "evidence_id": "E095",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": 0.01820481325654685,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.03762935089369708,
+        0.07375991148810622
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Unable to get your credit report or credit score",
+      "n": 3,
+      "early": 3,
+      "recent": 0,
+      "evidence_id": "E096",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": -0.054854635216675815,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.11055831951354339,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Improper use of your report",
+      "n": 3,
+      "early": 2,
+      "recent": 1,
+      "evidence_id": "E097",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": -0.018324910980064477,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.05542213190467394,
+        0.01878040823274089
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Money was taken from your bank account on the wrong day or for the wrong amount",
+      "n": 3,
+      "early": 2,
+      "recent": 1,
+      "evidence_id": "E098",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": -0.018324910980064477,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.05542213190467394,
+        0.018244845831052726
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Was approved for a loan, but didn't receive the money",
+      "n": 3,
+      "early": 1,
+      "recent": 2,
+      "evidence_id": "E099",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.000273972602739726,
+      "change_pp": 0.01820481325654685,
+      "share_wilson": [
+        9.317799823939637e-05,
+        0.0008052830494354212
+      ],
+      "change_block_interval": [
+        -0.020555373939719984,
+        0.055391432791728215
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem with fraud alerts or security freezes",
+      "n": 2,
+      "early": 0,
+      "recent": 2,
+      "evidence_id": "E100",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": 0.03648969166210545,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "issue": "Problem with a company's investigation into an existing issue",
+      "n": 2,
+      "early": 1,
+      "recent": 1,
+      "evidence_id": "E101",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": -4.003257450587577e-05,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        -0.03592599245554159,
+        0.03610760064993681
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Overdraft, savings, or rewards features",
+      "n": 2,
+      "early": 0,
+      "recent": 2,
+      "evidence_id": "E102",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": 0.03648969166210545,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Mortgage",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 2,
+      "early": 0,
+      "recent": 2,
+      "evidence_id": "E103",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": 0.03648969166210545,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        0.0,
+        0.11092623405435387
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Confusing or misleading advertising or marketing",
+      "n": 2,
+      "early": 2,
+      "recent": 0,
+      "evidence_id": "E104",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": -0.0365697568111172,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        -0.055279159756771695,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Confusing or missing disclosures",
+      "n": 2,
+      "early": 2,
+      "recent": 0,
+      "evidence_id": "E105",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": -0.0365697568111172,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        -0.057045065601825436,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with cash advance",
+      "n": 2,
+      "early": 1,
+      "recent": 1,
+      "evidence_id": "E106",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": -4.003257450587577e-05,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        -0.03723701359150996,
+        0.03687995574405311
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Unexpected fees",
+      "n": 2,
+      "early": 0,
+      "recent": 2,
+      "evidence_id": "E107",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": 0.03648969166210545,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        0.0,
+        0.05524861878453039
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Issue where my lender is my school",
+      "n": 2,
+      "early": 2,
+      "recent": 0,
+      "evidence_id": "E108",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.00018264840182648402,
+      "change_pp": -0.0365697568111172,
+      "share_wilson": [
+        5.0089160315275176e-05,
+        0.0006657875417907695
+      ],
+      "change_block_interval": [
+        -0.11055831951354339,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E109",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Credit limit changed",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E110",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E111",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with customer service",
+      "n": 1,
+      "early": 1,
+      "recent": 0,
+      "evidence_id": "E112",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": -0.0182848784055586,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        -0.057045065601825436,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Problem with fraud alerts or security freezes",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E113",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Unable to get your credit report or credit score",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E114",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.05524861878453039
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Vehicle was damaged or destroyed the vehicle",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E115",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.055463117027176934
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Payday loan, title loan, personal loan, or advance loan",
+      "issue": "Was approved for a loan, but didn't receive money",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E116",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.05353319057815846
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Prepaid card",
+      "issue": "Advertising",
+      "n": 1,
+      "early": 1,
+      "recent": 0,
+      "evidence_id": "E117",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": -0.0182848784055586,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        -0.05243838489774515,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Credit monitoring or identity theft protection services",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E118",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.05353319057815846
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Student loan",
+      "issue": "Unable to get your credit report or credit score",
+      "n": 1,
+      "early": 1,
+      "recent": 0,
+      "evidence_id": "E119",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": -0.0182848784055586,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        -0.05243838489774515,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Improper use of your report",
+      "n": 1,
+      "early": 0,
+      "recent": 1,
+      "evidence_id": "E120",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": 0.018244845831052726,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        0.0,
+        0.05524861878453039
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "issue": "Problem with fraud alerts or security freezes",
+      "n": 1,
+      "early": 1,
+      "recent": 0,
+      "evidence_id": "E121",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 9.132420091324201e-05,
+      "change_pp": -0.0182848784055586,
+      "share_wilson": [
+        1.612073114579083e-05,
+        0.000517171625391481
+      ],
+      "change_block_interval": [
+        -0.05243838489774515,
+        0.0
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    }
+  ],
+  "priorities": [
+    {
+      "product": "Debt collection",
+      "issue": "Attempts to collect debt not owed",
+      "n": 1417,
+      "early": 746,
+      "recent": 671,
+      "evidence_id": "E001",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.12940639269406393,
+      "change_pp": -1.3982277379103376,
+      "share_wilson": [
+        0.1232492498786398,
+        0.13582347580327989
+      ],
+      "change_block_interval": [
+        -3.0135255642229826,
+        0.1268228904208163
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate debt-ownership verification and the evidence provided before collection attempts.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Review a local random sample for mistaken identity, disputed balance, and missing ownership documentation; compare against account-level verification logs.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Managing an account",
+      "n": 1141,
+      "early": 557,
+      "recent": 584,
+      "evidence_id": "E002",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.10420091324200913,
+      "change_pp": 0.47031269343865145,
+      "share_wilson": [
+        0.09861648673062506,
+        0.11006295957431331
+      ],
+      "change_block_interval": [
+        -0.6216077941137349,
+        1.6937757667778914
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate account-management handoffs, access restrictions, and the clarity of customer status updates.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Code a local random sample into access, balance, and service-status reasons; compare handoff times and repeat contacts with operational logs.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem with a purchase shown on your statement",
+      "n": 698,
+      "early": 341,
+      "recent": 357,
+      "evidence_id": "E003",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.06374429223744292,
+      "change_pp": 0.2782664253903395,
+      "share_wilson": [
+        0.05931973685400038,
+        0.06847484436397158
+      ],
+      "change_block_interval": [
+        -0.3005900143875522,
+        0.7442303186485248
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate the purchase-dispute journey and whether evidence requirements are clear.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Separate unauthorized purchases from merchant disputes in a local sample; check evidence requests, response time, and repeat contacts against transaction exposure.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    }
+  ],
+  "change_ranking": [
+    {
+      "product": "Mortgage",
+      "issue": "Trouble during payment process",
+      "n": 369,
+      "early": 167,
+      "recent": 202,
+      "evidence_id": "E006",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.033698630136986304,
+      "change_pp": 0.6318841641443643,
+      "share_wilson": [
+        0.0304788448725166,
+        0.037245486653329114
+      ],
+      "change_block_interval": [
+        0.34076831876181657,
+        0.9570741995481732
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Unauthorized transactions or other transaction problem",
+      "n": 166,
+      "early": 68,
+      "recent": 98,
+      "evidence_id": "E019",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.015159817351598173,
+      "change_pp": 0.5446231598651822,
+      "share_wilson": [
+        0.013035299752891503,
+        0.017624409622493294
+      ],
+      "change_block_interval": [
+        0.15838775005514066,
+        0.9893639730176109
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Checking or savings account",
+      "issue": "Managing an account",
+      "n": 1141,
+      "early": 557,
+      "recent": 584,
+      "evidence_id": "E002",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.10420091324200913,
+      "change_pp": 0.47031269343865145,
+      "share_wilson": [
+        0.09861648673062506,
+        0.11006295957431331
+      ],
+      "change_block_interval": [
+        -0.6216077941137349,
+        1.6937757667778914
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator",
+      "recommendation": "Investigate account-management handoffs, access restrictions, and the clarity of customer status updates.",
+      "alternative": "Reporting campaigns, narrative-consent differences, repeated templates, or product mix could explain the volume.",
+      "next_check": "Code a local random sample into access, balance, and service-status reasons; compare handoff times and repeat contacts with operational logs.",
+      "hypothesis": "Clearer evidence requirements and status updates may reduce repeat contacts; test prospectively with an exposure denominator and a comparison group."
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "issue": "Fraud or scam",
+      "n": 284,
+      "early": 129,
+      "recent": 155,
+      "evidence_id": "E010",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.025936073059360732,
+      "change_pp": 0.4692017894961129,
+      "share_wilson": [
+        0.02312110379567989,
+        0.029083558356820114
+      ],
+      "change_block_interval": [
+        -0.13839230748175016,
+        1.0426343445233255
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    },
+    {
+      "product": "Credit card",
+      "issue": "Problem with a company's investigation into an existing problem",
+      "n": 61,
+      "early": 22,
+      "recent": 39,
+      "evidence_id": "E041",
+      "early_denominator": 5469,
+      "recent_denominator": 5481,
+      "denominator": 10950,
+      "share": 0.005570776255707763,
+      "change_pp": 0.3092816624887671,
+      "share_wilson": [
+        0.004339577027067924,
+        0.007148776063595721
+      ],
+      "change_block_interval": [
+        0.14031334452328706,
+        0.4848377231574599
+      ],
+      "evidence_quality": "Sample association; selected narratives; no exposure denominator"
+    }
+  ],
+  "ranking_policy": "Total sampled volume descending; change displayed separately. No causal or severity interpretation."
+}
