@@ -1,6 +1,7 @@
 """Check tracked release files for private artifacts and high-confidence credential patterns."""
 
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -8,7 +9,11 @@ ROOT = Path(__file__).parent
 
 
 def check() -> None:
-    tracked = subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines()
+    git = shutil.which("git")
+    if git is None:
+        raise RuntimeError("Git is required for publication checks")
+    # Resolved executable and fixed arguments; no user-supplied command content.
+    tracked = subprocess.check_output([git, "ls-files"], cwd=ROOT, text=True).splitlines()  # noqa: S603
     forbidden = [
         p for p in tracked if p.startswith(("data/", "work/", ".venv/")) or p.endswith(".joblib")
     ]
