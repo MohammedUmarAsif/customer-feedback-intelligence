@@ -1,0 +1,644 @@
+month,split,observed,predicted,accepted,n
+2026-01,train,Checking or savings account,Checking or savings account,False,110
+2026-01,train,Checking or savings account,Checking or savings account,True,155
+2026-01,train,Checking or savings account,Credit card,False,24
+2026-01,train,Checking or savings account,Credit card,True,4
+2026-01,train,Checking or savings account,Credit reporting or other personal consumer reports,False,1
+2026-01,train,Checking or savings account,Debt collection,False,7
+2026-01,train,Checking or savings account,"Money transfer, virtual currency, or money service",False,25
+2026-01,train,Checking or savings account,"Money transfer, virtual currency, or money service",True,6
+2026-01,train,Checking or savings account,Mortgage,False,2
+2026-01,train,Checking or savings account,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-01,train,Credit card,Checking or savings account,False,19
+2026-01,train,Credit card,Checking or savings account,True,3
+2026-01,train,Credit card,Credit card,False,122
+2026-01,train,Credit card,Credit card,True,166
+2026-01,train,Credit card,Credit reporting or other personal consumer reports,False,6
+2026-01,train,Credit card,Debt collection,False,12
+2026-01,train,Credit card,Debt collection,True,7
+2026-01,train,Credit card,"Money transfer, virtual currency, or money service",False,3
+2026-01,train,Credit card,Mortgage,False,1
+2026-01,train,Credit card,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-01,train,Credit card,Student loan,True,1
+2026-01,train,Credit card,Vehicle loan or lease,False,3
+2026-01,train,Credit reporting or other personal consumer reports,Checking or savings account,False,2
+2026-01,train,Credit reporting or other personal consumer reports,Credit card,False,1
+2026-01,train,Credit reporting or other personal consumer reports,Credit card,True,1
+2026-01,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,34
+2026-01,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,7
+2026-01,train,Credit reporting or other personal consumer reports,Debt collection,False,18
+2026-01,train,Credit reporting or other personal consumer reports,Debt collection,True,6
+2026-01,train,Credit reporting or other personal consumer reports,Mortgage,False,1
+2026-01,train,Credit reporting or other personal consumer reports,Student loan,False,1
+2026-01,train,Credit reporting or other personal consumer reports,Vehicle loan or lease,False,2
+2026-01,train,Debt collection,Checking or savings account,False,7
+2026-01,train,Debt collection,Checking or savings account,True,1
+2026-01,train,Debt collection,Credit card,False,16
+2026-01,train,Debt collection,Credit card,True,6
+2026-01,train,Debt collection,Credit reporting or other personal consumer reports,False,10
+2026-01,train,Debt collection,Credit reporting or other personal consumer reports,True,1
+2026-01,train,Debt collection,Debt collection,False,84
+2026-01,train,Debt collection,Debt collection,True,417
+2026-01,train,Debt collection,"Money transfer, virtual currency, or money service",False,5
+2026-01,train,Debt collection,Mortgage,True,2
+2026-01,train,Debt collection,"Payday loan, title loan, personal loan, or advance loan",False,3
+2026-01,train,Debt collection,Student loan,True,1
+2026-01,train,Debt collection,Vehicle loan or lease,False,5
+2026-01,train,Debt or credit management,Checking or savings account,False,1
+2026-01,train,Debt or credit management,Credit card,False,2
+2026-01,train,Debt or credit management,Credit reporting or other personal consumer reports,False,1
+2026-01,train,Debt or credit management,Debt collection,False,9
+2026-01,train,Debt or credit management,Debt collection,True,4
+2026-01,train,Debt or credit management,Debt or credit management,False,1
+2026-01,train,Debt or credit management,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-01,train,Debt or credit management,Vehicle loan or lease,False,1
+2026-01,train,"Money transfer, virtual currency, or money service",Checking or savings account,False,37
+2026-01,train,"Money transfer, virtual currency, or money service",Checking or savings account,True,18
+2026-01,train,"Money transfer, virtual currency, or money service",Credit card,False,8
+2026-01,train,"Money transfer, virtual currency, or money service",Credit card,True,3
+2026-01,train,"Money transfer, virtual currency, or money service",Debt collection,False,1
+2026-01,train,"Money transfer, virtual currency, or money service",Debt collection,True,2
+2026-01,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,61
+2026-01,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,30
+2026-01,train,Mortgage,Checking or savings account,False,1
+2026-01,train,Mortgage,Checking or savings account,True,2
+2026-01,train,Mortgage,Credit card,False,3
+2026-01,train,Mortgage,Credit reporting or other personal consumer reports,False,1
+2026-01,train,Mortgage,Debt collection,False,2
+2026-01,train,Mortgage,"Money transfer, virtual currency, or money service",False,1
+2026-01,train,Mortgage,Mortgage,False,25
+2026-01,train,Mortgage,Mortgage,True,86
+2026-01,train,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-01,train,Mortgage,Student loan,False,2
+2026-01,train,Mortgage,Vehicle loan or lease,False,6
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,10
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,True,1
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,11
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Credit reporting or other personal consumer reports,False,3
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,14
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,2
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",False,3
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,20
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Student loan,False,1
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,10
+2026-01,train,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,True,1
+2026-01,train,Prepaid card,Checking or savings account,False,10
+2026-01,train,Prepaid card,Checking or savings account,True,4
+2026-01,train,Prepaid card,Credit card,False,13
+2026-01,train,Prepaid card,Credit card,True,6
+2026-01,train,Prepaid card,"Money transfer, virtual currency, or money service",False,1
+2026-01,train,Prepaid card,Prepaid card,False,3
+2026-01,train,Student loan,Credit card,False,7
+2026-01,train,Student loan,Credit reporting or other personal consumer reports,False,2
+2026-01,train,Student loan,Debt collection,False,3
+2026-01,train,Student loan,Debt collection,True,1
+2026-01,train,Student loan,"Money transfer, virtual currency, or money service",False,1
+2026-01,train,Student loan,Mortgage,False,1
+2026-01,train,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-01,train,Student loan,Student loan,False,17
+2026-01,train,Student loan,Student loan,True,32
+2026-01,train,Student loan,Vehicle loan or lease,False,2
+2026-01,train,Vehicle loan or lease,Checking or savings account,False,5
+2026-01,train,Vehicle loan or lease,Credit card,False,8
+2026-01,train,Vehicle loan or lease,Credit card,True,1
+2026-01,train,Vehicle loan or lease,Credit reporting or other personal consumer reports,False,5
+2026-01,train,Vehicle loan or lease,Debt collection,False,10
+2026-01,train,Vehicle loan or lease,Debt collection,True,5
+2026-01,train,Vehicle loan or lease,"Money transfer, virtual currency, or money service",False,3
+2026-01,train,Vehicle loan or lease,Mortgage,False,1
+2026-01,train,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,5
+2026-01,train,Vehicle loan or lease,Vehicle loan or lease,False,53
+2026-01,train,Vehicle loan or lease,Vehicle loan or lease,True,7
+2026-02,train,Checking or savings account,Checking or savings account,False,113
+2026-02,train,Checking or savings account,Checking or savings account,True,176
+2026-02,train,Checking or savings account,Credit card,False,21
+2026-02,train,Checking or savings account,Credit card,True,6
+2026-02,train,Checking or savings account,Debt collection,False,8
+2026-02,train,Checking or savings account,"Money transfer, virtual currency, or money service",False,18
+2026-02,train,Checking or savings account,"Money transfer, virtual currency, or money service",True,6
+2026-02,train,Checking or savings account,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-02,train,Checking or savings account,Vehicle loan or lease,False,3
+2026-02,train,Credit card,Checking or savings account,False,20
+2026-02,train,Credit card,Checking or savings account,True,2
+2026-02,train,Credit card,Credit card,False,90
+2026-02,train,Credit card,Credit card,True,168
+2026-02,train,Credit card,Credit reporting or other personal consumer reports,False,3
+2026-02,train,Credit card,Debt collection,False,18
+2026-02,train,Credit card,Debt collection,True,7
+2026-02,train,Credit card,"Money transfer, virtual currency, or money service",False,5
+2026-02,train,Credit card,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-02,train,Credit card,Student loan,False,1
+2026-02,train,Credit card,Vehicle loan or lease,False,5
+2026-02,train,Credit reporting or other personal consumer reports,Checking or savings account,False,2
+2026-02,train,Credit reporting or other personal consumer reports,Credit card,False,5
+2026-02,train,Credit reporting or other personal consumer reports,Credit card,True,1
+2026-02,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,27
+2026-02,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,10
+2026-02,train,Credit reporting or other personal consumer reports,Debt collection,False,19
+2026-02,train,Credit reporting or other personal consumer reports,Debt collection,True,4
+2026-02,train,Credit reporting or other personal consumer reports,"Money transfer, virtual currency, or money service",False,1
+2026-02,train,Credit reporting or other personal consumer reports,Mortgage,True,1
+2026-02,train,Credit reporting or other personal consumer reports,Student loan,False,1
+2026-02,train,Credit reporting or other personal consumer reports,Student loan,True,1
+2026-02,train,Credit reporting or other personal consumer reports,Vehicle loan or lease,False,1
+2026-02,train,Debt collection,Checking or savings account,False,7
+2026-02,train,Debt collection,Checking or savings account,True,2
+2026-02,train,Debt collection,Credit card,False,18
+2026-02,train,Debt collection,Credit card,True,4
+2026-02,train,Debt collection,Credit reporting or other personal consumer reports,False,3
+2026-02,train,Debt collection,Debt collection,False,69
+2026-02,train,Debt collection,Debt collection,True,409
+2026-02,train,Debt collection,"Money transfer, virtual currency, or money service",False,3
+2026-02,train,Debt collection,"Money transfer, virtual currency, or money service",True,1
+2026-02,train,Debt collection,Mortgage,False,1
+2026-02,train,Debt collection,Mortgage,True,2
+2026-02,train,Debt collection,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-02,train,Debt collection,Student loan,True,1
+2026-02,train,Debt collection,Vehicle loan or lease,False,5
+2026-02,train,Debt or credit management,Checking or savings account,False,3
+2026-02,train,Debt or credit management,Credit card,False,2
+2026-02,train,Debt or credit management,Credit card,True,2
+2026-02,train,Debt or credit management,Credit reporting or other personal consumer reports,False,1
+2026-02,train,Debt or credit management,Debt collection,False,4
+2026-02,train,Debt or credit management,Debt collection,True,3
+2026-02,train,Debt or credit management,"Money transfer, virtual currency, or money service",False,2
+2026-02,train,Debt or credit management,Student loan,True,2
+2026-02,train,"Money transfer, virtual currency, or money service",Checking or savings account,False,41
+2026-02,train,"Money transfer, virtual currency, or money service",Checking or savings account,True,17
+2026-02,train,"Money transfer, virtual currency, or money service",Credit card,False,5
+2026-02,train,"Money transfer, virtual currency, or money service",Credit card,True,4
+2026-02,train,"Money transfer, virtual currency, or money service",Debt collection,False,2
+2026-02,train,"Money transfer, virtual currency, or money service",Debt collection,True,1
+2026-02,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,54
+2026-02,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,25
+2026-02,train,"Money transfer, virtual currency, or money service",Mortgage,False,1
+2026-02,train,"Money transfer, virtual currency, or money service",Vehicle loan or lease,False,2
+2026-02,train,Mortgage,Checking or savings account,False,3
+2026-02,train,Mortgage,Credit card,False,3
+2026-02,train,Mortgage,Credit card,True,1
+2026-02,train,Mortgage,Credit reporting or other personal consumer reports,False,1
+2026-02,train,Mortgage,Debt collection,False,3
+2026-02,train,Mortgage,Debt collection,True,1
+2026-02,train,Mortgage,Mortgage,False,16
+2026-02,train,Mortgage,Mortgage,True,64
+2026-02,train,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,3
+2026-02,train,Mortgage,Student loan,False,1
+2026-02,train,Mortgage,Vehicle loan or lease,False,7
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,6
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,True,2
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,9
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,6
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,2
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Mortgage,False,1
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,29
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Student loan,False,3
+2026-02,train,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,15
+2026-02,train,Prepaid card,Checking or savings account,False,3
+2026-02,train,Prepaid card,Checking or savings account,True,1
+2026-02,train,Prepaid card,Credit card,False,11
+2026-02,train,Prepaid card,Credit card,True,2
+2026-02,train,Prepaid card,Debt collection,False,1
+2026-02,train,Prepaid card,"Money transfer, virtual currency, or money service",False,5
+2026-02,train,Student loan,Checking or savings account,False,1
+2026-02,train,Student loan,Credit card,False,4
+2026-02,train,Student loan,Debt collection,True,3
+2026-02,train,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-02,train,Student loan,Student loan,False,15
+2026-02,train,Student loan,Student loan,True,41
+2026-02,train,Student loan,Vehicle loan or lease,False,4
+2026-02,train,Vehicle loan or lease,Checking or savings account,False,1
+2026-02,train,Vehicle loan or lease,Credit card,False,11
+2026-02,train,Vehicle loan or lease,Credit card,True,1
+2026-02,train,Vehicle loan or lease,Credit reporting or other personal consumer reports,False,1
+2026-02,train,Vehicle loan or lease,Debt collection,False,10
+2026-02,train,Vehicle loan or lease,Debt collection,True,4
+2026-02,train,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-02,train,Vehicle loan or lease,Student loan,False,1
+2026-02,train,Vehicle loan or lease,Vehicle loan or lease,False,55
+2026-02,train,Vehicle loan or lease,Vehicle loan or lease,True,7
+2026-03,train,Checking or savings account,Checking or savings account,False,117
+2026-03,train,Checking or savings account,Checking or savings account,True,148
+2026-03,train,Checking or savings account,Credit card,False,17
+2026-03,train,Checking or savings account,Credit card,True,5
+2026-03,train,Checking or savings account,Credit reporting or other personal consumer reports,False,2
+2026-03,train,Checking or savings account,Debt collection,False,2
+2026-03,train,Checking or savings account,"Money transfer, virtual currency, or money service",False,29
+2026-03,train,Checking or savings account,"Money transfer, virtual currency, or money service",True,1
+2026-03,train,Checking or savings account,Student loan,False,1
+2026-03,train,Checking or savings account,Vehicle loan or lease,False,2
+2026-03,train,Credit card,Checking or savings account,False,25
+2026-03,train,Credit card,Checking or savings account,True,1
+2026-03,train,Credit card,Credit card,False,94
+2026-03,train,Credit card,Credit card,True,157
+2026-03,train,Credit card,Credit reporting or other personal consumer reports,False,2
+2026-03,train,Credit card,Debt collection,False,21
+2026-03,train,Credit card,Debt collection,True,6
+2026-03,train,Credit card,"Money transfer, virtual currency, or money service",False,2
+2026-03,train,Credit card,Mortgage,True,2
+2026-03,train,Credit card,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-03,train,Credit card,Student loan,False,1
+2026-03,train,Credit card,Vehicle loan or lease,False,6
+2026-03,train,Credit reporting or other personal consumer reports,Checking or savings account,False,1
+2026-03,train,Credit reporting or other personal consumer reports,Credit card,False,4
+2026-03,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,30
+2026-03,train,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,3
+2026-03,train,Credit reporting or other personal consumer reports,Debt collection,False,10
+2026-03,train,Credit reporting or other personal consumer reports,Debt collection,True,8
+2026-03,train,Credit reporting or other personal consumer reports,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-03,train,Credit reporting or other personal consumer reports,Student loan,False,1
+2026-03,train,Credit reporting or other personal consumer reports,Vehicle loan or lease,False,1
+2026-03,train,Debt collection,Checking or savings account,False,6
+2026-03,train,Debt collection,Checking or savings account,True,1
+2026-03,train,Debt collection,Credit card,False,18
+2026-03,train,Debt collection,Credit card,True,4
+2026-03,train,Debt collection,Credit reporting or other personal consumer reports,False,7
+2026-03,train,Debt collection,Debt collection,False,73
+2026-03,train,Debt collection,Debt collection,True,397
+2026-03,train,Debt collection,"Money transfer, virtual currency, or money service",False,2
+2026-03,train,Debt collection,Mortgage,False,1
+2026-03,train,Debt collection,Mortgage,True,1
+2026-03,train,Debt collection,Student loan,False,1
+2026-03,train,Debt collection,Vehicle loan or lease,False,11
+2026-03,train,Debt or credit management,Checking or savings account,False,1
+2026-03,train,Debt or credit management,Checking or savings account,True,2
+2026-03,train,Debt or credit management,Credit card,False,1
+2026-03,train,Debt or credit management,Credit reporting or other personal consumer reports,False,3
+2026-03,train,Debt or credit management,Debt collection,False,6
+2026-03,train,Debt or credit management,Debt collection,True,4
+2026-03,train,Debt or credit management,Debt or credit management,False,1
+2026-03,train,Debt or credit management,Vehicle loan or lease,False,1
+2026-03,train,"Money transfer, virtual currency, or money service",Checking or savings account,False,47
+2026-03,train,"Money transfer, virtual currency, or money service",Checking or savings account,True,14
+2026-03,train,"Money transfer, virtual currency, or money service",Credit card,False,6
+2026-03,train,"Money transfer, virtual currency, or money service",Credit card,True,3
+2026-03,train,"Money transfer, virtual currency, or money service",Credit reporting or other personal consumer reports,False,1
+2026-03,train,"Money transfer, virtual currency, or money service",Debt collection,False,5
+2026-03,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,51
+2026-03,train,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,27
+2026-03,train,"Money transfer, virtual currency, or money service",Mortgage,False,1
+2026-03,train,"Money transfer, virtual currency, or money service","Payday loan, title loan, personal loan, or advance loan",False,1
+2026-03,train,"Money transfer, virtual currency, or money service",Vehicle loan or lease,False,1
+2026-03,train,Mortgage,Checking or savings account,False,3
+2026-03,train,Mortgage,Credit card,False,1
+2026-03,train,Mortgage,Credit reporting or other personal consumer reports,False,2
+2026-03,train,Mortgage,Debt collection,False,3
+2026-03,train,Mortgage,Debt collection,True,1
+2026-03,train,Mortgage,"Money transfer, virtual currency, or money service",False,1
+2026-03,train,Mortgage,Mortgage,False,19
+2026-03,train,Mortgage,Mortgage,True,58
+2026-03,train,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-03,train,Mortgage,Student loan,False,2
+2026-03,train,Mortgage,Vehicle loan or lease,False,3
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,10
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,9
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Credit card,True,3
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,4
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,2
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",False,2
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",True,1
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Mortgage,False,2
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,23
+2026-03,train,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,9
+2026-03,train,Prepaid card,Checking or savings account,False,1
+2026-03,train,Prepaid card,Checking or savings account,True,1
+2026-03,train,Prepaid card,Credit card,False,9
+2026-03,train,Prepaid card,Credit card,True,1
+2026-03,train,Prepaid card,"Money transfer, virtual currency, or money service",False,2
+2026-03,train,Prepaid card,"Money transfer, virtual currency, or money service",True,1
+2026-03,train,Student loan,Checking or savings account,True,1
+2026-03,train,Student loan,Credit reporting or other personal consumer reports,False,2
+2026-03,train,Student loan,Credit reporting or other personal consumer reports,True,1
+2026-03,train,Student loan,Debt collection,False,2
+2026-03,train,Student loan,Debt collection,True,2
+2026-03,train,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-03,train,Student loan,Student loan,False,22
+2026-03,train,Student loan,Student loan,True,35
+2026-03,train,Student loan,Vehicle loan or lease,False,5
+2026-03,train,Vehicle loan or lease,Checking or savings account,False,8
+2026-03,train,Vehicle loan or lease,Credit card,False,12
+2026-03,train,Vehicle loan or lease,Credit card,True,1
+2026-03,train,Vehicle loan or lease,Debt collection,False,13
+2026-03,train,Vehicle loan or lease,Debt collection,True,5
+2026-03,train,Vehicle loan or lease,"Money transfer, virtual currency, or money service",False,3
+2026-03,train,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,9
+2026-03,train,Vehicle loan or lease,Vehicle loan or lease,False,47
+2026-03,train,Vehicle loan or lease,Vehicle loan or lease,True,6
+2026-04,tune,Checking or savings account,Checking or savings account,False,94
+2026-04,tune,Checking or savings account,Checking or savings account,True,157
+2026-04,tune,Checking or savings account,Credit card,False,30
+2026-04,tune,Checking or savings account,Credit card,True,3
+2026-04,tune,Checking or savings account,Credit reporting or other personal consumer reports,False,2
+2026-04,tune,Checking or savings account,Debt collection,False,7
+2026-04,tune,Checking or savings account,"Money transfer, virtual currency, or money service",False,25
+2026-04,tune,Checking or savings account,"Money transfer, virtual currency, or money service",True,8
+2026-04,tune,Checking or savings account,Mortgage,False,1
+2026-04,tune,Checking or savings account,Mortgage,True,2
+2026-04,tune,Checking or savings account,Vehicle loan or lease,False,1
+2026-04,tune,Credit card,Checking or savings account,False,34
+2026-04,tune,Credit card,Checking or savings account,True,7
+2026-04,tune,Credit card,Credit card,False,116
+2026-04,tune,Credit card,Credit card,True,172
+2026-04,tune,Credit card,Credit reporting or other personal consumer reports,False,5
+2026-04,tune,Credit card,Debt collection,False,30
+2026-04,tune,Credit card,Debt collection,True,10
+2026-04,tune,Credit card,"Money transfer, virtual currency, or money service",False,8
+2026-04,tune,Credit card,"Money transfer, virtual currency, or money service",True,3
+2026-04,tune,Credit card,Mortgage,False,1
+2026-04,tune,Credit card,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-04,tune,Credit card,Student loan,False,1
+2026-04,tune,Credit card,Vehicle loan or lease,False,2
+2026-04,tune,Credit reporting or other personal consumer reports,Checking or savings account,False,1
+2026-04,tune,Credit reporting or other personal consumer reports,Credit card,False,3
+2026-04,tune,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,21
+2026-04,tune,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,2
+2026-04,tune,Credit reporting or other personal consumer reports,Debt collection,False,17
+2026-04,tune,Credit reporting or other personal consumer reports,Debt collection,True,8
+2026-04,tune,Credit reporting or other personal consumer reports,Student loan,False,1
+2026-04,tune,Debt collection,Checking or savings account,False,10
+2026-04,tune,Debt collection,Checking or savings account,True,2
+2026-04,tune,Debt collection,Credit card,False,10
+2026-04,tune,Debt collection,Credit card,True,8
+2026-04,tune,Debt collection,Credit reporting or other personal consumer reports,False,15
+2026-04,tune,Debt collection,Credit reporting or other personal consumer reports,True,2
+2026-04,tune,Debt collection,Debt collection,False,73
+2026-04,tune,Debt collection,Debt collection,True,395
+2026-04,tune,Debt collection,"Money transfer, virtual currency, or money service",False,3
+2026-04,tune,Debt collection,Mortgage,True,1
+2026-04,tune,Debt collection,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-04,tune,Debt collection,Student loan,False,2
+2026-04,tune,Debt collection,Student loan,True,2
+2026-04,tune,Debt collection,Vehicle loan or lease,False,10
+2026-04,tune,Debt or credit management,Checking or savings account,False,1
+2026-04,tune,Debt or credit management,Credit card,False,5
+2026-04,tune,Debt or credit management,Debt collection,False,6
+2026-04,tune,Debt or credit management,Debt collection,True,4
+2026-04,tune,Debt or credit management,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-04,tune,"Money transfer, virtual currency, or money service",Checking or savings account,False,49
+2026-04,tune,"Money transfer, virtual currency, or money service",Checking or savings account,True,16
+2026-04,tune,"Money transfer, virtual currency, or money service",Credit card,False,9
+2026-04,tune,"Money transfer, virtual currency, or money service",Credit card,True,3
+2026-04,tune,"Money transfer, virtual currency, or money service",Debt collection,False,4
+2026-04,tune,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,58
+2026-04,tune,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,24
+2026-04,tune,"Money transfer, virtual currency, or money service","Payday loan, title loan, personal loan, or advance loan",False,4
+2026-04,tune,"Money transfer, virtual currency, or money service",Prepaid card,False,1
+2026-04,tune,"Money transfer, virtual currency, or money service",Prepaid card,True,1
+2026-04,tune,"Money transfer, virtual currency, or money service",Vehicle loan or lease,False,1
+2026-04,tune,Mortgage,Checking or savings account,False,3
+2026-04,tune,Mortgage,Credit card,False,5
+2026-04,tune,Mortgage,Credit reporting or other personal consumer reports,False,1
+2026-04,tune,Mortgage,Debt collection,False,4
+2026-04,tune,Mortgage,"Money transfer, virtual currency, or money service",False,1
+2026-04,tune,Mortgage,Mortgage,False,30
+2026-04,tune,Mortgage,Mortgage,True,63
+2026-04,tune,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,3
+2026-04,tune,Mortgage,Vehicle loan or lease,False,6
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,9
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,True,2
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,7
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Credit reporting or other personal consumer reports,False,1
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,9
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,1
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",False,2
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,21
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",True,1
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Student loan,False,3
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Student loan,True,1
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,16
+2026-04,tune,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,True,1
+2026-04,tune,Prepaid card,Checking or savings account,False,10
+2026-04,tune,Prepaid card,Checking or savings account,True,5
+2026-04,tune,Prepaid card,Credit card,False,2
+2026-04,tune,Prepaid card,Credit card,True,2
+2026-04,tune,Prepaid card,"Money transfer, virtual currency, or money service",False,2
+2026-04,tune,Prepaid card,"Money transfer, virtual currency, or money service",True,2
+2026-04,tune,Prepaid card,Prepaid card,False,3
+2026-04,tune,Student loan,Credit card,False,2
+2026-04,tune,Student loan,Credit reporting or other personal consumer reports,False,3
+2026-04,tune,Student loan,Debt collection,False,4
+2026-04,tune,Student loan,Mortgage,False,1
+2026-04,tune,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-04,tune,Student loan,Student loan,False,13
+2026-04,tune,Student loan,Student loan,True,34
+2026-04,tune,Student loan,Vehicle loan or lease,False,2
+2026-04,tune,Vehicle loan or lease,Checking or savings account,False,2
+2026-04,tune,Vehicle loan or lease,Checking or savings account,True,1
+2026-04,tune,Vehicle loan or lease,Credit card,False,11
+2026-04,tune,Vehicle loan or lease,Credit card,True,1
+2026-04,tune,Vehicle loan or lease,Credit reporting or other personal consumer reports,False,2
+2026-04,tune,Vehicle loan or lease,Debt collection,False,18
+2026-04,tune,Vehicle loan or lease,Debt collection,True,5
+2026-04,tune,Vehicle loan or lease,"Money transfer, virtual currency, or money service",False,1
+2026-04,tune,Vehicle loan or lease,Mortgage,False,5
+2026-04,tune,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,2
+2026-04,tune,Vehicle loan or lease,Student loan,False,2
+2026-04,tune,Vehicle loan or lease,Vehicle loan or lease,False,39
+2026-04,tune,Vehicle loan or lease,Vehicle loan or lease,True,7
+2026-05,calibration,Checking or savings account,Checking or savings account,False,100
+2026-05,calibration,Checking or savings account,Checking or savings account,True,161
+2026-05,calibration,Checking or savings account,Credit card,False,37
+2026-05,calibration,Checking or savings account,Credit card,True,10
+2026-05,calibration,Checking or savings account,Credit reporting or other personal consumer reports,False,1
+2026-05,calibration,Checking or savings account,Debt collection,False,10
+2026-05,calibration,Checking or savings account,"Money transfer, virtual currency, or money service",False,19
+2026-05,calibration,Checking or savings account,"Money transfer, virtual currency, or money service",True,8
+2026-05,calibration,Checking or savings account,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-05,calibration,Checking or savings account,Prepaid card,False,2
+2026-05,calibration,Checking or savings account,Vehicle loan or lease,False,1
+2026-05,calibration,Credit card,Checking or savings account,False,23
+2026-05,calibration,Credit card,Checking or savings account,True,8
+2026-05,calibration,Credit card,Credit card,False,85
+2026-05,calibration,Credit card,Credit card,True,163
+2026-05,calibration,Credit card,Credit reporting or other personal consumer reports,False,8
+2026-05,calibration,Credit card,Debt collection,False,21
+2026-05,calibration,Credit card,Debt collection,True,4
+2026-05,calibration,Credit card,"Money transfer, virtual currency, or money service",False,4
+2026-05,calibration,Credit card,"Money transfer, virtual currency, or money service",True,2
+2026-05,calibration,Credit card,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-05,calibration,Credit card,Prepaid card,False,3
+2026-05,calibration,Credit card,Student loan,False,2
+2026-05,calibration,Credit card,Vehicle loan or lease,False,2
+2026-05,calibration,Credit reporting or other personal consumer reports,Checking or savings account,False,1
+2026-05,calibration,Credit reporting or other personal consumer reports,Credit card,False,5
+2026-05,calibration,Credit reporting or other personal consumer reports,Credit card,True,2
+2026-05,calibration,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,29
+2026-05,calibration,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,4
+2026-05,calibration,Credit reporting or other personal consumer reports,Debt collection,False,20
+2026-05,calibration,Credit reporting or other personal consumer reports,Debt collection,True,4
+2026-05,calibration,Credit reporting or other personal consumer reports,Mortgage,False,1
+2026-05,calibration,Credit reporting or other personal consumer reports,Student loan,False,1
+2026-05,calibration,Credit reporting or other personal consumer reports,Vehicle loan or lease,False,2
+2026-05,calibration,Debt collection,Checking or savings account,False,6
+2026-05,calibration,Debt collection,Checking or savings account,True,1
+2026-05,calibration,Debt collection,Credit card,False,12
+2026-05,calibration,Debt collection,Credit card,True,5
+2026-05,calibration,Debt collection,Credit reporting or other personal consumer reports,False,11
+2026-05,calibration,Debt collection,Credit reporting or other personal consumer reports,True,1
+2026-05,calibration,Debt collection,Debt collection,False,77
+2026-05,calibration,Debt collection,Debt collection,True,356
+2026-05,calibration,Debt collection,"Money transfer, virtual currency, or money service",False,2
+2026-05,calibration,Debt collection,"Payday loan, title loan, personal loan, or advance loan",False,3
+2026-05,calibration,Debt collection,Student loan,True,1
+2026-05,calibration,Debt collection,Vehicle loan or lease,False,12
+2026-05,calibration,Debt or credit management,Credit card,False,2
+2026-05,calibration,Debt or credit management,Credit reporting or other personal consumer reports,False,1
+2026-05,calibration,Debt or credit management,Debt collection,False,3
+2026-05,calibration,Debt or credit management,Debt collection,True,2
+2026-05,calibration,Debt or credit management,Debt or credit management,False,1
+2026-05,calibration,Debt or credit management,Mortgage,True,1
+2026-05,calibration,"Money transfer, virtual currency, or money service",Checking or savings account,False,48
+2026-05,calibration,"Money transfer, virtual currency, or money service",Checking or savings account,True,23
+2026-05,calibration,"Money transfer, virtual currency, or money service",Credit card,False,10
+2026-05,calibration,"Money transfer, virtual currency, or money service",Debt collection,False,2
+2026-05,calibration,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,53
+2026-05,calibration,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,35
+2026-05,calibration,"Money transfer, virtual currency, or money service",Student loan,False,1
+2026-05,calibration,Mortgage,Checking or savings account,False,2
+2026-05,calibration,Mortgage,Credit card,False,3
+2026-05,calibration,Mortgage,Credit reporting or other personal consumer reports,False,1
+2026-05,calibration,Mortgage,Debt collection,False,2
+2026-05,calibration,Mortgage,"Money transfer, virtual currency, or money service",False,1
+2026-05,calibration,Mortgage,Mortgage,False,30
+2026-05,calibration,Mortgage,Mortgage,True,86
+2026-05,calibration,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-05,calibration,Mortgage,Student loan,False,1
+2026-05,calibration,Mortgage,Vehicle loan or lease,False,10
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,8
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,14
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Credit card,True,3
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Credit reporting or other personal consumer reports,False,2
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,11
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,4
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",False,2
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Mortgage,False,3
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,16
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Student loan,False,2
+2026-05,calibration,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,14
+2026-05,calibration,Prepaid card,Checking or savings account,False,5
+2026-05,calibration,Prepaid card,Checking or savings account,True,1
+2026-05,calibration,Prepaid card,Credit card,False,9
+2026-05,calibration,Prepaid card,Credit card,True,2
+2026-05,calibration,Prepaid card,"Money transfer, virtual currency, or money service",False,2
+2026-05,calibration,Prepaid card,Prepaid card,False,3
+2026-05,calibration,Student loan,Credit card,False,3
+2026-05,calibration,Student loan,Credit reporting or other personal consumer reports,False,2
+2026-05,calibration,Student loan,Debt collection,False,3
+2026-05,calibration,Student loan,Debt collection,True,1
+2026-05,calibration,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-05,calibration,Student loan,Student loan,False,22
+2026-05,calibration,Student loan,Student loan,True,22
+2026-05,calibration,Student loan,Vehicle loan or lease,False,3
+2026-05,calibration,Vehicle loan or lease,Checking or savings account,False,2
+2026-05,calibration,Vehicle loan or lease,Credit card,False,14
+2026-05,calibration,Vehicle loan or lease,Credit reporting or other personal consumer reports,False,1
+2026-05,calibration,Vehicle loan or lease,Debt collection,False,13
+2026-05,calibration,Vehicle loan or lease,Debt collection,True,5
+2026-05,calibration,Vehicle loan or lease,"Money transfer, virtual currency, or money service",False,3
+2026-05,calibration,Vehicle loan or lease,Mortgage,False,1
+2026-05,calibration,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,9
+2026-05,calibration,Vehicle loan or lease,Student loan,True,2
+2026-05,calibration,Vehicle loan or lease,Vehicle loan or lease,False,33
+2026-05,calibration,Vehicle loan or lease,Vehicle loan or lease,True,5
+2026-06,test,Checking or savings account,Checking or savings account,False,118
+2026-06,test,Checking or savings account,Checking or savings account,True,189
+2026-06,test,Checking or savings account,Credit card,False,17
+2026-06,test,Checking or savings account,Credit card,True,5
+2026-06,test,Checking or savings account,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Checking or savings account,Debt collection,False,6
+2026-06,test,Checking or savings account,Debt collection,True,1
+2026-06,test,Checking or savings account,"Money transfer, virtual currency, or money service",False,33
+2026-06,test,Checking or savings account,"Money transfer, virtual currency, or money service",True,6
+2026-06,test,Checking or savings account,Mortgage,True,1
+2026-06,test,Checking or savings account,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-06,test,Checking or savings account,Vehicle loan or lease,False,1
+2026-06,test,Credit card,Checking or savings account,False,34
+2026-06,test,Credit card,Checking or savings account,True,8
+2026-06,test,Credit card,Credit card,False,95
+2026-06,test,Credit card,Credit card,True,155
+2026-06,test,Credit card,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Credit card,Debt collection,False,18
+2026-06,test,Credit card,Debt collection,True,7
+2026-06,test,Credit card,"Money transfer, virtual currency, or money service",False,7
+2026-06,test,Credit card,"Money transfer, virtual currency, or money service",True,1
+2026-06,test,Credit reporting or other personal consumer reports,Checking or savings account,False,1
+2026-06,test,Credit reporting or other personal consumer reports,Credit card,False,2
+2026-06,test,Credit reporting or other personal consumer reports,Credit card,True,2
+2026-06,test,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,False,14
+2026-06,test,Credit reporting or other personal consumer reports,Credit reporting or other personal consumer reports,True,5
+2026-06,test,Credit reporting or other personal consumer reports,Debt collection,False,26
+2026-06,test,Credit reporting or other personal consumer reports,Debt collection,True,7
+2026-06,test,Debt collection,Checking or savings account,False,8
+2026-06,test,Debt collection,Checking or savings account,True,2
+2026-06,test,Debt collection,Credit card,False,16
+2026-06,test,Debt collection,Credit card,True,3
+2026-06,test,Debt collection,Credit reporting or other personal consumer reports,False,18
+2026-06,test,Debt collection,Debt collection,False,77
+2026-06,test,Debt collection,Debt collection,True,321
+2026-06,test,Debt collection,"Money transfer, virtual currency, or money service",False,2
+2026-06,test,Debt collection,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-06,test,Debt collection,Prepaid card,False,1
+2026-06,test,Debt collection,Student loan,False,2
+2026-06,test,Debt collection,Student loan,True,1
+2026-06,test,Debt collection,Vehicle loan or lease,False,8
+2026-06,test,Debt or credit management,Checking or savings account,False,3
+2026-06,test,Debt or credit management,Credit card,False,2
+2026-06,test,Debt or credit management,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Debt or credit management,Debt collection,False,4
+2026-06,test,Debt or credit management,Debt collection,True,6
+2026-06,test,Debt or credit management,Debt or credit management,False,1
+2026-06,test,Debt or credit management,"Money transfer, virtual currency, or money service",False,1
+2026-06,test,"Money transfer, virtual currency, or money service",Checking or savings account,False,39
+2026-06,test,"Money transfer, virtual currency, or money service",Checking or savings account,True,18
+2026-06,test,"Money transfer, virtual currency, or money service",Credit card,False,10
+2026-06,test,"Money transfer, virtual currency, or money service",Credit card,True,1
+2026-06,test,"Money transfer, virtual currency, or money service",Debt collection,False,5
+2026-06,test,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",False,49
+2026-06,test,"Money transfer, virtual currency, or money service","Money transfer, virtual currency, or money service",True,23
+2026-06,test,"Money transfer, virtual currency, or money service",Student loan,False,1
+2026-06,test,"Money transfer, virtual currency, or money service",Vehicle loan or lease,False,1
+2026-06,test,Mortgage,Checking or savings account,False,2
+2026-06,test,Mortgage,Credit card,False,4
+2026-06,test,Mortgage,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Mortgage,Debt collection,False,1
+2026-06,test,Mortgage,Debt collection,True,2
+2026-06,test,Mortgage,"Money transfer, virtual currency, or money service",False,1
+2026-06,test,Mortgage,Mortgage,False,19
+2026-06,test,Mortgage,Mortgage,True,93
+2026-06,test,Mortgage,"Payday loan, title loan, personal loan, or advance loan",False,4
+2026-06,test,Mortgage,Vehicle loan or lease,False,11
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,False,7
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Checking or savings account,True,1
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Credit card,False,16
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Credit card,True,2
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Debt collection,False,12
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Debt collection,True,5
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",False,3
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan","Money transfer, virtual currency, or money service",True,1
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan","Payday loan, title loan, personal loan, or advance loan",False,26
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Student loan,False,1
+2026-06,test,"Payday loan, title loan, personal loan, or advance loan",Vehicle loan or lease,False,15
+2026-06,test,Prepaid card,Checking or savings account,False,6
+2026-06,test,Prepaid card,Checking or savings account,True,4
+2026-06,test,Prepaid card,Credit card,False,8
+2026-06,test,Prepaid card,"Money transfer, virtual currency, or money service",False,3
+2026-06,test,Prepaid card,"Money transfer, virtual currency, or money service",True,1
+2026-06,test,Student loan,Checking or savings account,False,2
+2026-06,test,Student loan,Credit card,False,2
+2026-06,test,Student loan,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Student loan,Debt collection,False,5
+2026-06,test,Student loan,Debt collection,True,1
+2026-06,test,Student loan,"Payday loan, title loan, personal loan, or advance loan",False,1
+2026-06,test,Student loan,Student loan,False,17
+2026-06,test,Student loan,Student loan,True,23
+2026-06,test,Student loan,Vehicle loan or lease,False,9
+2026-06,test,Vehicle loan or lease,Checking or savings account,False,1
+2026-06,test,Vehicle loan or lease,Checking or savings account,True,1
+2026-06,test,Vehicle loan or lease,Credit card,False,17
+2026-06,test,Vehicle loan or lease,Credit reporting or other personal consumer reports,False,1
+2026-06,test,Vehicle loan or lease,Debt collection,False,20
+2026-06,test,Vehicle loan or lease,Debt collection,True,4
+2026-06,test,Vehicle loan or lease,"Money transfer, virtual currency, or money service",False,2
+2026-06,test,Vehicle loan or lease,Mortgage,True,1
+2026-06,test,Vehicle loan or lease,"Payday loan, title loan, personal loan, or advance loan",False,10
+2026-06,test,Vehicle loan or lease,Vehicle loan or lease,False,50
+2026-06,test,Vehicle loan or lease,Vehicle loan or lease,True,6

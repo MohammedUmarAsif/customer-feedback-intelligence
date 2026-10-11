@@ -148,7 +148,11 @@ def build() -> None:
     private_db = ROOT / "data/private/analysis.duckdb"
     con = duckdb.connect(str(private_db))
     con.register("prepared", frame.drop(columns=["text", "id"]))
-    con.execute("CREATE OR REPLACE TABLE complaints AS SELECT * FROM prepared")
+    con.execute("""CREATE OR REPLACE TABLE complaints AS
+        SELECT CAST(date AS DATE) AS date, CAST(product AS VARCHAR) AS product,
+        CAST(issue AS VARCHAR) AS issue, CAST(channel AS VARCHAR) AS channel,
+        CAST(timely AS VARCHAR) AS timely, CAST(month AS VARCHAR) AS month,
+        CAST(split AS VARCHAR) AS split FROM prepared""")
     evidence = con.execute((ROOT / "sql/metrics.sql").read_text()).df()
     evidence.to_csv(reports / "evidence.csv", index=False)
     channels = (
@@ -239,8 +243,21 @@ def build() -> None:
         ),
         "monthly": [],
     }
+    evaluation_parts = []
     for month, group in frame.groupby("month"):
         predictions = model.predict(vectorizer.transform(group["text"]))
+        monthly_prob = model.predict_proba(vectorizer.transform(group["text"])).max(axis=1)
+        evaluation_parts.append(
+            pd.DataFrame(
+                {
+                    "month": month,
+                    "split": group["split"].iloc[0],
+                    "observed": map_labels(group["product"], supported).to_numpy(),
+                    "predicted": predictions,
+                    "accepted": monthly_prob >= selection["threshold"],
+                }
+            )
+        )
         metrics["monthly"].append(
             {
                 "month": month,
@@ -258,6 +275,13 @@ def build() -> None:
                 ),
             }
         )
+    evaluation = pd.concat(evaluation_parts, ignore_index=True)
+    con = duckdb.connect(str(private_db))
+    con.register("evaluation", evaluation)
+    con.execute("CREATE OR REPLACE TABLE routing_evaluation AS SELECT * FROM evaluation")
+    routing_counts = con.execute((ROOT / "sql/routing.sql").read_text()).df()
+    routing_counts.to_csv(reports / "routing_counts.csv", index=False)
+    con.close()
     # No identifiers, dates, narratives or company details in the public review queue.
     queue = [
         {

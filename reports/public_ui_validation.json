@@ -1,0 +1,24 @@
+{
+  "url": "https://mohammedumarasif.github.io/customer-feedback-intelligence/",
+  "authentication": "fresh contexts without stored credentials",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "flows": "filters/reset/4 routing examples/review filter",
+      "browser_errors": [],
+      "horizontal_page_overflow": false,
+      "inference_max_tolerance": 1e-10
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "flows": "filters/reset/4 routing examples/review filter",
+      "browser_errors": [],
+      "horizontal_page_overflow": false,
+      "inference_max_tolerance": 1e-10
+    }
+  ]
+}

@@ -62,6 +62,47 @@ def test_public_downloads_match_reports():
     assert (ROOT / "site/evidence.csv").read_bytes() == (ROOT / "reports/evidence.csv").read_bytes()
 
 
+def test_routing_results_reconcile_to_sql_aggregate_counts():
+    rows = pd.read_csv(ROOT / "reports/routing_counts.csv")
+    test = rows[rows["split"] == "test"]
+    m = DATA["metrics"]
+    assert test.n.sum() == m["test_rows"]
+    assert test.loc[test.observed == test.predicted, "n"].sum() == m["correct"]
+    assert test.loc[test.accepted, "n"].sum() == m["accepted"]
+    assert (
+        test.loc[test.accepted & (test.observed == test.predicted), "n"].sum()
+        == m["accepted_correct"]
+    )
+    assert test.loc[test.observed == m["majority"]["label"], "n"].sum() == m["majority"]["correct"]
+    matrix = (
+        test.groupby(["observed", "predicted"])
+        .n.sum()
+        .unstack(fill_value=0)
+        .reindex(index=m["labels"], columns=m["labels"], fill_value=0)
+    )
+    np.testing.assert_array_equal(matrix.to_numpy(), m["confusion"])
+    values = matrix.to_numpy()
+    tp = np.diag(values)
+    precision = np.divide(
+        tp, values.sum(axis=0), out=np.zeros(len(tp)), where=values.sum(axis=0) != 0
+    )
+    recall = np.divide(tp, values.sum(axis=1), out=np.zeros(len(tp)), where=values.sum(axis=1) != 0)
+    f1 = np.divide(
+        2 * precision * recall,
+        precision + recall,
+        out=np.zeros(len(tp)),
+        where=precision + recall != 0,
+    )
+    assert abs(f1.mean() - m["macro_f1"]) < 1e-12
+    for i, label in enumerate(m["labels"]):
+        assert abs(precision[i] - m["per_class"][label]["precision"]) < 1e-12
+        assert abs(recall[i] - m["per_class"][label]["recall"]) < 1e-12
+    for month in m["monthly"]:
+        group = rows[rows.month == month["month"]]
+        assert group.n.sum() == month["n"]
+        assert group.loc[group.observed == group.predicted, "n"].sum() == month["correct"]
+
+
 def test_public_privacy_allowlist():
     assert set(MODEL["vocabulary"]) <= SAFE
     assert all(
