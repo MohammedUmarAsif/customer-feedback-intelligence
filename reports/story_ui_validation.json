@@ -1,0 +1,24 @@
+{
+  "url": "http://127.0.0.1:8082/",
+  "authentication": "fresh contexts without stored credentials",
+  "checks": [
+    {
+      "viewport": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "flows": "3 finding links/filters/reset/4 routing examples/review filter/pagination",
+      "browser_errors": [],
+      "horizontal_page_overflow": false,
+      "inference_max_tolerance": 1e-10
+    },
+    {
+      "viewport": "mobile",
+      "width": 390,
+      "height": 844,
+      "flows": "3 finding links/filters/reset/4 routing examples/review filter/pagination",
+      "browser_errors": [],
+      "horizontal_page_overflow": false,
+      "inference_max_tolerance": 1e-10
+    }
+  ]
+}

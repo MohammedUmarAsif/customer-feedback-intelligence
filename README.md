@@ -1,6 +1,6 @@
 # Customer Feedback Intelligence
 
-**[Open the public dashboard](https://MohammedUmarAsif.github.io/customer-feedback-intelligence/)** · [Decision brief](docs/decision_brief.md) · [Personal review checklist](docs/contributions.md) · [Validation](docs/validation.md)
+**[Open the public dashboard](https://MohammedUmarAsif.github.io/customer-feedback-intelligence/)** · [Decision brief](docs/decision_brief.md) · [Personal review checklist](docs/contributions.md) · [Validation](docs/validation.md) · [Product/code review](docs/audit/review.md)
 
 Which recurring complaints merit investigation next, what evidence supports the recommendation, and which automated routing predictions need review?
 
@@ -80,7 +80,7 @@ docker build -t customer-feedback-intelligence .
 docker run --rm -p 8080:8080 customer-feedback-intelligence
 ```
 
-The container runs as a non-root user and requires no GPU, paid API, secret or private data. [Validation](docs/validation.md) distinguishes local Docker availability from actual Linux CI verification.
+The container runs as a non-root user and requires no GPU, paid API, secret or private data. [Validation](docs/validation.md) · [Product/code review](docs/audit/review.md) distinguishes local Docker availability from actual Linux CI verification.
 
 ## Architecture
 

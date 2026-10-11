@@ -24,3 +24,13 @@ Near-duplicate LSH can miss matches and semantic paraphrases. Eligibility, conse
 
 Personal review before presentation: follow `docs/contributions.md`, reproduce a SQL count, inspect local model errors, and challenge at least one investigation hypothesis. Record actual reviews and unresolved questions there.
 
+
+## Guided-story release — 12 October 2026
+
+The presentation now starts with the customer-service problem, then findings, interactive evidence, a model comparison, and a validation plan. The frozen analytical results are unchanged. Thirteen tests pass locally, including the new recommendation-identity regression test; public CI passes eleven and skips the two private-data checks.
+
+[Story validation run 38175198387](https://github.com/MohammedUmarAsif/customer-feedback-intelligence/actions/runs/38175198387) passed Ruff, pytest, the publication gate, desktop 1440×1000 and mobile 390×844 browser flows, exported-model parity, missing-data/model states, and a real Linux Docker build/run. The three finding links now select their matching product and issue; queue pagination reaches the exported preview cases. Current visual evidence is in `docs/audit/` and the machine-readable browser result in `reports/story_ui_validation.json`.
+
+The live page was checked for filter handoffs, four model examples and queue pagination, with no recorded browser errors. Exact-size screenshot evidence comes from fresh Linux Chromium contexts. Desktop and mobile screenshots were visually inspected; no full screen-reader or usability-study result is claimed.
+
+The chart library was removed from the page and repository. Core uncompressed page assets are approximately 329 KB, versus 1.49 MB before this release (about 78% smaller). This is a deterministic asset-size comparison; network timings and Core Web Vitals were not benchmarked.
