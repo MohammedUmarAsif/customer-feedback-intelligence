@@ -6,7 +6,7 @@ Checks executed by the Codex agent; independent human reproduction and case adju
 
 - Official archive provenance, five compressed archive SHA-256 hashes, schema, acquisition UTC time, deterministic sample hash and monthly eligibility/cap counts recorded in `reports/manifest.json`.
 - Frozen snapshot preparation and model rerun reproduced 12,000 sampled, 1,050 duplicate exclusions, 10,950 usable, and June correctness 1,281/1,810. No model choice was changed after opening June.
-- Eleven pytest tests pass locally: exclusion/month reconciliation, SQL-derived priority denominators, confusion/review reconciliation, privacy allowlists, synthetic split/preprocessing/unknown-label/Wilson edge cases, synthetic exact/near duplicates, threshold rejection, bounded serving routes, training-only IDF/vocabulary and exact split leakage checks, and Python/sklearn export parity on 30 real held-out records.
+- Twelve pytest tests pass locally: exclusion/month reconciliation, SQL-derived priority denominators, confusion/review reconciliation, public download consistency, SQL routing-count reconciliation, privacy allowlists, synthetic split/preprocessing/unknown-label/Wilson edge cases, synthetic exact/near duplicates, threshold rejection, bounded serving routes, training-only IDF/vocabulary and exact split leakage checks, and Python/sklearn export parity on 30 real held-out records.
 - Public CI intentionally skips two tests needing private narratives; it does not claim to retrain or independently validate the real data snapshot.
 - Ruff lint and formatting checks pass. Dependency lock is committed. A dependency deprecation warning in the FastAPI/Starlette HTTPX test adapter does not fail tests; no unchecked warning is reclassified as a model result.
 - Fresh Chromium contexts at desktop 1440×1000 and mobile 390×844 verify product/issue filtering, reset, four synthetic routing flows, review-case filtering, chart rendering, no browser exceptions and no horizontal page overflow. Browser/Python confidence parity tolerance is 1e-10. Rendered screenshots were visually inspected for layout and readability.
@@ -14,9 +14,9 @@ Checks executed by the Codex agent; independent human reproduction and case adju
 
 ## Container, CI and public deployment
 
-Docker Desktop is installed but the local daemon could not start. No local successful Docker build/run is claimed. Linux GitHub Actions is configured to build the image, run its non-root CPU application, and check health and inference. Deployment and CI results will be recorded here after verification.
+Docker Desktop is installed but the local daemon could not start. No local successful Docker build/run is claimed. [Linux GitHub Actions run 38170474084](https://github.com/MohammedUmarAsif/customer-feedback-intelligence/actions/runs/38170474084) succeeded, including a real Docker build, container launch, health endpoint and bounded inference check. It also passed Ruff, public-data tests, the publication gate and rendered browser flows. The first CI attempt caught a publication-check lint issue; it was corrected and the subsequent run succeeded. No failed check is hidden as a successful validation.
 
-The public demo uses GitHub Pages, not a local URL and not a Python server. Public logged-out access and the same desktop/mobile flows will be checked in fresh contexts after deployment.
+The public demo is [GitHub Pages](https://mohammedumarasif.github.io/customer-feedback-intelligence/), not a local URL and not a Python server. [Deployment run 38170474067](https://github.com/MohammedUmarAsif/customer-feedback-intelligence/actions/runs/38170474067) succeeded. Public access returned HTTP 200 in fresh Chromium contexts without stored credentials. The same desktop/mobile flows passed on the public URL; evidence is saved in `reports/public_ui_validation.json`. Screenshots show safe aggregate data and synthetic examples only. The final SQL extension adds aggregate routing counts, whose confusion totals, precision/recall/macro-F1, acceptance counts and monthly counts are checked against the model report.
 
 ## Material limits
 
