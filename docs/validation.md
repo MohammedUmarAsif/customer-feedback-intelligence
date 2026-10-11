@@ -38,3 +38,9 @@ The chart library was removed from the page and repository. Core uncompressed pa
 ## Five-scene refinement, 12 October 2026
 
 The current screenshots and `reports/story_ui_validation.json` come from local fresh Chromium contexts at desktop 1440×1000 and mobile 390×844. Checks passed for finding-bar handoffs, chart filters, 100-dot rounded counts (45 correct, 5 incorrect above cutoff, 50 review), three example buttons, all four model predictions versus Python, queue pagination and missing-file recovery. No JavaScript errors or horizontal page overflow occurred. Thirteen local pytest tests and Ruff checks passed. The data and model were not refitted. Primary archive/research links are provided in the relevant disclosures; internal section and repository evidence links were reconciled against the checkout.
+
+## Dashboard-first redesign, 12 October 2026
+
+The opening now contains the actual linked count and monthly-trend dashboard, a compact summary strip, and accuracy/review panels. A shorter introduction replaces the earlier workflow hero. The problem, data/methods, results and discussion follow as four chapters; technical disclosures and source links remain available. The model and data were not refitted.
+
+Local validation passed at 1440×1000 and 390×844, including a desktop first-viewport chart-position assertion, readable mobile heading, three methods/source disclosures, finding handoffs, filters, 100-dot counts, example buttons, inference parity, review pagination, load-failure recovery, no page overflow and no JavaScript errors. Thirteen pytest tests, Ruff and the publication gate passed. All 33 section, download and repository evidence links were reconciled against the checkout; external primary references were previously inspected. Screenshots were visually reviewed. No usability-study or operational improvement claim is made.

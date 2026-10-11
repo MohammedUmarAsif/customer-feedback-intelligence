@@ -1,9 +1,11 @@
-# A short walkthrough
+# Dashboard-first walkthrough
 
-1. **The problem.** Read the opening: 10,950 public complaints become investigation priorities and a tested message-sorting prototype. The workflow explains the steps. Follow the official archive link to inspect the source.
-2. **The findings.** Select each of the three count bars. The question and monthly chart change together. Counts use the entire sample; monthly shares use the selected product. Open the priorities dropdown for alternatives, testable hypotheses and exact denominators. Open the chart dropdown to explore other products or read the exact values.
-3. **The experiment.** Compare 25.4% for always choosing the most common category with 70.8% for the trained text model on the same 1,810 June complaints. Follow the timeline from training to the locked test. Open model explanations for TF-IDF, logistic regression, safe vocabulary and settings. Detailed results include macro-F1, category recall and the confusion matrix.
-4. **Reliability.** Read the rounded 100-dot graphic: 45 correct and 5 incorrect suggestions above the cutoff, with 50 flagged for review. This is not 90% correctness across every message. Try Clear message, Vague message and Model mistake. Predictions run locally; examples are invented, not quotations. Expand the review policy and real anonymous test-case preview.
-5. **Action.** Follow the proposed case review, service change, pilot and outcome measurement. No operational savings are claimed. Open the research and data dropdowns to inspect primary sources, sampling, hashes, method choices and limitations. End with code, counts or the full methodology.
+1. **Overview.** The first screen explains the purpose and presents 10,950 complaints, three priorities and 70.8% model accuracy. The source archive is linked beside the study period.
+2. **Explore the evidence.** Select a count bar. On desktop the adjacent monthly chart and investigation question change in place; on mobile the trend comes into view. The bars use the whole sample and the trend uses the selected product’s monthly sample. Open the chart dropdown for filters and exact counts.
+3. **Compare model results.** The next dashboard row compares 25.4% baseline accuracy with 70.8% text-model accuracy and shows the rounded 45/5/50 reliability breakdown. The above-cutoff subset is not the whole test set. Follow the example link to try the model.
+4. **Read the problem.** Two tasks are distinguished: choose an investigation and suggest a product category. Open the priorities dropdown for hypotheses, alternative explanations and evidence.
+5. **Inspect data and methods.** Follow the preparation flow and chronological experiment. Source, duplicate detection, SQL, TF-IDF, logistic regression and research dropdowns explain choices and link to primary evidence.
+6. **Challenge the result.** Try Clear message, Vague message and Model mistake. The examples are invented and separate from real evaluation data. Inspect category metrics, review policy, failures and anonymous review metadata.
+7. **Discuss action.** Follow a case review, proposed change, pilot and outcome measure. No operational savings or complaint reductions have been measured. Code, aggregate downloads and the methodology remain linked.
 
-The core story is intended for a short first read; timing and comprehension have not been measured with participants.
+A short first read is the design goal. Comprehension and reading time have not been measured with participants.

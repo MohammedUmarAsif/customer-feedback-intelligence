@@ -56,3 +56,13 @@ Validation: 13 local pytest tests, Ruff checks, desktop 1440×1000 and mobile 39
 ![Current findings](11-findings.png)
 
 ![Current reliability breakdown](10-reliability.png)
+
+## Dashboard-first redesign, 12 October 2026
+
+The opening now contains the actual linked count and monthly-trend dashboard, a compact summary strip, and accuracy/review panels. A shorter introduction replaces the earlier workflow hero. The problem, data/methods, results and discussion follow as four chapters; technical disclosures and source links remain available. The model and data were not refitted.
+
+Local validation passed at 1440×1000 and 390×844, including a desktop first-viewport chart-position assertion, readable mobile heading, three methods/source disclosures, finding handoffs, filters, 100-dot counts, example buttons, inference parity, review pagination, load-failure recovery, no page overflow and no JavaScript errors. Thirteen pytest tests, Ruff and the publication gate passed. All 33 section, download and repository evidence links were reconciled against the checkout; external primary references were previously inspected. Screenshots were visually reviewed. No usability-study or operational improvement claim is made.
+
+![Dashboard-first desktop](12-dashboard-desktop.png)
+
+![Dashboard-first mobile](13-dashboard-mobile.png)

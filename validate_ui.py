@@ -34,6 +34,26 @@ def validate(url: str) -> dict:
             assert page.locator(".recommendation").count() == 3
             assert page.locator("#trend-chart .trend-svg").count() == 1
             assert page.locator("#accuracy-comparison .bar-fill").count() == 2
+            if name == "desktop":
+                chart_bounds = page.locator("#trend-chart").bounding_box()
+                assert chart_bounds["y"] + chart_bounds["height"] < height
+            assert "complaints to investigation priorities" in page.locator(
+                "h1"
+            ).inner_text().replace("\n", " ")
+            for caption in [
+                "How does the model work? Why this method?",
+                "Where did the data come from? How was it cleaned?",
+                "Research and ideas behind the approach",
+            ]:
+                disclosure = (
+                    page.locator("details")
+                    .filter(has=page.locator("summary").get_by_text(caption, exact=True))
+                    .first
+                )
+                disclosure.locator("summary").first.click()
+                assert disclosure.locator("a").count() > 0
+                disclosure.locator("summary").first.click()
+            page.locator(".brand").click()
             page.screenshot(path=str(output / f"{name}-overview.png"))
             assert page.locator("#reliability-dots .dot").count() == 100
             assert page.locator("#reliability-dots .correct").count() == 45
@@ -74,7 +94,7 @@ def validate(url: str) -> dict:
                 assert browser_result["review"] == predict(text)["review"]
             page.locator("nav a[href='#routing']").click()
             page.screenshot(path=str(output / f"{name}-model.png"))
-            page.locator("nav a[href='#reliability']").click()
+            page.locator("a[href='#reliability']").click()
             page.screenshot(path=str(output / f"{name}-reliability.png"))
             page.get_by_text("See cases flagged for human review", exact=True).click()
             first_case = page.locator("#queue tbody tr").first.inner_text()

@@ -244,6 +244,18 @@ function predictExample() {
 function render() {
   const a = data.audit,
     m = data.metrics;
+  $("overview-metrics").innerHTML =
+    metric(fmt(a.usable), "Complaints analysed", "Public historical sample") +
+    metric(
+      String(data.insights.priorities.length),
+      "Investigation priorities",
+      "Ranked by sampled volume",
+    ) +
+    metric(
+      `${(100 * m.accuracy).toFixed(1)}%`,
+      "Category accuracy",
+      "Unseen June test; baseline 25.4%",
+    );
   const priorities = data.insights.priorities;
   const largest = Math.max(...priorities.map((r) => r.n));
   $("brief").innerHTML = priorities
@@ -423,7 +435,8 @@ function render() {
   showExample();
   showQueue();
   document.querySelectorAll("[data-priority]").forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (event) => {
+      if (matchMedia("(min-width: 1000px)").matches) event.preventDefault();
       selectPriority(Number(link.dataset.priority));
       $("evidence-heading").focus({ preventScroll: true });
     });
@@ -503,7 +516,7 @@ Promise.allSettled([
     $("retry").addEventListener("click", () => location.reload());
   });
 
-const chapters = ["priorities", "routing", "reliability", "method"];
+const chapters = ["priorities", "data-methods", "routing", "method"];
 const chapterObserver = new IntersectionObserver(
   (entries) => {
     const visible = entries
