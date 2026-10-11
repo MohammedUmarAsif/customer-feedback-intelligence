@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Evidence-linked complaint investigations and transparent human-review routing using official CFPB public data."
+    />
+    <title>Customer Feedback Intelligence</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="vendor/plotly.min.js"></script>
+    <script defer src="inference.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to evidence</a>
+    <header>
+      <a class="brand" href="#main"
+        >CFI <span>Customer Feedback Intelligence</span></a
+      >
+      <nav aria-label="Main">
+        <a href="#priorities">Investigate</a><a href="#trends">Evidence</a
+        ><a href="#routing">Routing</a><a href="#method">Method</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="intro">
+        <p class="eyebrow">Public-data decision support</p>
+        <h1>
+          Turn recurring complaints<br />
+          into better investigation questions.
+        </h1>
+        <p>
+          Explore what recurs, what changed, and where automated routing needs a
+          person.
+        </p>
+        <div class="notice">
+          CFPB financial-service complaints · January–June 2026 · Historical
+          narrative sample. Counts are not customer failure rates. No TAMM
+          affiliation.
+        </div>
+      </section>
+      <div id="status" role="status">Loading the verified snapshot…</div>
+      <div id="content" hidden>
+        <section
+          class="metrics"
+          id="headline"
+          aria-label="Snapshot summary"
+        ></section>
+        <section id="priorities">
+          <div class="section-head">
+            <h2>Investigate next</h2>
+            <p>
+              Three evidence-backed hypotheses. Start with the evidence, then
+              test the explanation.
+            </p>
+          </div>
+          <div id="brief"></div>
+          <details>
+            <summary>Compare volume and change rankings</summary>
+            <p>
+              Default shortlist ranks total sampled volume. Change ranks
+              percentage-point movement from January–March to April–June, among
+              issues with at least 50 sampled records. These are separate
+              signals, not a severity score.
+            </p>
+            <div id="sensitivity" class="table-wrap"></div>
+          </details>
+        </section>
+        <section id="trends">
+          <div class="section-head">
+            <h2>Follow the evidence</h2>
+            <p>
+              Shares use usable narratives in each selected product and month as
+              the denominator.
+            </p>
+          </div>
+          <div class="filters">
+            <label
+              >Product<select id="product">
+                <option value="">All products</option>
+              </select></label
+            ><label
+              >Issue<select id="issue">
+                <option value="">Top issues by volume</option>
+              </select></label
+            ><button id="reset" type="button">Reset filters</button
+            ><a class="button secondary" href="evidence.csv" download
+              >Download aggregate CSV</a
+            >
+          </div>
+          <p id="filter-summary"></p>
+          <div
+            id="trend-chart"
+            role="img"
+            aria-label="Monthly sampled complaint issue shares"
+          ></div>
+          <details>
+            <summary>Accessible monthly evidence table</summary>
+            <div id="trend-table" class="table-wrap"></div>
+          </details>
+          <div id="issue-table" class="table-wrap"></div>
+        </section>
+        <section id="quality">
+          <div class="section-head">
+            <h2>A usable sample, with exclusions visible</h2>
+            <p>
+              Published narratives are a selected subset of self-selected
+              complaints. Sampling and duplicate removal introduce further
+              selection.
+            </p>
+          </div>
+          <div id="audit" class="table-wrap"></div>
+          <div id="quality-detail"></div>
+        </section>
+        <section id="routing">
+          <div class="section-head">
+            <h2>Automate routing. Keep review visible.</h2>
+            <p>
+              TF-IDF + logistic regression predicts observed product from text
+              only. Published labels are routing proxies, not gold truth.
+            </p>
+          </div>
+          <div class="metrics" id="model-metrics"></div>
+          <p id="model-note"></p>
+          <details>
+            <summary>Class results and confusion counts</summary>
+            <div id="class-table" class="table-wrap"></div>
+            <p>
+              Confusion rows are observed categories; columns are predicted
+              categories. Download the complete matrix and experiment settings.
+            </p>
+            <a href="metrics.json" download>Machine-readable model report</a>
+            <div id="confusion" class="table-wrap"></div>
+          </details>
+          <div id="monthly-model" class="table-wrap"></div>
+          <div class="two-col">
+            <article class="panel">
+              <h3>Try a safe routing example</h3>
+              <p>
+                These fixed examples are synthetic. They are not measured test
+                cases. Inference runs locally in your browser.
+              </p>
+              <label
+                >Example<select id="example">
+                  <option value="credit">Credit report dispute</option>
+                  <option value="mortgage">Mortgage payment</option>
+                  <option value="card">Card billing</option>
+                  <option value="ambiguous">Ambiguous service issue</option>
+                </select></label
+              >
+              <blockquote id="example-text"></blockquote>
+              <button id="predict" type="button">Predict routing</button>
+              <p id="prediction" role="status"></p>
+            </article>
+            <article class="panel">
+              <h3>Human-review queue</h3>
+              <p id="queue-note"></p>
+              <label
+                >Show<select id="queue-filter">
+                  <option value="all">All review cases</option>
+                  <option value="errors">
+                    Disagreements with observed labels
+                  </option>
+                </select></label
+              >
+              <div id="queue" class="table-wrap"></div>
+              <p>
+                Anonymous test positions only. Narratives and complaint
+                identifiers are withheld. Metadata can identify cases needing
+                local inspection; it cannot establish the correct label.
+              </p>
+            </article>
+          </div>
+        </section>
+        <section id="method">
+          <div class="section-head">
+            <h2>Know what this evidence can say</h2>
+          </div>
+          <div class="two-col">
+            <div>
+              <h3>Scope and limits</h3>
+              <p>
+                No customer exposure denominator, causal identification,
+                satisfaction measure, savings, adoption, or Arabic/Japanese
+                benchmark. Timely response is an administrative measure, not
+                resolution.
+              </p>
+              <p>
+                Monthly sampling is unweighted. Trends describe this sample; six
+                months cannot establish seasonality. Near-duplicate screening is
+                approximate and can miss paraphrases. Usability under one minute
+                is a target, not a measured result.
+              </p>
+            </div>
+            <div>
+              <h3>Reproduce and inspect</h3>
+              <p id="provenance"></p>
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
+                >Code, SQL, tests and review checklist</a
+              ><br /><a
+                href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
+                >Official CFPB historical archive</a
+              ><br /><a href="https://cfpb.github.io/api/ccdb/fields.html"
+                >Official field definitions</a
+              ><br /><a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+                >Sampling, splits and model card</a
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      AI-assisted development by Mohammed Umar Asif Sayed. Human review and
+      reproduction status documented separately. Public portfolio prototype.
+    </footer>
+  </body>
+</html>

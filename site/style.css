@@ -1,0 +1,372 @@
+:root {
+  --ink: #182b32;
+  --muted: #4b626a;
+  --accent: #006b67;
+  --line: #d5e0e1;
+  --wash: #edf4f3;
+  --paper: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+body {
+  margin: 0;
+  background: #f6f8f8;
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.55;
+}
+a {
+  color: var(--accent);
+}
+header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5%;
+  gap: 20px;
+}
+.brand {
+  font-size: 26px;
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+.brand span {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0;
+  margin-left: 12px;
+}
+nav {
+  display: flex;
+  gap: 24px;
+}
+nav a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+main {
+  max-width: 1240px;
+  padding: 0 36px;
+  margin: auto;
+}
+.intro {
+  padding: 48px 0 24px;
+}
+.eyebrow {
+  font-size: 13px;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+h1 {
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.16;
+  letter-spacing: -1.5px;
+  margin: 12px 0 20px;
+  max-width: 850px;
+}
+h2 {
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.6px;
+  margin: 0 0 12px;
+}
+h3 {
+  font-size: 19px;
+  line-height: 1.35;
+  margin: 0 0 12px;
+}
+p {
+  max-width: 850px;
+  color: var(--muted);
+}
+.notice {
+  font-size: 14px;
+  background: var(--wash);
+  border-left: 4px solid var(--accent);
+  padding: 14px 18px;
+  margin-top: 26px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  margin: 24px 0;
+}
+.metric {
+  padding: 22px;
+  border-right: 1px solid var(--line);
+}
+.metric:last-child {
+  border: 0;
+}
+.metric strong {
+  display: block;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+.metric span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.metric small {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+section:not(.intro) {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--line);
+}
+.section-head {
+  margin-bottom: 24px;
+}
+.section-head p {
+  margin: 0;
+}
+.recommendation {
+  display: grid;
+  grid-template-columns: 64px 1fr 240px;
+  gap: 24px;
+  background: var(--paper);
+  padding: 24px;
+  margin: 16px 0;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.rank {
+  font-size: 30px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.recommendation p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+.evidence-stat {
+  background: var(--wash);
+  padding: 16px;
+  font-size: 14px;
+}
+.evidence-stat strong {
+  display: block;
+  font-size: 28px;
+}
+.filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+label {
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+}
+select {
+  display: block;
+  max-width: 360px;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 6px;
+  font: inherit;
+  background: white;
+  border: 1px solid #8ca3aa;
+  border-radius: 4px;
+  padding: 8px 28px 8px 10px;
+  color: var(--ink);
+}
+button,
+.button {
+  display: inline-block;
+  min-height: 44px;
+  background: var(--accent);
+  color: white;
+  padding: 10px 18px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  font:
+    600 14px "Segoe UI",
+    Arial,
+    sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+}
+.secondary {
+  background: white;
+  color: var(--accent);
+}
+:focus-visible {
+  outline: 3px solid #c48111;
+  outline-offset: 3px;
+}
+#trend-chart {
+  height: 360px;
+  margin: 20px 0;
+  background: white;
+}
+.table-wrap {
+  overflow: auto;
+  max-width: 100%;
+  margin: 18px 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+  text-align: left;
+  background: white;
+}
+th {
+  background: var(--wash);
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+th,
+td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+td:first-child {
+  min-width: 160px;
+}
+details {
+  padding: 16px 0;
+}
+summary {
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--accent);
+  min-height: 32px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.panel {
+  background: white;
+  border: 1px solid var(--line);
+  padding: 24px;
+  border-radius: 4px;
+}
+.panel p {
+  font-size: 14px;
+}
+blockquote {
+  margin: 20px 0;
+  padding: 14px;
+  border-left: 3px solid var(--accent);
+  background: var(--wash);
+  font-size: 15px;
+}
+footer {
+  padding: 30px 5%;
+  font-size: 12px;
+  color: var(--muted);
+}
+.skip {
+  position: absolute;
+  top: -60px;
+}
+.skip:focus {
+  top: 8px;
+  background: white;
+  padding: 12px;
+  z-index: 10;
+}
+#status {
+  padding: 24px;
+  color: var(--accent);
+}
+@media (max-width: 760px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+  .brand span {
+    font-size: 12px;
+  }
+  nav {
+    gap: 20px;
+  }
+  main {
+    padding: 0 20px;
+  }
+  .intro {
+    padding-top: 30px;
+  }
+  h1 {
+    letter-spacing: -0.8px;
+  }
+  h1 br {
+    display: none;
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metric {
+    padding: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .metric strong {
+    font-size: 28px;
+  }
+  .recommendation {
+    grid-template-columns: 32px 1fr;
+    gap: 12px;
+    padding: 18px;
+  }
+  .evidence-stat {
+    grid-column: 2;
+  }
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .filters {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .filters select {
+    max-width: none;
+  }
+  .panel {
+    padding: 18px;
+  }
+  #trend-chart {
+    height: 320px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+.two-col > *,
+.recommendation > * {
+  min-width: 0;
+}
+
+#quality-detail {
+  overflow-x: auto;
+}
