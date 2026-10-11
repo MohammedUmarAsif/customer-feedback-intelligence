@@ -500,4 +500,7 @@ button:disabled {
   .chart-legend {
     flex-direction: column;
   }
+  .trend-svg text {
+    font-size: 24px;
+  }
 }

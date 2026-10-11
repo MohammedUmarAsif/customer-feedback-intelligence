@@ -42,6 +42,8 @@ def validate(url: str) -> dict:
                 assert page.locator("#issue-table tbody tr").count() == 1
                 assert page.locator("#trend-chart path").count() == 1
             page.screenshot(path=str(output / f"{name}-evidence.png"))
+            page.locator("#trend-chart").scroll_into_view_if_needed()
+            page.screenshot(path=str(output / f"{name}-chart.png"))
             page.locator("#reset").click()
             page.screenshot(path=str(output / f"{name}.png"), full_page=True)
             page.locator("#product").select_option("Mortgage")
@@ -52,6 +54,7 @@ def validate(url: str) -> dict:
             assert page.locator("#product").input_value() == ""
             for example, text in EXAMPLES.items():
                 page.locator("#example").select_option(example)
+                assert page.locator("#example-text").inner_text() == text
                 page.locator("#predict").click()
                 assert predict(text)["category"] in page.locator("#prediction").inner_text()
                 browser_result = page.evaluate("(text) => infer(model,text)", text)

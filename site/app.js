@@ -94,7 +94,7 @@ function drawTrend(traces, months) {
   // A responsive SVG is sufficient for six monthly points; no chart runtime needed.
   const width = 640,
     height = 280,
-    left = 50,
+    left = 60,
     right = 20,
     top = 25,
     bottom = 40;
