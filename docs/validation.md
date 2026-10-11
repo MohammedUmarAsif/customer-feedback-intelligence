@@ -34,3 +34,7 @@ The presentation now starts with the customer-service problem, then findings, in
 The live page was checked for filter handoffs, four model examples and queue pagination, with no recorded browser errors. Exact-size screenshot evidence comes from fresh Linux Chromium contexts. Desktop and mobile screenshots were visually inspected; no full screen-reader or usability-study result is claimed.
 
 The chart library was removed from the page and repository. Core uncompressed page assets are approximately 329 KB, versus 1.49 MB before this release (about 78% smaller). This is a deterministic asset-size comparison; network timings and Core Web Vitals were not benchmarked.
+
+## Five-scene refinement, 12 October 2026
+
+The current screenshots and `reports/story_ui_validation.json` come from local fresh Chromium contexts at desktop 1440×1000 and mobile 390×844. Checks passed for finding-bar handoffs, chart filters, 100-dot rounded counts (45 correct, 5 incorrect above cutoff, 50 review), three example buttons, all four model predictions versus Python, queue pagination and missing-file recovery. No JavaScript errors or horizontal page overflow occurred. Thirteen local pytest tests and Ruff checks passed. The data and model were not refitted. Primary archive/research links are provided in the relevant disclosures; internal section and repository evidence links were reconciled against the checkout.

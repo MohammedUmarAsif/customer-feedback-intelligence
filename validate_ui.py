@@ -35,6 +35,12 @@ def validate(url: str) -> dict:
             assert page.locator("#trend-chart .trend-svg").count() == 1
             assert page.locator("#accuracy-comparison .bar-fill").count() == 2
             page.screenshot(path=str(output / f"{name}-overview.png"))
+            assert page.locator("#reliability-dots .dot").count() == 100
+            assert page.locator("#reliability-dots .correct").count() == 45
+            assert page.locator("#reliability-dots .incorrect").count() == 5
+            assert page.locator("#reliability-dots .review").count() == 50
+            page.locator("nav a[href='#priorities']").click()
+            page.screenshot(path=str(output / f"{name}-findings.png"))
             for finding in page.locator("[data-priority]").all():
                 finding.click()
                 assert page.locator("#product").input_value() != ""
@@ -44,6 +50,7 @@ def validate(url: str) -> dict:
             page.screenshot(path=str(output / f"{name}-evidence.png"))
             page.locator("#trend-chart").scroll_into_view_if_needed()
             page.screenshot(path=str(output / f"{name}-chart.png"))
+            page.get_by_text("Explore other products and inspect exact counts", exact=True).click()
             page.locator("#reset").click()
             page.screenshot(path=str(output / f"{name}.png"), full_page=True)
             page.locator("#product").select_option("Mortgage")
@@ -52,6 +59,11 @@ def validate(url: str) -> dict:
             assert page.locator("#issue-table tbody tr").count() > 0
             page.locator("#reset").click()
             assert page.locator("#product").input_value() == ""
+            for button in page.locator("[data-example]").all():
+                button.click()
+                assert button.get_attribute("aria-pressed") == "true"
+                assert "Suggested category" in page.locator("#prediction").inner_text()
+            page.get_by_text("What words does it use? Try another example", exact=True).click()
             for example, text in EXAMPLES.items():
                 page.locator("#example").select_option(example)
                 assert page.locator("#example-text").inner_text() == text
@@ -62,6 +74,8 @@ def validate(url: str) -> dict:
                 assert browser_result["review"] == predict(text)["review"]
             page.locator("nav a[href='#routing']").click()
             page.screenshot(path=str(output / f"{name}-model.png"))
+            page.locator("nav a[href='#reliability']").click()
+            page.screenshot(path=str(output / f"{name}-reliability.png"))
             page.get_by_text("See cases flagged for human review", exact=True).click()
             first_case = page.locator("#queue tbody tr").first.inner_text()
             page.locator("#queue-next").click()
@@ -77,7 +91,7 @@ def validate(url: str) -> dict:
                     "viewport": name,
                     "width": width,
                     "height": height,
-                    "flows": "3 finding links/filters/reset/4 routing examples/review filter/pagination",
+                    "flows": "3 finding bars/filters/reset/100-dot counts/3 example buttons/4 inference parity/review pagination",
                     "browser_errors": errors,
                     "horizontal_page_overflow": False,
                     "inference_max_tolerance": 1e-10,

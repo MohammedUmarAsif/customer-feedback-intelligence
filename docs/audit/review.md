@@ -46,3 +46,13 @@ The analytical snapshot was not retrained or retuned. The measured result remain
 ![Mobile first screen](08-after-mobile.png)
 
 See the [plain-language walkthrough](../demo_script.md), [CV evidence](../cv_evidence.md), [research ledger](../research.md), and [validation record](../validation.md).
+
+## Five-scene refinement, October 12, 2026
+
+The introductory essay and metric strip were replaced by a concise purpose statement and workflow diagram. Three directly labelled count bars now select the investigation question and monthly evidence. Model accuracy and review coverage are separate scenes: the 100-dot illustration derives from the frozen test counts, not a new experiment. Fixed example buttons reveal a clear case, a vague case and a mistake. Research, sampling, tools, operational proposals and detailed metrics remain accessible through disclosures. Public copy uses no em dashes.
+
+Validation: 13 local pytest tests, Ruff checks, desktop 1440×1000 and mobile 390×844 browser flows passed. The browser checks include all three bars, filters/reset, exact 45/5/50 dot counts, example buttons, four-example inference parity, review pagination, load-failure recovery, no page overflow and no JavaScript errors. Repository evidence links and section links were checked against the checkout. Screenshots below were refreshed from this run. No user-study comprehension or measured operational effect is claimed.
+
+![Current findings](11-findings.png)
+
+![Current reliability breakdown](10-reliability.png)

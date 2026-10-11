@@ -49,6 +49,14 @@ function plainFinding(row) {
   );
 }
 function showExample() {
+  document
+    .querySelectorAll("[data-example]")
+    .forEach((button) =>
+      button.setAttribute(
+        "aria-pressed",
+        String(button.dataset.example === $("example").value),
+      ),
+    );
   $("recognized-words").textContent = "";
   $("example-text").textContent = examples[$("example").value];
   $("prediction").textContent = model
@@ -61,7 +69,7 @@ function showQueue() {
   );
   const rows = matching.slice(queuePage * 8, (queuePage + 1) * 8);
   $("queue-page").textContent = matching.length
-    ? `${queuePage * 8 + 1}–${Math.min((queuePage + 1) * 8, matching.length)} of ${matching.length} preview cases`
+    ? `${queuePage * 8 + 1} to ${Math.min((queuePage + 1) * 8, matching.length)} of ${matching.length} preview cases`
     : "No matching preview cases";
   $("queue-prev").disabled = queuePage === 0;
   $("queue-next").disabled = (queuePage + 1) * 8 >= matching.length;
@@ -159,7 +167,7 @@ function showTrends() {
     chosen = issue ? [issue] : ranked.slice(0, 3),
     denom = Object.values(totals).reduce((a, b) => a + b, 0);
   $("filter-summary").textContent =
-    `${product || "All products"} · ${fmt(denom)} sampled complaints, January–June 2026. ${issue ? `Selected issue: ${issue}. Shares below are within this product, while finding cards use the whole sample.` : "Lines show the three most frequent issues. Percentages use the selected product’s monthly sample."}`;
+    `${product || "All products"} · ${fmt(denom)} sampled complaints, January to June 2026. ${issue ? `Selected issue: ${issue}. Chart shares use this product’s monthly complaint sample. The bars above use all 10,950 complaints.` : "Lines show the three most frequent issues. Percentages use the selected product’s monthly sample."}`;
   const monthRows = [],
     traces = chosen.map((name, k) => {
       const numerators = months.map((m) =>
@@ -206,34 +214,48 @@ function showTrends() {
       ]),
   );
 }
+function selectPriority(index) {
+  const priority = data.insights.priorities[index];
+  $("product").value = priority.product;
+  fillIssues();
+  $("issue").value = priority.issue;
+  $("finding-question").textContent = plainFinding(priority)[1];
+  document
+    .querySelectorAll("[data-priority]")
+    .forEach((link) =>
+      link.setAttribute(
+        "aria-current",
+        String(Number(link.dataset.priority) === index),
+      ),
+    );
+  showTrends();
+}
+function predictExample() {
+  if (!model) return;
+  const result = infer(model, examples[$("example").value]);
+  const recognized = [
+    ...new Set(examples[$("example").value].toLowerCase().match(/[a-z]{2,}/g)),
+  ].filter((word) => Object.hasOwn(model.vocabulary, word));
+  $("recognized-words").textContent =
+    `Recognised words: ${recognized.join(", ") || "none"}. Model score: ${result.confidence.toFixed(3)}; review cutoff: ${data.metrics.threshold_selection.threshold.toFixed(2)}.`;
+  $("prediction").textContent =
+    `${result.review ? "Human review flagged." : "Above the review cutoff."} Suggested category: ${result.category}.${$("example").value === "credit" ? " This is a mistake: the message describes a credit report error." : ""}`;
+}
 function render() {
   const a = data.audit,
     m = data.metrics;
-  $("headline").innerHTML =
-    metric(
-      fmt(a.usable),
-      "Complaints analyzed",
-      "Real public data · January–June 2026",
-    ) +
-    metric(
-      String(data.insights.priorities.length),
-      "Investigation priorities",
-      "Recurring problems linked to evidence",
-    ) +
-    metric(
-      `${(100 * m.accuracy).toFixed(1)}%`,
-      "Category accuracy",
-      `Versus ${(100 * m.majority.accuracy).toFixed(1)}% for the simplest baseline · June test`,
-    ) +
-    metric(
-      pct(m.review, m.test_rows),
-      "Flagged for a person",
-      `${fmt(m.review)}/${fmt(m.test_rows)} June test complaints`,
-    );
-  $("brief").innerHTML = data.insights.priorities
+  const priorities = data.insights.priorities;
+  const largest = Math.max(...priorities.map((r) => r.n));
+  $("brief").innerHTML = priorities
     .map(
       (r, i) =>
-        `<article class="recommendation" id="${r.evidence_id}"><div class="rank">${i + 1}</div><div><h3>${esc(plainFinding(r)[0])}</h3><p>${esc(r.product)}</p><p><b>The question to investigate:</b> ${esc(plainFinding(r)[1])}</p><details><summary>Why investigate this, and what to check</summary><p><b>Recorded issue:</b> ${esc(r.issue)}.</p><p>${esc(r.recommendation)}</p><p><b>Next check:</b> ${esc(r.next_check)}</p><p><b>Other possible explanations:</b> ${esc(r.alternative)}</p><p>Evidence ${r.evidence_id}. January–March: ${r.early}/${r.early_denominator} of all sampled complaints. April–June: ${r.recent}/${r.recent_denominator}. Change ${(r.change_pp >= 0 ? "+" : "") + r.change_pp.toFixed(2)} percentage points. Descriptive month-block interval [${r.change_block_interval.map((v) => v.toFixed(2)).join(", ")}] points, only three months per period.</p><p>${esc(r.hypothesis)}</p><p>${esc(r.evidence_quality)}. Frequent complaints are a starting point for investigation, not proof of a cause.</p></details></div><div class="evidence-stat"><strong>${fmt(r.n)}</strong>complaints in this sample<br>${pct(r.n, r.denominator)} of all ${fmt(r.denominator)}<a class="finding-link" data-priority="${i}" href="#trends">Explore this issue <span aria-hidden="true">→</span><span class="sr-only">: ${esc(r.issue)}</span></a></div></article>`,
+        `<a class="finding-link finding-row recommendation" data-priority="${i}" href="#trends" aria-current="${i === 0 ? "true" : "false"}"><span class="finding-label">${esc(plainFinding(r)[0])}</span><span class="finding-track" aria-hidden="true"><span style="width:${(100 * r.n) / largest}%"></span></span><span class="finding-count">${fmt(r.n)}<small>${pct(r.n, r.denominator)} of sample</small></span></a>`,
+    )
+    .join("");
+  $("finding-research").innerHTML = priorities
+    .map(
+      (r) =>
+        `<article><h3>${esc(plainFinding(r)[0])}</h3><p><b>Recorded issue:</b> ${esc(r.issue)} (${esc(r.product)}).</p><p><b>Investigation:</b> ${esc(r.next_check)}</p><p><b>Alternative explanation:</b> ${esc(r.alternative)}</p><p><b>Testable hypothesis:</b> ${esc(r.hypothesis)}</p><p>Evidence ${esc(r.evidence_id)}: ${fmt(r.n)} / ${fmt(r.denominator)} sampled complaints. January to March: ${r.early}/${r.early_denominator}; April to June: ${r.recent}/${r.recent_denominator}. Share change: ${r.change_pp.toFixed(2)} percentage points. Descriptive month-block interval: ${r.change_block_interval.map((v) => v.toFixed(2)).join(" to ")} points. Only three months per period; this does not prove a trend or cause.</p></article>`,
     )
     .join("");
   $("sensitivity").innerHTML = table(
@@ -263,7 +285,7 @@ function render() {
       .map((p) => `<option value="${esc(p)}">${esc(p)}</option>`)
       .join("");
   fillIssues();
-  showTrends();
+  selectPriority(0);
   $("audit").innerHTML = table(
     ["Preparation step", "Records"],
     [
@@ -321,8 +343,33 @@ function render() {
       "Cases above the score cutoff",
       `${m.accepted}/${m.test_rows}; the other ${m.review} need review`,
     );
+  const acceptedDots = Math.round((100 * m.accepted) / m.test_rows);
+  const correctDots = Math.round((100 * m.accepted_correct) / m.test_rows);
+  const wrongDots = acceptedDots - correctDots;
+  const reviewDots = 100 - acceptedDots;
   $("routing-summary").textContent =
-    "In plain terms: about 71 out of 100 suggestions matched the published category. Keeping only higher-score suggestions increased accuracy to about 90 out of 100, but covered only half the test cases. This is a measured trade-off, not a guarantee or a deployed automation result.";
+    "About half the messages were flagged for review. Among suggestions above the cutoff, about 90% matched the published category.";
+  $("reliability-dots").innerHTML = Array.from(
+    { length: 100 },
+    (_, i) =>
+      `<span class="dot ${i < correctDots ? "correct" : i < acceptedDots ? "incorrect" : "review"}" aria-hidden="true"></span>`,
+  ).join("");
+  $("reliability-dots").setAttribute(
+    "aria-label",
+    `Rounded June results per 100 messages: ${correctDots} above-cutoff correct suggestions, ${wrongDots} above-cutoff incorrect suggestions, ${reviewDots} flagged for review.`,
+  );
+  $("reliability-legend").innerHTML =
+    [
+      ["correct", correctDots, "Above cutoff, correct"],
+      ["incorrect", wrongDots, "Above cutoff, incorrect"],
+      ["review", reviewDots, "Flagged for a person"],
+    ]
+      .map(
+        ([cls, n, label]) =>
+          `<div><span class="dot ${cls}" aria-hidden="true"></span><strong>${n}</strong><span>${label}</span></div>`,
+      )
+      .join("") +
+    `<small>Exact test counts: ${m.accepted_correct} correct and ${m.accepted - m.accepted_correct} incorrect above cutoff; ${m.review} flagged.</small>`;
   $("accuracy-comparison").innerHTML = [
     ["Always choose the most common category", m.majority.accuracy, "baseline"],
     ["Read the text with the trained model", m.accuracy, ""],
@@ -333,11 +380,11 @@ function render() {
     )
     .join("");
   $("accuracy-gain").textContent =
-    `${((m.accuracy - m.majority.accuracy) * 100).toFixed(1)} percentage points higher accuracy on this test. This measures classification performance—not time saved or complaints resolved.`;
+    `${((m.accuracy - m.majority.accuracy) * 100).toFixed(1)} percentage points higher accuracy on this test. This measures category matching, not service outcomes.`;
   $("technical-metrics").textContent =
     `Macro-F1: ${m.macro_f1.toFixed(3)} (balances performance across the ${m.labels.length} categories; higher is better). Majority baseline: ${pct(m.majority.correct, m.test_rows)} (${m.majority.correct}/${m.test_rows}), obtained by always choosing the most common training category. Rare-category results remain weak; see recall below.`;
   $("model-note").textContent =
-    `January–March train (${a.split_counts.train}), April tuning (${a.split_counts.tune}), May threshold selection (${a.split_counts.calibration}), locked June test (${a.split_counts.test}). Threshold ${m.threshold_selection.threshold.toFixed(2)} met ≥90% observed correctness on May; June accepted correctness is ${pct(m.accepted_correct, m.accepted)}, so the calibration target is not a guarantee. Confidence is a raw model score, not a calibrated probability. ${m.test_unseen_rows} unseen-category test records.`;
+    `January to March train (${a.split_counts.train}), April tuning (${a.split_counts.tune}), May threshold selection (${a.split_counts.calibration}), locked June test (${a.split_counts.test}). Threshold ${m.threshold_selection.threshold.toFixed(2)} met ≥90% observed correctness on May; June accepted correctness is ${pct(m.accepted_correct, m.accepted)}, so the calibration target is not a guarantee. Confidence is a raw model score, not a calibrated probability. ${m.test_unseen_rows} unseen-category test records.`;
   $("class-table").innerHTML = table(
     ["Code", "Observed category", "Support", "Precision", "Recall", "F1"],
     m.labels.map((label, i) => {
@@ -377,11 +424,7 @@ function render() {
   showQueue();
   document.querySelectorAll("[data-priority]").forEach((link) => {
     link.addEventListener("click", () => {
-      const priority = data.insights.priorities[Number(link.dataset.priority)];
-      $("product").value = priority.product;
-      fillIssues();
-      $("issue").value = priority.issue;
-      showTrends();
+      selectPriority(Number(link.dataset.priority));
       $("evidence-heading").focus({ preventScroll: true });
     });
   });
@@ -395,7 +438,18 @@ function render() {
     fillIssues();
     showTrends();
   });
-  $("example").addEventListener("change", showExample);
+  $("example").addEventListener("change", () => {
+    showExample();
+    if (model) predictExample();
+  });
+  document.querySelectorAll("[data-example]").forEach((button) => {
+    button.disabled = !model;
+    button.addEventListener("click", () => {
+      $("example").value = button.dataset.example;
+      showExample();
+      predictExample();
+    });
+  });
   $("queue-filter").addEventListener("change", () => {
     queuePage = 0;
     showQueue();
@@ -408,18 +462,7 @@ function render() {
     queuePage++;
     showQueue();
   });
-  $("predict").addEventListener("click", () => {
-    const result = infer(model, examples[$("example").value]);
-    const recognized = [
-      ...new Set(
-        examples[$("example").value].toLowerCase().match(/[a-z]{2,}/g),
-      ),
-    ].filter((word) => Object.hasOwn(model.vocabulary, word));
-    $("recognized-words").textContent =
-      `Words the model recognizes: ${recognized.join(", ") || "none"}. It gives learned weights to these words; it does not understand the message like a person.`;
-    $("prediction").textContent =
-      `${result.review ? "Needs a person to review." : "Above the automatic-routing cutoff."} Suggested category: ${result.category}. Model score: ${result.confidence.toFixed(3)}; cutoff: ${data.metrics.threshold_selection.threshold.toFixed(2)}. This score is not a probability of being correct. ${$("example").value === "credit" && result.category !== "Credit reporting or other personal consumer reports" ? "This example mentions a credit report, so the suggestion also illustrates why review matters." : ""}`;
-  });
+  $("predict").addEventListener("click", predictExample);
   $("status").hidden = true;
   $("content").hidden = false;
   document.querySelectorAll(".table-wrap").forEach((region) => {
@@ -459,3 +502,20 @@ Promise.allSettled([
       'The snapshot could not load. <button type="button" id="retry">Try again</button> or <a href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/decision_brief.md">read the findings on GitHub</a>.';
     $("retry").addEventListener("click", () => location.reload());
   });
+
+const chapters = ["priorities", "routing", "reliability", "method"];
+const chapterObserver = new IntersectionObserver(
+  (entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
+    if (!visible) return;
+    document.querySelectorAll("nav a").forEach((link) => {
+      if (link.hash === `#${visible.target.id}`)
+        link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  },
+  { rootMargin: "-15% 0px -55% 0px" },
+);
+chapters.forEach((id) => chapterObserver.observe($(id)));

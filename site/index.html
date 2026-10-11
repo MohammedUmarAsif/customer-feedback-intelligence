@@ -13,204 +13,195 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <a class="skip" href="#main">Skip to evidence</a>
+    <a class="skip" href="#main">Skip to the story</a>
     <header>
       <a class="brand" href="#main"
         >CFI <span>Customer Feedback Intelligence</span></a
       >
-      <nav aria-label="Main">
-        <a href="#priorities">1. Patterns</a><a href="#trends">2. Explore</a
-        ><a href="#routing">3. Model</a><a href="#method">4. Apply</a>
+      <nav aria-label="Story chapters">
+        <a href="#priorities">Findings</a><a href="#routing">Model</a
+        ><a href="#reliability">Review</a><a href="#method">Next steps</a>
       </nav>
     </header>
     <main id="main">
-      <section class="intro">
-        <p class="eyebrow">A guided data-science case study</p>
-        <h1>
-          What are customers<br />
-          trying to tell us?
-        </h1>
-        <p>
-          A complaint is a clue. Thousands of complaints can reveal a pattern.
-          Follow how this project turns customer messages into questions a team
-          can investigate—and tests when a model can help sort them.
-        </p>
-        <div class="actions">
-          <a class="button" href="#problem-heading">Start the story</a>
-          <a class="button secondary" href="#routing">Try the model</a>
-          <a
-            href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
-            >View code on GitHub</a
+      <section class="intro scene" aria-labelledby="problem-heading">
+        <div>
+          <p class="eyebrow">01 / The problem</p>
+          <h1 id="problem-heading">
+            Which customer problems deserve attention first?
+          </h1>
+          <p class="lead">
+            I analysed 10,950 public complaints to find recurring problems, then
+            tested a model that sorts new messages into product categories.
+          </p>
+          <a class="button" href="#priorities"
+            >Explore the findings <span aria-hidden="true">↓</span></a
           >
+          <p class="source-line">
+            Bank accounts, cards and loans. January to June 2026.<br /><a
+              href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
+              >Official US complaint archive</a
+            >
+          </p>
         </div>
-        <div class="notice">
-          Explore real complaint patterns, change the chart filters, and try
-          four made-up messages with the trained model. No sign-in or data
-          upload needed.
-        </div>
+        <ol class="journey" aria-label="Project workflow">
+          <li>
+            <span>01</span>
+            <div>
+              <b>Customer messages</b><small>Prepare a consistent sample</small>
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <b>Recurring problems</b><small>Find where to investigate</small>
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <b>Suggested categories</b><small>Test text classification</small>
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <b>Human review</b><small>Flag uncertain suggestions</small>
+            </div>
+          </li>
+        </ol>
       </section>
       <noscript
         ><p>
-          This interactive demo needs JavaScript.
+          This interactive study needs JavaScript.
           <a
             href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/decision_brief.md"
-            >Read the findings on GitHub</a
+            >Read the findings</a
           >.
         </p></noscript
       >
-      <div id="status" role="status">Loading the verified snapshot…</div>
+      <div id="status" role="status">Loading the study...</div>
       <div id="content" hidden>
-        <section class="story-intro" aria-labelledby="problem-heading">
-          <p class="eyebrow">First, the human problem</p>
-          <h2 id="problem-heading">
-            If people keep asking for help, what should change?
-          </h2>
+        <section id="priorities" class="scene">
+          <p class="eyebrow">02 / The findings</p>
+          <h2>Three problems worth investigating.</h2>
           <p>
-            Imagine a support team receiving messages about confusing bills,
-            account access, and requests that go unresolved. Answering each
-            person matters. So does noticing when many people face the same
-            problem.
+            These were the most common product and issue combinations. Select a
+            bar to follow the evidence.
           </p>
-          <p>
-            <strong>Two different questions:</strong> What should the team
-            investigate? And can new messages be sent to the right product team?
-            Counting helps with the first. A text-classification model can help
-            with the second.
-          </p>
-          <ol class="process">
-            <li>
-              <b>Clean the feedback</b
-              ><span
-                >Remove repeated entries so they do not inflate patterns.</span
-              >
-            </li>
-            <li>
-              <b>Find recurring issues</b
-              ><span
-                >Count problems and trace each finding back to its
-                evidence.</span
-              >
-            </li>
-            <li>
-              <b>Test a routing model</b
-              ><span
-                >Compare against a simple baseline on later, unseen
-                complaints.</span
-              >
-            </li>
-            <li>
-              <b>Keep people involved</b
-              ><span
-                >Flag uncertain suggestions instead of treating every prediction
-                as reliable.</span
-              >
-            </li>
-          </ol>
-          <details>
-            <summary>The real data behind this story</summary>
-            <p>
-              This demo uses complaints people submitted about bank accounts,
-              cards, loans, and other financial products in the United States.
-              The Consumer Financial Protection Bureau (CFPB), a US government
-              agency, publishes this complaint data. A “narrative” simply means
-              the person's written account.
-            </p>
-            <p>
-              We selected 12,000 written complaints from January–June 2026 and
-              removed 1,050 repeated or very similar entries. The remaining
-              10,950 form this study. These are historical public complaint
-              records.
-            </p>
-          </details>
-          <p class="source-line">
-            Study data: US complaints about financial products · January–June
-            2026 · A selected sample, not all customers.
-          </p>
-        </section>
-        <section
-          class="metrics"
-          id="headline"
-          aria-label="Snapshot summary"
-        ></section>
-        <section id="priorities">
-          <div class="section-head">
-            <h2>1. Which problems keep coming up?</h2>
-            <p>
-              These are the three most common product-and-problem combinations
-              in the sample. The counts use the categories recorded in the data;
-              the model did not invent these themes. Open a finding to see what
-              a team could check next.
-            </p>
+          <div id="brief" aria-label="Ranked complaint counts"></div>
+          <div class="finding-insight" aria-live="polite">
+            <span class="eyebrow">The next question</span>
+            <p id="finding-question"></p>
           </div>
-          <div id="brief"></div>
-          <details>
-            <summary>Compare volume and change rankings</summary>
+          <p class="source-line">
+            Counts out of 10,950 sampled complaints, not customer failure rates.
+            <a href="evidence.csv" download>Download the underlying counts</a>
+          </p>
+          <details id="finding-details">
+            <summary>Why these priorities? What should a team check?</summary>
+            <div id="finding-research"></div>
+            <h3>Does a different ranking change the shortlist?</h3>
             <p>
-              Default shortlist ranks total sampled volume. Change ranks
-              percentage-point movement from January–March to April–June, among
-              issues with at least 50 sampled records. These are separate
-              signals, not a severity score.
+              Volume ranks total sampled counts. Change ranks share movement
+              between January to March and April to June, for issues with at
+              least 50 records. Neither measures severity.
             </p>
             <div id="sensitivity" class="table-wrap"></div>
           </details>
+          <div id="trends" class="evidence-panel">
+            <h3 tabindex="-1" id="evidence-heading">
+              Follow the pattern over six months
+            </h3>
+            <p id="filter-summary" role="status"></p>
+            <div id="trend-chart"></div>
+            <div id="trend-legend" class="chart-legend"></div>
+            <details>
+              <summary>Explore other products and inspect exact counts</summary>
+              <div class="filters">
+                <label
+                  >Product<select id="product">
+                    <option value="">All products</option>
+                  </select></label
+                ><label
+                  >Issue<select id="issue">
+                    <option value="">Top issues by volume</option>
+                  </select></label
+                ><button id="reset" type="button">Reset filters</button>
+              </div>
+              <h4>Monthly evidence</h4>
+              <div id="trend-table" class="table-wrap"></div>
+              <h4>Issue counts</h4>
+              <div id="issue-table" class="table-wrap"></div>
+            </details>
+          </div>
         </section>
-        <section id="trends">
-          <div class="section-head">
-            <h2 tabindex="-1" id="evidence-heading">
-              2. Does the pattern hold over time?
-            </h2>
-            <p>
-              Choose a product and issue to see how often it appears each month.
-              A share of 10% means 10 out of every 100 sampled complaints in the
-              selected product. It does not mean 10% of customers had a problem.
-            </p>
-          </div>
-          <div class="filters">
-            <label
-              >Product<select id="product">
-                <option value="">All products</option>
-              </select></label
-            ><label
-              >Issue<select id="issue">
-                <option value="">Top issues by volume</option>
-              </select></label
-            ><button id="reset" type="button">Reset filters</button
-            ><a class="button secondary" href="evidence.csv" download
-              >Download all counts (CSV)</a
-            >
-          </div>
-          <p id="filter-summary" role="status"></p>
-          <div id="trend-chart"></div>
-          <div id="trend-legend" class="chart-legend"></div>
-          <details>
-            <summary>Accessible monthly evidence table</summary>
-            <div id="trend-table" class="table-wrap"></div>
-          </details>
-          <details>
-            <summary>See issue counts for these filters</summary>
-            <div id="issue-table" class="table-wrap"></div>
-          </details>
-        </section>
-        <section id="routing">
-          <div class="section-head">
-            <h2>3. Can a model help sort the next message?</h2>
-            <p>
-              “Routing” means choosing a product category, such as Mortgage or
-              Credit card. The model reads a complaint and suggests a category.
-              When its score is low, it asks for human review. It does not
-              resolve the complaint.
-            </p>
-          </div>
-          <div class="comparison panel" aria-labelledby="comparison-heading">
-            <h3 id="comparison-heading">Does the model beat a simple guess?</h3>
-            <p>
-              Both are evaluated on the same 1,810 June complaints, held aside
-              until testing.
-            </p>
+        <section id="routing" class="scene">
+          <p class="eyebrow">03 / The experiment</p>
+          <h2>Can a model sort the next message?</h2>
+          <p>
+            It reads a complaint and suggests a product category, such as a home
+            loan or credit card.
+          </p>
+          <div class="comparison" aria-labelledby="comparison-heading">
+            <h3 id="comparison-heading">
+              Correct suggestions on unseen June complaints
+            </h3>
             <div id="accuracy-comparison"></div>
             <p id="accuracy-gain"></p>
           </div>
-          <p id="routing-summary"></p>
+          <ol class="timeline" aria-label="Chronological evaluation">
+            <li><b>Jan to Mar</b><span>Train</span></li>
+            <li><b>April</b><span>Choose settings</span></li>
+            <li><b>May</b><span>Set review cutoff</span></li>
+            <li><b>June</b><span>Test once</span></li>
+          </ol>
+          <p class="source-line">
+            Same 1,810 test complaints for both methods.
+            <a href="metrics.json">Inspect the measured results</a>
+          </p>
+          <details>
+            <summary>How does the model work? Why this method?</summary>
+            <p>
+              <b>TF-IDF turns words into numbers.</b> Words that distinguish
+              messages receive more weight than words appearing everywhere. The
+              vocabulary and word frequencies are learned from the training
+              months only.
+            </p>
+            <p>
+              <b>Logistic regression learns category scores.</b> It combines
+              weighted words to choose one of 11 product categories. This
+              established method gives a compact baseline that can run in a
+              browser.
+            </p>
+            <p>
+              <b>Privacy affects the design.</b> Only 164 learned tokens from an
+              approved generic vocabulary are exported. This keeps raw complaint
+              vocabulary out of the public model, but limits what it can
+              recognise.
+            </p>
+            <p>
+              April selects regularisation strength C from 0.3, 1 and 3 using
+              macro-F1. C = 1 was selected. June never chooses the vocabulary,
+              settings or review cutoff.
+            </p>
+            <p>
+              <a
+                href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction"
+                >Text feature extraction documentation</a
+              >
+              ·
+              <a
+                href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+                >Logistic regression documentation</a
+              >
+              ·
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/pipeline.py"
+                >Project training code</a
+              >
+            </p>
+          </details>
           <details>
             <summary>How the model was tested · detailed results</summary>
             <div class="metrics" id="model-metrics"></div>
@@ -221,6 +212,13 @@
             </p>
             <p id="model-note"></p>
             <p id="technical-metrics"></p>
+            <p>
+              <b>Reading the class results:</b> precision asks how often a
+              suggested category was right. Recall asks how many actual cases in
+              that category were found. F1 balances those two. Macro-F1 gives
+              each category equal weight, so a common category cannot hide every
+              rare-category failure.
+            </p>
             <div id="class-table" class="table-wrap"></div>
             <p>
               Confusion rows are observed categories; columns are predicted
@@ -230,17 +228,59 @@
             <div id="confusion" class="table-wrap"></div>
             <div id="monthly-model" class="table-wrap"></div>
           </details>
-          <div>
-            <article class="panel">
-              <h3>Choose an example and see the suggestion</h3>
+        </section>
+        <section id="reliability" class="scene">
+          <p class="eyebrow">04 / The reliability check</p>
+          <h2>Which suggestions need a person?</h2>
+          <p id="routing-summary"></p>
+          <div class="reliability-layout">
+            <div id="reliability-dots" class="dot-grid" role="img"></div>
+            <div id="reliability-legend" class="dot-legend"></div>
+          </div>
+          <p class="source-line">
+            Each dot represents about 1% of the June test sample. Rounded
+            illustration. <a href="metrics.json">Exact counts and scores</a>
+          </p>
+          <article class="example-demo">
+            <h3>Try a message. See where it goes.</h3>
+            <div
+              class="example-buttons"
+              role="group"
+              aria-label="Example messages"
+            >
+              <button
+                class="secondary"
+                data-example="mortgage"
+                aria-pressed="true"
+                type="button"
+              >
+                Clear message</button
+              ><button
+                class="secondary"
+                data-example="ambiguous"
+                aria-pressed="false"
+                type="button"
+              >
+                Vague message</button
+              ><button
+                class="secondary"
+                data-example="credit"
+                aria-pressed="false"
+                type="button"
+              >
+                Model mistake
+              </button>
+            </div>
+            <blockquote id="example-text"></blockquote>
+            <button id="predict" type="button" disabled>
+              Suggest a category
+            </button>
+            <p id="prediction" role="status"></p>
+            <details>
+              <summary>What words does it use? Try another example</summary>
               <p>
-                These are made-up examples, separate from the real test data.
-                The trained model runs in your browser.
-              </p>
-              <p>
-                Start with the home-loan message, then try the vague message.
-                Notice when the model asks for a person to review its
-                suggestion.
+                These messages are made-up examples, separate from the real test
+                data. Predictions use the trained model in your browser.
               </p>
               <label
                 >Example<select id="example">
@@ -249,137 +289,167 @@
                   </option>
                   <option value="card">An unfamiliar card purchase</option>
                   <option value="credit">
-                    A credit report error · a model mistake
+                    A credit report error: a model mistake
                   </option>
                   <option value="ambiguous">
-                    A vague message · not enough detail
+                    A vague message: not enough detail
                   </option>
                 </select></label
               >
-              <blockquote id="example-text"></blockquote>
-              <button id="predict" type="button" disabled>
-                Suggest a category
-              </button>
-              <p id="prediction" role="status"></p>
               <p id="recognized-words"></p>
-            </article>
-            <details>
-              <summary>See cases flagged for human review</summary>
-              <h3>Review queue preview</h3>
-              <p id="queue-note"></p>
-              <label
-                >Show<select id="queue-filter">
-                  <option value="all">All 100 preview cases</option>
-                  <option value="errors">
-                    Disagreements with observed labels
-                  </option>
-                </select></label
-              >
-              <div id="queue" class="table-wrap"></div>
-              <div class="actions">
-                <button id="queue-prev" type="button" class="secondary">
-                  Previous cases</button
-                ><span id="queue-page" role="status"></span
-                ><button id="queue-next" type="button" class="secondary">
-                  Next cases
-                </button>
-              </div>
               <p>
-                Anonymous test positions only. Narratives and complaint
-                identifiers are withheld. Metadata can identify cases needing
-                local inspection; it cannot establish the correct label.
+                Recognised words are features, not a full explanation of a
+                prediction. The score is not a calibrated probability of being
+                correct.
               </p>
             </details>
-          </div>
-        </section>
-        <section id="quality">
-          <div class="section-head">
-            <h2>About the data</h2>
-            <p>
-              We sampled 12,000 written complaints and removed 1,050 repeated or
-              very similar entries, leaving 10,950 for analysis. People choose
-              whether to complain and publish their account, so this sample
-              cannot represent all customers.
-            </p>
-          </div>
+          </article>
           <details>
-            <summary>How the sample was selected and cleaned</summary>
-            <div id="audit" class="table-wrap"></div>
-            <div id="quality-detail"></div>
+            <summary>
+              How was the review cutoff chosen? Where does it fail?
+            </summary>
+            <p>
+              May selected a score cutoff of 0.66: the highest coverage meeting
+              at least 90% observed correctness with at least 50 accepted cases.
+              This was threshold selection, not probability calibration.
+            </p>
+            <p>
+              On June, 815 of 907 suggestions above the cutoff matched the
+              published category (89.9%). The remaining 903 of 1,810 messages
+              were flagged. A high score still allows mistakes.
+            </p>
+            <p>
+              Rare categories remain weak: the model identified 0 of 22
+              prepaid-card cases and 1 of 18 debt or credit-management cases.
+              The published categories have not been independently checked by a
+              person.
+            </p>
+            <p>
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+                >Full model card and evaluation policy</a
+              >
+            </p>
+          </details>
+          <details>
+            <summary>See cases flagged for human review</summary>
+            <h3>Review queue preview</h3>
+            <p id="queue-note"></p>
+            <label
+              >Show<select id="queue-filter">
+                <option value="all">All 100 preview cases</option>
+                <option value="errors">
+                  Disagreements with observed labels
+                </option>
+              </select></label
+            >
+            <div id="queue" class="table-wrap"></div>
+            <div class="actions">
+              <button id="queue-prev" type="button" class="secondary">
+                Previous cases</button
+              ><span id="queue-page" role="status"></span
+              ><button id="queue-next" type="button" class="secondary">
+                Next cases
+              </button>
+            </div>
+            <p>
+              Anonymous test positions only. Narratives and complaint
+              identifiers are withheld. Metadata can identify cases needing
+              local inspection; it cannot establish the correct label.
+            </p>
           </details>
         </section>
-        <section id="method">
-          <div class="section-head">
-            <h2>4. What would make this useful in a real service?</h2>
-            <p>
-              The prototype delivers a repeatable way to find patterns and test
-              message sorting. Proving that it improves a service needs one more
-              step: a real-world pilot.
-            </p>
-          </div>
-          <div class="two-col application">
-            <article>
-              <h3>For a customer-support team</h3>
-              <p>
-                Use the recurring issues to choose a focused case review. Check
-                the actual messages and service records before changing a
-                process.
-              </p>
-            </article>
-            <article>
-              <h3>For a product team</h3>
-              <p>
-                Turn the review into a testable change: clearer instructions,
-                fewer handoffs, or better status updates. Measure whether
-                customers need to contact support again.
-              </p>
-            </article>
-          </div>
+        <section id="method" class="scene">
+          <p class="eyebrow">05 / From evidence to action</p>
+          <h2>What would I do next?</h2>
+          <ol class="action-path">
+            <li>
+              <b>Review the cases</b><span>Understand a recurring issue</span>
+            </li>
+            <li>
+              <b>Propose a change</b><span>Address the verified cause</span>
+            </li>
+            <li>
+              <b>Run a small pilot</b
+              ><span>Compare with the current process</span>
+            </li>
+            <li>
+              <b>Measure the outcome</b
+              ><span>Repeat contacts and routing errors</span>
+            </li>
+          </ol>
           <p>
-            <strong>A testable next step:</strong> try clearer instructions with
-            one eligible group and compare it with the current process. Measure
-            repeat-contact rates and check for worse outcomes. This pilot has
-            not been run.
+            The study delivers investigation priorities and a tested sorting
+            prototype. A service pilot would establish whether they improve
+            customer outcomes.
           </p>
           <details>
-            <summary>Which tools solved which part?</summary>
+            <summary>
+              What change would I test, and how would I measure it?
+            </summary>
+            <p>
+              For disputed card purchases, first review case messages and
+              service records to check whether unclear evidence requirements
+              contribute to repeat contacts. The complaint count alone cannot
+              confirm this.
+            </p>
+            <p>
+              If that explanation is supported, test clearer dispute
+              instructions against the current process in randomly assigned
+              eligible cases, where feasible. Define a fixed follow-up window,
+              compare repeat-contact rates, and monitor adverse outcomes and
+              resolution time.
+            </p>
+            <p>
+              For message sorting, begin with a shadow pilot: record model
+              suggestions while staff keep control. Measure category accuracy,
+              handoff corrections and handling time before considering
+              automation. These pilots have not been run; no time savings or
+              complaint reductions are claimed.
+            </p>
+          </details>
+          <details>
+            <summary>Which tools solved which problem?</summary>
             <dl class="tool-guide">
               <div>
-                <dt>Python · prepare the data</dt>
+                <dt>Python: prepare trustworthy data</dt>
                 <dd>
-                  Sample the archive reproducibly and remove repeated
-                  complaints.
+                  Sample reproducibly, validate fields and remove repeats.
                 </dd>
               </div>
               <div>
-                <dt>DuckDB + SQL · answer the questions</dt>
+                <dt>DuckDB and SQL: find patterns</dt>
                 <dd>
-                  Count recurring issues and calculate the monthly shares behind
-                  every finding.
+                  Count product and issue combinations, with explicit monthly
+                  denominators.
                 </dd>
               </div>
               <div>
-                <dt>TF-IDF + logistic regression · test classification</dt>
+                <dt>Scikit-learn: test classification</dt>
                 <dd>
-                  Turn words into features and learn which product category they
-                  suggest. A compact, established baseline.
+                  Fit TF-IDF and logistic regression on earlier data. Compare
+                  against the most common category.
                 </dd>
               </div>
               <div>
-                <dt>Chronological testing · challenge the result</dt>
+                <dt>HTML and JavaScript: explain the evidence</dt>
                 <dd>
-                  Train on earlier months, choose settings on separate months,
-                  then test once on June. Flag low-score cases for review.
-                </dd>
-              </div>
-              <div>
-                <dt>HTML + JavaScript · make it explorable</dt>
-                <dd>
-                  Filter the evidence and run fixed examples in your browser. No
-                  account, upload, or paid API needed.
+                  Interactive charts and local model inference, without a paid
+                  API.
                 </dd>
               </div>
             </dl>
+            <p>
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/sql/metrics.sql"
+                >Analysis SQL</a
+              >
+              ·
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
+                >Contribution and validation record</a
+              >
+            </p>
           </details>
           <details>
             <summary>Research and ideas behind the approach</summary>
@@ -407,47 +477,90 @@
               classifier in this demo.
             </p>
           </details>
-          <div class="two-col">
-            <div>
-              <h3>What remains unproven</h3>
-              <p>
-                Complaint counts show what appears in this sample. Without
-                knowing the total number of customers or transactions, we cannot
-                calculate a customer problem rate. The findings do not prove
-                causes, customer satisfaction, cost savings, or business impact.
-              </p>
-              <p>
-                Each month was sampled separately. Six months cannot establish
-                seasonal patterns, and duplicate detection can miss reworded
-                complaints. Model performance varies by category; some rare
-                categories perform poorly.
-              </p>
-            </div>
-            <div>
-              <h3>Reproduce and inspect</h3>
-              <p id="provenance"></p>
+
+          <details id="quality">
+            <summary>Where did the data come from? How was it cleaned?</summary>
+            <p>
+              The Consumer Financial Protection Bureau, a US government agency,
+              publishes complaints about financial products. This study uses its
+              historical written accounts, not a live feed.
+            </p>
+            <p>
+              We selected 12,000 complaints from January to June 2026 and
+              removed 1,050 repeated or very similar entries, leaving 10,950.
+              People choose whether to complain and publish their account. This
+              sample cannot represent all customers.
+            </p>
+            <p>
               <a
-                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
-                >Code, SQL, tests and review checklist</a
-              ><br /><a
                 href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
-                >Official CFPB historical archive</a
-              ><br /><a href="https://cfpb.github.io/api/ccdb/fields.html"
-                >Official field definitions</a
-              ><br /><a
-                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
-                >Sampling, splits and model card</a
+                >Official archive</a
               >
-            </div>
+              ·
+              <a href="https://cfpb.github.io/api/ccdb/fields.html"
+                >Official field definitions</a
+              >
+            </p>
+            <details>
+              <summary>How the sample was selected and cleaned</summary>
+              <div id="audit" class="table-wrap"></div>
+              <div id="quality-detail"></div>
+            </details>
+            <p id="provenance"></p>
+            <p>
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/reports/manifest.json"
+                >Archive URLs, full hashes and acquisition record</a
+              >
+            </p>
+          </details>
+          <details>
+            <summary>What can the evidence establish?</summary>
+            <p>
+              Issue counts describe this selected sample. Without customer or
+              transaction totals, they cannot measure customer failure rates,
+              severity or causes. The categories are recorded source labels, not
+              themes discovered by the model.
+            </p>
+            <p>
+              Six months cannot establish seasonality or long-term model
+              stability. Similar messages may remain after duplicate screening.
+              Binomial intervals and month-block bootstrap intervals are
+              descriptive: related complaints and only three months per
+              comparison period limit inference.
+            </p>
+            <p>
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+                >Sampling, uncertainty and experiment design</a
+              >
+              ·
+              <a
+                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/research.md"
+                >Research ledger</a
+              >
+            </p>
+          </details>
+          <div class="actions">
+            <a
+              class="button"
+              href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
+              >View code</a
+            ><a class="button secondary" href="evidence.csv" download
+              >Explore the data</a
+            ><a
+              href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+              >Read the methods</a
+            >
           </div>
         </section>
       </div>
     </main>
     <footer>
-      A portfolio study by Mohammed Umar Asif Sayed · AI-assisted development.
+      A portfolio study by Mohammed Umar Asif Sayed. AI-assisted development.
       <a
         href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
-        >Contribution and validation record</a
+        >Contribution record</a
       >
     </footer>
   </body>
