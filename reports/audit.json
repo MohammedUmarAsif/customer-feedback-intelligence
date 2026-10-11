@@ -1,0 +1,39 @@
+{
+  "duplicate_ids": 0,
+  "exact_duplicates": 827,
+  "invalid_required_fields": 0,
+  "missing_fields": {
+    "Company": 0,
+    "Company public response": 7981,
+    "Company response to consumer": 0,
+    "Date received": 0,
+    "Date sent to company": 0,
+    "Issue": 0,
+    "Product": 0,
+    "State": 88,
+    "Sub-issue": 1532,
+    "Sub-product": 0,
+    "Submitted via": 0,
+    "Tags": 10203,
+    "Timely response?": 0,
+    "ZIP code": 35,
+    "month": 0
+  },
+  "monthly_usable": {
+    "2026-01": 1907,
+    "2026-02": 1809,
+    "2026-03": 1753,
+    "2026-04": 1868,
+    "2026-05": 1803,
+    "2026-06": 1810
+  },
+  "near_duplicates": 223,
+  "sampled": 12000,
+  "split_counts": {
+    "calibration": 1803,
+    "test": 1810,
+    "train": 5469,
+    "tune": 1868
+  },
+  "usable": 10950
+}

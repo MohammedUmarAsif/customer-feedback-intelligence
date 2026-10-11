@@ -1,0 +1,551 @@
+month,product,issue,n
+2026-01,Checking or savings account,Closing an account,47
+2026-01,Checking or savings account,Improper use of your report,1
+2026-01,Checking or savings account,Managing an account,178
+2026-01,Checking or savings account,Opening an account,21
+2026-01,Checking or savings account,Problem caused by your funds being low,20
+2026-01,Checking or savings account,Problem with a lender or other company charging your account,67
+2026-01,Checking or savings account,Problem with fraud alerts or security freezes,2
+2026-01,Credit card,"Advertising and marketing, including promotional offers",20
+2026-01,Credit card,Closing your account,23
+2026-01,Credit card,Credit monitoring or identity theft protection services,1
+2026-01,Credit card,Fees or interest,35
+2026-01,Credit card,Getting a credit card,32
+2026-01,Credit card,Improper use of your report,4
+2026-01,Credit card,Incorrect information on your report,13
+2026-01,Credit card,"Other features, terms, or problems",52
+2026-01,Credit card,Problem when making payments,18
+2026-01,Credit card,Problem with a company's investigation into an existing problem,10
+2026-01,Credit card,Problem with a purchase shown on your statement,113
+2026-01,Credit card,Struggling to pay your bill,7
+2026-01,Credit card,Trouble using your card,16
+2026-01,Credit reporting or other personal consumer reports,Improper use of your report,13
+2026-01,Credit reporting or other personal consumer reports,Incorrect information on your report,38
+2026-01,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing issue,1
+2026-01,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,18
+2026-01,Credit reporting or other personal consumer reports,Problem with fraud alerts or security freezes,2
+2026-01,Credit reporting or other personal consumer reports,Unable to get your credit report or credit score,1
+2026-01,Debt collection,Attempts to collect debt not owed,246
+2026-01,Debt collection,Communication tactics,35
+2026-01,Debt collection,Electronic communications,12
+2026-01,Debt collection,False statements or representation,99
+2026-01,Debt collection,Threatened to contact someone or share information improperly,19
+2026-01,Debt collection,Took or threatened to take negative or legal action,60
+2026-01,Debt collection,Written notification about debt,87
+2026-01,Debt or credit management,Charged upfront or unexpected fees,3
+2026-01,Debt or credit management,Confusing or misleading advertising or marketing,1
+2026-01,Debt or credit management,Confusing or missing disclosures,1
+2026-01,Debt or credit management,Didn't provide services promised,8
+2026-01,Debt or credit management,Problem with customer service,3
+2026-01,Debt or credit management,Unauthorized withdrawals or charges,4
+2026-01,"Money transfer, virtual currency, or money service",Confusing or misleading advertising or marketing,2
+2026-01,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,5
+2026-01,"Money transfer, virtual currency, or money service",Fraud or scam,39
+2026-01,"Money transfer, virtual currency, or money service",Lost or stolen money order,4
+2026-01,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",10
+2026-01,"Money transfer, virtual currency, or money service",Money was not available when promised,16
+2026-01,"Money transfer, virtual currency, or money service",Other service problem,4
+2026-01,"Money transfer, virtual currency, or money service",Other transaction problem,27
+2026-01,"Money transfer, virtual currency, or money service",Problem adding money,2
+2026-01,"Money transfer, virtual currency, or money service",Problem with customer service,1
+2026-01,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,16
+2026-01,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,28
+2026-01,"Money transfer, virtual currency, or money service",Unexpected or other fees,6
+2026-01,Mortgage,Applying for a mortgage or refinancing an existing mortgage,18
+2026-01,Mortgage,Closing on a mortgage,9
+2026-01,Mortgage,Improper use of your report,1
+2026-01,Mortgage,Incorrect information on your report,1
+2026-01,Mortgage,Problem with a company's investigation into an existing problem,5
+2026-01,Mortgage,Struggling to pay mortgage,36
+2026-01,Mortgage,Trouble during payment process,60
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Can't stop withdrawals from your bank account,2
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,13
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Confusing or misleading advertising or marketing,1
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Getting a line of credit,1
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,5
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,4
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Issues with repayment,2
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,5
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Money was taken from your bank account on the wrong day or for the wrong amount,1
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,10
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,5
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,8
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,7
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Problems receiving the advance,1
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,2
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,8
+2026-01,"Payday loan, title loan, personal loan, or advance loan",Vehicle was repossessed or sold the vehicle,1
+2026-01,Prepaid card,Advertising,1
+2026-01,Prepaid card,Problem getting a card or closing an account,4
+2026-01,Prepaid card,Problem with a purchase or transfer,13
+2026-01,Prepaid card,Trouble using the card,15
+2026-01,Prepaid card,Unexpected or other fees,4
+2026-01,Student loan,Dealing with your lender or servicer,41
+2026-01,Student loan,Getting a loan,2
+2026-01,Student loan,Improper use of your report,2
+2026-01,Student loan,Incorrect information on your report,7
+2026-01,Student loan,Problem with a company's investigation into an existing problem,3
+2026-01,Student loan,Struggling to repay your loan,14
+2026-01,Student loan,Unable to get your credit report or credit score,1
+2026-01,Vehicle loan or lease,Credit monitoring or identity theft protection services,1
+2026-01,Vehicle loan or lease,Getting a loan or lease,12
+2026-01,Vehicle loan or lease,Incorrect information on your report,7
+2026-01,Vehicle loan or lease,Managing the loan or lease,26
+2026-01,Vehicle loan or lease,Problem with a company's investigation into an existing problem,5
+2026-01,Vehicle loan or lease,Problem with fraud alerts or security freezes,1
+2026-01,Vehicle loan or lease,Problems at the end of the loan or lease,15
+2026-01,Vehicle loan or lease,Repossession,30
+2026-01,Vehicle loan or lease,Struggling to pay your loan,6
+2026-02,Checking or savings account,Closing an account,55
+2026-02,Checking or savings account,Incorrect information on your report,1
+2026-02,Checking or savings account,Managing an account,196
+2026-02,Checking or savings account,Opening an account,26
+2026-02,Checking or savings account,Problem caused by your funds being low,19
+2026-02,Checking or savings account,Problem with a company's investigation into an existing problem,1
+2026-02,Checking or savings account,Problem with a lender or other company charging your account,54
+2026-02,Credit card,"Advertising and marketing, including promotional offers",12
+2026-02,Credit card,Closing your account,28
+2026-02,Credit card,Fees or interest,37
+2026-02,Credit card,Getting a credit card,24
+2026-02,Credit card,Improper use of your report,4
+2026-02,Credit card,Incorrect information on your report,15
+2026-02,Credit card,"Other features, terms, or problems",48
+2026-02,Credit card,Problem when making payments,12
+2026-02,Credit card,Problem with a company's investigation into an existing problem,6
+2026-02,Credit card,Problem with a purchase shown on your statement,116
+2026-02,Credit card,Struggling to pay your bill,6
+2026-02,Credit card,Trouble using your card,13
+2026-02,Credit reporting or other personal consumer reports,Improper use of your report,18
+2026-02,Credit reporting or other personal consumer reports,Incorrect information on your report,39
+2026-02,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,14
+2026-02,Credit reporting or other personal consumer reports,Unable to get your credit report or credit score,2
+2026-02,Debt collection,Attempts to collect debt not owed,246
+2026-02,Debt collection,Communication tactics,29
+2026-02,Debt collection,Electronic communications,26
+2026-02,Debt collection,False statements or representation,93
+2026-02,Debt collection,Threatened to contact someone or share information improperly,12
+2026-02,Debt collection,Took or threatened to take negative or legal action,44
+2026-02,Debt collection,Written notification about debt,79
+2026-02,Debt or credit management,Charged upfront or unexpected fees,1
+2026-02,Debt or credit management,Confusing or misleading advertising or marketing,3
+2026-02,Debt or credit management,Confusing or missing disclosures,2
+2026-02,Debt or credit management,Didn't provide services promised,5
+2026-02,Debt or credit management,Problem with customer service,6
+2026-02,Debt or credit management,Unauthorized withdrawals or charges,2
+2026-02,"Money transfer, virtual currency, or money service",Confusing or misleading advertising or marketing,2
+2026-02,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,8
+2026-02,"Money transfer, virtual currency, or money service",Fraud or scam,38
+2026-02,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",2
+2026-02,"Money transfer, virtual currency, or money service",Money was not available when promised,12
+2026-02,"Money transfer, virtual currency, or money service",Other service problem,3
+2026-02,"Money transfer, virtual currency, or money service",Other transaction problem,30
+2026-02,"Money transfer, virtual currency, or money service",Problem adding money,3
+2026-02,"Money transfer, virtual currency, or money service",Problem with customer service,3
+2026-02,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,21
+2026-02,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,26
+2026-02,"Money transfer, virtual currency, or money service",Unexpected or other fees,3
+2026-02,"Money transfer, virtual currency, or money service",Wrong amount charged or received,1
+2026-02,Mortgage,Applying for a mortgage or refinancing an existing mortgage,14
+2026-02,Mortgage,Closing on a mortgage,12
+2026-02,Mortgage,Incorrect information on your report,1
+2026-02,Mortgage,Struggling to pay mortgage,23
+2026-02,Mortgage,Trouble during payment process,53
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Can't contact lender or servicer,2
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,17
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Confusing or misleading advertising or marketing,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Confusing or missing disclosures,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Getting a line of credit,3
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Improper use of your report,2
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,4
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,2
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,7
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,7
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problem with cash advance,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,10
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Problems receiving the advance,1
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,2
+2026-02,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,11
+2026-02,Prepaid card,Problem getting a card or closing an account,6
+2026-02,Prepaid card,Problem with a purchase or transfer,7
+2026-02,Prepaid card,Trouble using the card,7
+2026-02,Prepaid card,Unexpected or other fees,3
+2026-02,Student loan,Dealing with your lender or servicer,37
+2026-02,Student loan,Getting a loan,3
+2026-02,Student loan,Improper use of your report,1
+2026-02,Student loan,Incorrect information on your report,6
+2026-02,Student loan,Issue where my lender is my school,2
+2026-02,Student loan,Problem with a company's investigation into an existing problem,2
+2026-02,Student loan,Struggling to repay your loan,18
+2026-02,Vehicle loan or lease,Getting a loan or lease,5
+2026-02,Vehicle loan or lease,Incorrect information on your report,5
+2026-02,Vehicle loan or lease,Managing the loan or lease,29
+2026-02,Vehicle loan or lease,Problem with a company's investigation into an existing problem,3
+2026-02,Vehicle loan or lease,Problems at the end of the loan or lease,11
+2026-02,Vehicle loan or lease,Repossession,30
+2026-02,Vehicle loan or lease,Struggling to pay your loan,12
+2026-03,Checking or savings account,Closing an account,52
+2026-03,Checking or savings account,Incorrect information on your report,2
+2026-03,Checking or savings account,Managing an account,183
+2026-03,Checking or savings account,Opening an account,16
+2026-03,Checking or savings account,Problem caused by your funds being low,24
+2026-03,Checking or savings account,Problem with a lender or other company charging your account,47
+2026-03,Credit card,"Advertising and marketing, including promotional offers",11
+2026-03,Credit card,Closing your account,25
+2026-03,Credit card,Fees or interest,40
+2026-03,Credit card,Getting a credit card,33
+2026-03,Credit card,Improper use of your report,2
+2026-03,Credit card,Incorrect information on your report,12
+2026-03,Credit card,"Other features, terms, or problems",41
+2026-03,Credit card,Problem when making payments,20
+2026-03,Credit card,Problem with a company's investigation into an existing problem,6
+2026-03,Credit card,Problem with a purchase shown on your statement,112
+2026-03,Credit card,Struggling to pay your bill,2
+2026-03,Credit card,Trouble using your card,15
+2026-03,Credit reporting or other personal consumer reports,Credit monitoring or identity theft protection services,1
+2026-03,Credit reporting or other personal consumer reports,Improper use of your report,16
+2026-03,Credit reporting or other personal consumer reports,Incorrect information on your report,30
+2026-03,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,12
+2026-03,Debt collection,Attempts to collect debt not owed,254
+2026-03,Debt collection,Communication tactics,29
+2026-03,Debt collection,Electronic communications,20
+2026-03,Debt collection,False statements or representation,95
+2026-03,Debt collection,Threatened to contact someone or share information improperly,9
+2026-03,Debt collection,Took or threatened to take negative or legal action,43
+2026-03,Debt collection,Written notification about debt,72
+2026-03,Debt or credit management,Charged upfront or unexpected fees,3
+2026-03,Debt or credit management,Confusing or misleading advertising or marketing,1
+2026-03,Debt or credit management,Confusing or missing disclosures,2
+2026-03,Debt or credit management,Didn't provide services promised,4
+2026-03,Debt or credit management,Problem with customer service,5
+2026-03,Debt or credit management,Unauthorized withdrawals or charges,4
+2026-03,"Money transfer, virtual currency, or money service",Confusing or misleading advertising or marketing,2
+2026-03,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,1
+2026-03,"Money transfer, virtual currency, or money service",Fraud or scam,52
+2026-03,"Money transfer, virtual currency, or money service",Lost or stolen money order,1
+2026-03,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",5
+2026-03,"Money transfer, virtual currency, or money service",Money was not available when promised,11
+2026-03,"Money transfer, virtual currency, or money service",Other service problem,4
+2026-03,"Money transfer, virtual currency, or money service",Other transaction problem,37
+2026-03,"Money transfer, virtual currency, or money service",Problem adding money,2
+2026-03,"Money transfer, virtual currency, or money service",Problem with customer service,6
+2026-03,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,15
+2026-03,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,14
+2026-03,"Money transfer, virtual currency, or money service",Unexpected or other fees,3
+2026-03,"Money transfer, virtual currency, or money service",Wrong amount charged or received,4
+2026-03,Mortgage,Applying for a mortgage or refinancing an existing mortgage,9
+2026-03,Mortgage,Closing on a mortgage,7
+2026-03,Mortgage,Improper use of your report,1
+2026-03,Mortgage,Struggling to pay mortgage,24
+2026-03,Mortgage,Trouble during payment process,54
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Can't contact lender or servicer,2
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,21
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Confusing or missing disclosures,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Getting a line of credit,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,7
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Money was taken from your bank account on the wrong day or for the wrong amount,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,12
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,4
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problem with customer service,1
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,4
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Problems receiving the advance,2
+2026-03,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,5
+2026-03,"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive the money",1
+2026-03,Prepaid card,Problem with a purchase or transfer,6
+2026-03,Prepaid card,Trouble using the card,6
+2026-03,Prepaid card,Unexpected or other fees,3
+2026-03,Student loan,Dealing with your lender or servicer,40
+2026-03,Student loan,Getting a loan,3
+2026-03,Student loan,Improper use of your report,3
+2026-03,Student loan,Incorrect information on your report,7
+2026-03,Student loan,Problem with a company's investigation into an existing problem,5
+2026-03,Student loan,Struggling to repay your loan,16
+2026-03,Vehicle loan or lease,Getting a loan or lease,13
+2026-03,Vehicle loan or lease,Incorrect information on your report,4
+2026-03,Vehicle loan or lease,Managing the loan or lease,41
+2026-03,Vehicle loan or lease,Problem with a company's investigation into an existing problem,3
+2026-03,Vehicle loan or lease,Problems at the end of the loan or lease,16
+2026-03,Vehicle loan or lease,Repossession,25
+2026-03,Vehicle loan or lease,Struggling to pay your loan,2
+2026-04,Checking or savings account,Closing an account,48
+2026-04,Checking or savings account,Improper use of your report,1
+2026-04,Checking or savings account,Incorrect information on your report,1
+2026-04,Checking or savings account,Managing an account,186
+2026-04,Checking or savings account,Opening an account,21
+2026-04,Checking or savings account,Problem caused by your funds being low,17
+2026-04,Checking or savings account,Problem with a lender or other company charging your account,56
+2026-04,Credit card,"Advertising and marketing, including promotional offers",26
+2026-04,Credit card,Closing your account,29
+2026-04,Credit card,Credit monitoring or identity theft protection services,2
+2026-04,Credit card,Fees or interest,42
+2026-04,Credit card,Getting a credit card,42
+2026-04,Credit card,Improper use of your report,2
+2026-04,Credit card,Incorrect information on your report,22
+2026-04,Credit card,"Other features, terms, or problems",50
+2026-04,Credit card,Problem when making payments,14
+2026-04,Credit card,Problem with a company's investigation into an existing problem,13
+2026-04,Credit card,Problem with a purchase shown on your statement,128
+2026-04,Credit card,Struggling to pay your bill,2
+2026-04,Credit card,Trouble using your card,18
+2026-04,Credit reporting or other personal consumer reports,Improper use of your report,9
+2026-04,Credit reporting or other personal consumer reports,Incorrect information on your report,36
+2026-04,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing issue,1
+2026-04,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,7
+2026-04,Debt collection,Attempts to collect debt not owed,252
+2026-04,Debt collection,Communication tactics,33
+2026-04,Debt collection,Electronic communications,15
+2026-04,Debt collection,False statements or representation,103
+2026-04,Debt collection,Threatened to contact someone or share information improperly,7
+2026-04,Debt collection,Took or threatened to take negative or legal action,48
+2026-04,Debt collection,Written notification about debt,77
+2026-04,Debt or credit management,Charged upfront or unexpected fees,4
+2026-04,Debt or credit management,Confusing or misleading advertising or marketing,6
+2026-04,Debt or credit management,Confusing or missing disclosures,2
+2026-04,Debt or credit management,Didn't provide services promised,2
+2026-04,Debt or credit management,Problem with customer service,1
+2026-04,Debt or credit management,Unauthorized withdrawals or charges,2
+2026-04,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,5
+2026-04,"Money transfer, virtual currency, or money service",Fraud or scam,54
+2026-04,"Money transfer, virtual currency, or money service",Lost or stolen money order,3
+2026-04,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",9
+2026-04,"Money transfer, virtual currency, or money service",Money was not available when promised,11
+2026-04,"Money transfer, virtual currency, or money service",Other service problem,1
+2026-04,"Money transfer, virtual currency, or money service",Other transaction problem,25
+2026-04,"Money transfer, virtual currency, or money service","Overdraft, savings, or rewards features",1
+2026-04,"Money transfer, virtual currency, or money service",Problem with customer service,4
+2026-04,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,14
+2026-04,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,37
+2026-04,"Money transfer, virtual currency, or money service",Unexpected or other fees,4
+2026-04,"Money transfer, virtual currency, or money service",Wrong amount charged or received,2
+2026-04,Mortgage,Applying for a mortgage or refinancing an existing mortgage,7
+2026-04,Mortgage,Closing on a mortgage,14
+2026-04,Mortgage,Incorrect information on your report,6
+2026-04,Mortgage,Problem with a company's investigation into an existing problem,1
+2026-04,Mortgage,Struggling to pay mortgage,25
+2026-04,Mortgage,Trouble during payment process,63
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Can't stop withdrawals from your bank account,4
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,16
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,9
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Improper use of your report,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,2
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Issues with repayment,2
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,3
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Money was taken from your bank account on the wrong day or for the wrong amount,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,8
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,12
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,11
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Unexpected fees,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan",Vehicle was repossessed or sold the vehicle,1
+2026-04,"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive money",1
+2026-04,Prepaid card,Problem getting a card or closing an account,3
+2026-04,Prepaid card,Problem with a purchase or transfer,10
+2026-04,Prepaid card,Trouble using the card,6
+2026-04,Prepaid card,Unexpected or other fees,7
+2026-04,Student loan,Credit monitoring or identity theft protection services,1
+2026-04,Student loan,Dealing with your lender or servicer,36
+2026-04,Student loan,Getting a loan,3
+2026-04,Student loan,Improper use of your report,2
+2026-04,Student loan,Incorrect information on your report,4
+2026-04,Student loan,Problem with a company's investigation into an existing problem,3
+2026-04,Student loan,Struggling to repay your loan,12
+2026-04,Vehicle loan or lease,Getting a loan or lease,9
+2026-04,Vehicle loan or lease,Incorrect information on your report,7
+2026-04,Vehicle loan or lease,Managing the loan or lease,34
+2026-04,Vehicle loan or lease,Problem with a company's investigation into an existing problem,2
+2026-04,Vehicle loan or lease,Problems at the end of the loan or lease,13
+2026-04,Vehicle loan or lease,Repossession,25
+2026-04,Vehicle loan or lease,Struggling to pay your loan,6
+2026-05,Checking or savings account,Closing an account,46
+2026-05,Checking or savings account,Credit monitoring or identity theft protection services,1
+2026-05,Checking or savings account,Incorrect information on your report,1
+2026-05,Checking or savings account,Managing an account,183
+2026-05,Checking or savings account,Opening an account,23
+2026-05,Checking or savings account,Problem caused by your funds being low,26
+2026-05,Checking or savings account,Problem with a company's investigation into an existing problem,3
+2026-05,Checking or savings account,Problem with a lender or other company charging your account,66
+2026-05,Checking or savings account,Problem with fraud alerts or security freezes,1
+2026-05,Credit card,"Advertising and marketing, including promotional offers",17
+2026-05,Credit card,Closing your account,20
+2026-05,Credit card,Fees or interest,45
+2026-05,Credit card,Getting a credit card,27
+2026-05,Credit card,Improper use of your report,1
+2026-05,Credit card,Incorrect information on your report,12
+2026-05,Credit card,"Other features, terms, or problems",44
+2026-05,Credit card,Problem when making payments,22
+2026-05,Credit card,Problem with a company's investigation into an existing problem,10
+2026-05,Credit card,Problem with a purchase shown on your statement,107
+2026-05,Credit card,Problem with fraud alerts or security freezes,1
+2026-05,Credit card,Struggling to pay your bill,6
+2026-05,Credit card,Trouble using your card,14
+2026-05,Credit reporting or other personal consumer reports,Improper use of your report,14
+2026-05,Credit reporting or other personal consumer reports,Incorrect information on your report,41
+2026-05,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,13
+2026-05,Credit reporting or other personal consumer reports,Problem with fraud alerts or security freezes,1
+2026-05,Debt collection,Attempts to collect debt not owed,230
+2026-05,Debt collection,Communication tactics,32
+2026-05,Debt collection,Electronic communications,10
+2026-05,Debt collection,False statements or representation,84
+2026-05,Debt collection,Threatened to contact someone or share information improperly,9
+2026-05,Debt collection,Took or threatened to take negative or legal action,44
+2026-05,Debt collection,Written notification about debt,78
+2026-05,Debt or credit management,Confusing or misleading advertising or marketing,1
+2026-05,Debt or credit management,Confusing or missing disclosures,3
+2026-05,Debt or credit management,Didn't provide services promised,2
+2026-05,Debt or credit management,Problem with customer service,3
+2026-05,Debt or credit management,Unauthorized withdrawals or charges,1
+2026-05,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,6
+2026-05,"Money transfer, virtual currency, or money service",Fraud or scam,58
+2026-05,"Money transfer, virtual currency, or money service",Lost or stolen money order,1
+2026-05,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",9
+2026-05,"Money transfer, virtual currency, or money service",Money was not available when promised,14
+2026-05,"Money transfer, virtual currency, or money service",Other service problem,7
+2026-05,"Money transfer, virtual currency, or money service",Other transaction problem,27
+2026-05,"Money transfer, virtual currency, or money service","Overdraft, savings, or rewards features",1
+2026-05,"Money transfer, virtual currency, or money service",Problem with customer service,7
+2026-05,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,13
+2026-05,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,26
+2026-05,"Money transfer, virtual currency, or money service",Unexpected or other fees,2
+2026-05,"Money transfer, virtual currency, or money service",Wrong amount charged or received,1
+2026-05,Mortgage,Applying for a mortgage or refinancing an existing mortgage,17
+2026-05,Mortgage,Closing on a mortgage,9
+2026-05,Mortgage,Credit monitoring or identity theft protection services,2
+2026-05,Mortgage,Incorrect information on your report,2
+2026-05,Mortgage,Problem with a company's investigation into an existing problem,2
+2026-05,Mortgage,Struggling to pay mortgage,42
+2026-05,Mortgage,Trouble during payment process,66
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,16
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Credit limit changed,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Credit monitoring or identity theft protection services,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Getting a line of credit,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,11
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Improper use of your report,2
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,3
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Issues with repayment,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,13
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,7
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Problem with fraud alerts or security freezes,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,7
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,10
+2026-05,"Payday loan, title loan, personal loan, or advance loan",Vehicle was damaged or destroyed the vehicle,1
+2026-05,"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive the money",1
+2026-05,Prepaid card,Problem getting a card or closing an account,3
+2026-05,Prepaid card,Problem with a purchase or transfer,8
+2026-05,Prepaid card,Trouble using the card,6
+2026-05,Prepaid card,Unexpected or other fees,5
+2026-05,Student loan,Dealing with your lender or servicer,32
+2026-05,Student loan,Getting a loan,1
+2026-05,Student loan,Improper use of your report,5
+2026-05,Student loan,Incorrect information on your report,5
+2026-05,Student loan,Problem with a company's investigation into an existing problem,3
+2026-05,Student loan,Struggling to repay your loan,14
+2026-05,Vehicle loan or lease,Getting a loan or lease,5
+2026-05,Vehicle loan or lease,Incorrect information on your report,2
+2026-05,Vehicle loan or lease,Managing the loan or lease,28
+2026-05,Vehicle loan or lease,Problem with a company's investigation into an existing problem,2
+2026-05,Vehicle loan or lease,Problems at the end of the loan or lease,26
+2026-05,Vehicle loan or lease,Repossession,22
+2026-05,Vehicle loan or lease,Struggling to pay your loan,3
+2026-06,Checking or savings account,Closing an account,62
+2026-06,Checking or savings account,Improper use of your report,1
+2026-06,Checking or savings account,Incorrect information on your report,1
+2026-06,Checking or savings account,Managing an account,215
+2026-06,Checking or savings account,Opening an account,24
+2026-06,Checking or savings account,Problem caused by your funds being low,17
+2026-06,Checking or savings account,Problem with a company's investigation into an existing problem,5
+2026-06,Checking or savings account,Problem with a lender or other company charging your account,54
+2026-06,Credit card,"Advertising and marketing, including promotional offers",16
+2026-06,Credit card,Closing your account,26
+2026-06,Credit card,Credit monitoring or identity theft protection services,1
+2026-06,Credit card,Fees or interest,37
+2026-06,Credit card,Getting a credit card,18
+2026-06,Credit card,Improper use of your report,2
+2026-06,Credit card,Incorrect information on your report,6
+2026-06,Credit card,"Other features, terms, or problems",46
+2026-06,Credit card,Problem when making payments,23
+2026-06,Credit card,Problem with a company's investigation into an existing problem,16
+2026-06,Credit card,Problem with a purchase shown on your statement,122
+2026-06,Credit card,Problem with fraud alerts or security freezes,1
+2026-06,Credit card,Struggling to pay your bill,2
+2026-06,Credit card,Trouble using your card,10
+2026-06,Credit reporting or other personal consumer reports,Credit monitoring or identity theft protection services,2
+2026-06,Credit reporting or other personal consumer reports,Improper use of your report,13
+2026-06,Credit reporting or other personal consumer reports,Incorrect information on your report,30
+2026-06,Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,11
+2026-06,Credit reporting or other personal consumer reports,Problem with fraud alerts or security freezes,1
+2026-06,Debt collection,Attempts to collect debt not owed,189
+2026-06,Debt collection,Communication tactics,17
+2026-06,Debt collection,Electronic communications,16
+2026-06,Debt collection,False statements or representation,102
+2026-06,Debt collection,Threatened to contact someone or share information improperly,8
+2026-06,Debt collection,Took or threatened to take negative or legal action,45
+2026-06,Debt collection,Written notification about debt,83
+2026-06,Debt or credit management,Charged upfront or unexpected fees,1
+2026-06,Debt or credit management,Confusing or missing disclosures,6
+2026-06,Debt or credit management,Didn't provide services promised,3
+2026-06,Debt or credit management,Problem with customer service,6
+2026-06,Debt or credit management,Unauthorized withdrawals or charges,2
+2026-06,"Money transfer, virtual currency, or money service",Confusing or misleading advertising or marketing,2
+2026-06,"Money transfer, virtual currency, or money service",Confusing or missing disclosures,7
+2026-06,"Money transfer, virtual currency, or money service",Fraud or scam,43
+2026-06,"Money transfer, virtual currency, or money service",Lost or stolen money order,1
+2026-06,"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",13
+2026-06,"Money transfer, virtual currency, or money service",Money was not available when promised,5
+2026-06,"Money transfer, virtual currency, or money service",Other service problem,3
+2026-06,"Money transfer, virtual currency, or money service",Other transaction problem,12
+2026-06,"Money transfer, virtual currency, or money service",Problem adding money,1
+2026-06,"Money transfer, virtual currency, or money service",Problem with customer service,6
+2026-06,"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,15
+2026-06,"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,35
+2026-06,"Money transfer, virtual currency, or money service",Unexpected or other fees,2
+2026-06,"Money transfer, virtual currency, or money service",Wrong amount charged or received,2
+2026-06,Mortgage,Applying for a mortgage or refinancing an existing mortgage,13
+2026-06,Mortgage,Closing on a mortgage,16
+2026-06,Mortgage,Improper use of your report,1
+2026-06,Mortgage,Incorrect information on your report,2
+2026-06,Mortgage,Struggling to pay mortgage,33
+2026-06,Mortgage,Trouble during payment process,73
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Can't contact lender or servicer,3
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Can't stop withdrawals from your bank account,2
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,25
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Getting the loan,10
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,2
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Issues with repayment,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,13
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,4
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Problem with cash advance,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,10
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,3
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,6
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Unable to get your credit report or credit score,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Unexpected fees,1
+2026-06,"Payday loan, title loan, personal loan, or advance loan",Vehicle was repossessed or sold the vehicle,4
+2026-06,"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive the money",1
+2026-06,Prepaid card,Problem getting a card or closing an account,3
+2026-06,Prepaid card,Problem with a purchase or transfer,7
+2026-06,Prepaid card,Trouble using the card,8
+2026-06,Prepaid card,Unexpected or other fees,4
+2026-06,Student loan,Dealing with your lender or servicer,42
+2026-06,Student loan,Getting a loan,1
+2026-06,Student loan,Improper use of your report,1
+2026-06,Student loan,Incorrect information on your report,2
+2026-06,Student loan,Struggling to repay your loan,15
+2026-06,Vehicle loan or lease,Credit monitoring or identity theft protection services,3
+2026-06,Vehicle loan or lease,Getting a loan or lease,8
+2026-06,Vehicle loan or lease,Improper use of your report,1
+2026-06,Vehicle loan or lease,Incorrect information on your report,6
+2026-06,Vehicle loan or lease,Managing the loan or lease,51
+2026-06,Vehicle loan or lease,Problem with a company's investigation into an existing problem,2
+2026-06,Vehicle loan or lease,Problems at the end of the loan or lease,19
+2026-06,Vehicle loan or lease,Repossession,17
+2026-06,Vehicle loan or lease,Struggling to pay your loan,6
