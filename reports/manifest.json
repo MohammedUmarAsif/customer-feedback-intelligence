@@ -1,0 +1,93 @@
+{
+  "acquired_utc": "2026-10-11T19:42:56.070122+00:00",
+  "period": [
+    "2026-01-01",
+    "2026-06-30"
+  ],
+  "cap_per_month": 2000,
+  "selection": "lowest SHA256(seed=42|complaint_id), independently per month",
+  "source_page": "https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/",
+  "archives": [
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/CCDB_Export_15_January_2026_through_February_2026.zip",
+      "sha256": "437eee7adcc3e4342d1eafd8d716c4ef149e29c6a68c5ce3c379d1dc82c14b22",
+      "bytes": 36832036,
+      "rows": 1038383,
+      "eligible_narratives": 34351
+    },
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/CCDB_Export_16_March_2026.zip",
+      "sha256": "0d337dac973d1fdf874c1d9cd5909502bb29a71334543572f0b1aedcd5a58d24",
+      "bytes": 22053643,
+      "rows": 614945,
+      "eligible_narratives": 21640
+    },
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/CCDB_Export_17_April_2026.zip",
+      "sha256": "6f2ef5624c1bd76abcf2d39f693a0571c91fc8c08edf4dd7338516a3f913b30c",
+      "bytes": 22963936,
+      "rows": 618293,
+      "eligible_narratives": 21052
+    },
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/CCDB_Export_18_May_2026.zip",
+      "sha256": "311fe537afac63230d52f41529bb91361ce5a9844d7450866538bb0456bceade",
+      "bytes": 21033928,
+      "rows": 619940,
+      "eligible_narratives": 17528
+    },
+    {
+      "url": "https://files.consumerfinance.gov/f/documents/CCDB_Export_19_June_2026.zip",
+      "sha256": "3021c8af9eeed4971a92f15be21c7ce08cf3c1337151de255e5b12bf782049df",
+      "bytes": 19624767,
+      "rows": 620794,
+      "eligible_narratives": 16820
+    }
+  ],
+  "monthly": {
+    "2026-01": {
+      "eligible": 22227,
+      "sampled": 2000
+    },
+    "2026-02": {
+      "eligible": 12124,
+      "sampled": 2000
+    },
+    "2026-03": {
+      "eligible": 21640,
+      "sampled": 2000
+    },
+    "2026-04": {
+      "eligible": 21052,
+      "sampled": 2000
+    },
+    "2026-05": {
+      "eligible": 17528,
+      "sampled": 2000
+    },
+    "2026-06": {
+      "eligible": 16820,
+      "sampled": 2000
+    }
+  },
+  "columns": [
+    "Date received",
+    "Product",
+    "Sub-product",
+    "Issue",
+    "Sub-issue",
+    "Consumer complaint narrative",
+    "Company public response",
+    "Company",
+    "State",
+    "ZIP code",
+    "Tags",
+    "Submitted via",
+    "Date sent to company",
+    "Company response to consumer",
+    "Timely response?",
+    "Complaint ID"
+  ],
+  "sample_sha256": "8806eddad5d74064f743fb16f4ea21d38ef60986a49fe7ad2dce5350c54ee518",
+  "sample_rows": 12000
+}
