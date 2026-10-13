@@ -6,7 +6,7 @@
       "viewport": "desktop",
       "width": 1440,
       "height": 1000,
-      "flows": "3 finding bars/filters/reset/100-dot counts/3 example buttons/4 inference parity/review pagination",
+      "flows": "research figures/exact evaluation counts/3 finding handoffs/filters/3 example buttons/4 inference parity/review pagination",
       "browser_errors": [],
       "horizontal_page_overflow": false,
       "inference_max_tolerance": 1e-10
@@ -15,7 +15,7 @@
       "viewport": "mobile",
       "width": 390,
       "height": 844,
-      "flows": "3 finding bars/filters/reset/100-dot counts/3 example buttons/4 inference parity/review pagination",
+      "flows": "research figures/exact evaluation counts/3 finding handoffs/filters/3 example buttons/4 inference parity/review pagination",
       "browser_errors": [],
       "horizontal_page_overflow": false,
       "inference_max_tolerance": 1e-10

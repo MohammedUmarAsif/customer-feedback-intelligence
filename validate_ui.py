@@ -35,9 +35,9 @@ def validate(url: str) -> dict:
             assert page.locator("#trend-chart .trend-svg").count() == 1
             assert page.locator("#accuracy-comparison .bar-fill").count() == 2
             if name == "desktop":
-                chart_bounds = page.locator("#trend-chart").bounding_box()
+                chart_bounds = page.locator("#accuracy-comparison").bounding_box()
                 assert chart_bounds["y"] + chart_bounds["height"] < height
-            assert "complaints to investigation priorities" in page.locator(
+            assert "Can customer complaints guide better service decisions?" in page.locator(
                 "h1"
             ).inner_text().replace("\n", " ")
             for caption in [
@@ -54,11 +54,15 @@ def validate(url: str) -> dict:
                 assert disclosure.locator("a").count() > 0
                 disclosure.locator("summary").first.click()
             page.locator(".brand").click()
+            page.wait_for_function(
+                "document.querySelector('nav a[href=\"#main\"]').getAttribute('aria-current') === 'location'"
+            )
             page.screenshot(path=str(output / f"{name}-overview.png"))
-            assert page.locator("#reliability-dots .dot").count() == 100
-            assert page.locator("#reliability-dots .correct").count() == 45
-            assert page.locator("#reliability-dots .incorrect").count() == 5
-            assert page.locator("#reliability-dots .review").count() == 50
+            assert "907 above cutoff" in page.locator("#review-coverage").inner_text()
+            assert "903 review" in page.locator("#review-coverage").inner_text()
+            assert page.locator("#evaluation-summary tbody tr").count() == 4
+            assert "89.9% (815 / 907)" in page.locator("#evaluation-summary").inner_text()
+            page.screenshot(path=str(output / f"{name}-paper.png"), full_page=True)
             page.locator("nav a[href='#priorities']").click()
             page.screenshot(path=str(output / f"{name}-findings.png"))
             for finding in page.locator("[data-priority]").all():
@@ -94,7 +98,7 @@ def validate(url: str) -> dict:
                 assert browser_result["review"] == predict(text)["review"]
             page.locator("nav a[href='#routing']").click()
             page.screenshot(path=str(output / f"{name}-model.png"))
-            page.locator("a[href='#reliability']").click()
+            page.locator("nav a[href='#reliability']").click()
             page.screenshot(path=str(output / f"{name}-reliability.png"))
             page.get_by_text("See cases flagged for human review", exact=True).click()
             first_case = page.locator("#queue tbody tr").first.inner_text()
@@ -111,7 +115,7 @@ def validate(url: str) -> dict:
                     "viewport": name,
                     "width": width,
                     "height": height,
-                    "flows": "3 finding bars/filters/reset/100-dot counts/3 example buttons/4 inference parity/review pagination",
+                    "flows": "research figures/exact evaluation counts/3 finding handoffs/filters/3 example buttons/4 inference parity/review pagination",
                     "browser_errors": errors,
                     "horizontal_page_overflow": False,
                     "inference_max_tolerance": 1e-10,

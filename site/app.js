@@ -49,6 +49,7 @@ function plainFinding(row) {
   );
 }
 function showExample() {
+  $("prediction-score").textContent = "";
   document
     .querySelectorAll("[data-example]")
     .forEach((button) =>
@@ -233,6 +234,8 @@ function selectPriority(index) {
 function predictExample() {
   if (!model) return;
   const result = infer(model, examples[$("example").value]);
+  $("prediction-score").textContent =
+    `Score ${result.confidence.toFixed(3)} · Review cutoff ${data.metrics.threshold_selection.threshold.toFixed(2)}`;
   const recognized = [
     ...new Set(examples[$("example").value].toLowerCase().match(/[a-z]{2,}/g)),
   ].filter((word) => Object.hasOwn(model.vocabulary, word));
@@ -244,20 +247,12 @@ function predictExample() {
 function render() {
   const a = data.audit,
     m = data.metrics;
-  $("overview-metrics").innerHTML =
-    metric(fmt(a.usable), "Complaints analysed", "Public historical sample") +
-    metric(
-      String(data.insights.priorities.length),
-      "Investigation priorities",
-      "Ranked by sampled volume",
-    ) +
-    metric(
-      `${(100 * m.accuracy).toFixed(1)}%`,
-      "Category accuracy",
-      "Unseen June test; baseline 25.4%",
-    );
   const priorities = data.insights.priorities;
-  const largest = Math.max(...priorities.map((r) => r.n));
+  const largest =
+    Math.ceil(Math.max(...priorities.map((r) => r.n)) / 500) * 500;
+  $("finding-axis").innerHTML = [0, largest / 3, (largest * 2) / 3, largest]
+    .map((v) => `<span>${fmt(v)}</span>`)
+    .join("");
   $("brief").innerHTML = priorities
     .map(
       (r, i) =>
@@ -355,36 +350,36 @@ function render() {
       "Cases above the score cutoff",
       `${m.accepted}/${m.test_rows}; the other ${m.review} need review`,
     );
-  const acceptedDots = Math.round((100 * m.accepted) / m.test_rows);
-  const correctDots = Math.round((100 * m.accepted_correct) / m.test_rows);
-  const wrongDots = acceptedDots - correctDots;
-  const reviewDots = 100 - acceptedDots;
-  $("routing-summary").textContent =
-    "About half the messages were flagged for review. Among suggestions above the cutoff, about 90% matched the published category.";
-  $("reliability-dots").innerHTML = Array.from(
-    { length: 100 },
-    (_, i) =>
-      `<span class="dot ${i < correctDots ? "correct" : i < acceptedDots ? "incorrect" : "review"}" aria-hidden="true"></span>`,
-  ).join("");
-  $("reliability-dots").setAttribute(
-    "aria-label",
-    `Rounded June results per 100 messages: ${correctDots} above-cutoff correct suggestions, ${wrongDots} above-cutoff incorrect suggestions, ${reviewDots} flagged for review.`,
-  );
-  $("reliability-legend").innerHTML =
+  $("evaluation-summary").innerHTML = table(
+    ["June result", "Evidence"],
     [
-      ["correct", correctDots, "Above cutoff, correct"],
-      ["incorrect", wrongDots, "Above cutoff, incorrect"],
-      ["review", reviewDots, "Flagged for a person"],
-    ]
-      .map(
-        ([cls, n, label]) =>
-          `<div><span class="dot ${cls}" aria-hidden="true"></span><strong>${n}</strong><span>${label}</span></div>`,
-      )
-      .join("") +
-    `<small>Exact test counts: ${m.accepted_correct} correct and ${m.accepted - m.accepted_correct} incorrect above cutoff; ${m.review} flagged.</small>`;
+      [
+        "Overall accuracy",
+        `${pct(m.correct, m.test_rows)} (${fmt(m.correct)} / ${fmt(m.test_rows)})`,
+      ],
+      [
+        "Majority baseline",
+        `${pct(m.majority.correct, m.test_rows)} (${fmt(m.majority.correct)} / ${fmt(m.test_rows)})`,
+      ],
+      [
+        "Above-cutoff accuracy",
+        `${pct(m.accepted_correct, m.accepted)} (${fmt(m.accepted_correct)} / ${fmt(m.accepted)})`,
+      ],
+      [
+        "Flagged for review",
+        `${pct(m.review, m.test_rows)} (${fmt(m.review)} / ${fmt(m.test_rows)})`,
+      ],
+    ],
+  );
+  $("review-coverage").innerHTML =
+    `<span class="coverage-accepted" style="flex:${m.accepted}">${fmt(m.accepted)} above cutoff</span><span class="coverage-review" style="flex:${m.review}">${fmt(m.review)} review</span>`;
+  $("review-coverage").setAttribute(
+    "aria-label",
+    `${m.accepted} of ${m.test_rows} above cutoff; ${m.review} flagged for review. ${m.accepted_correct} of ${m.accepted} above-cutoff suggestions matched the published category.`,
+  );
   $("accuracy-comparison").innerHTML = [
-    ["Always choose the most common category", m.majority.accuracy, "baseline"],
-    ["Read the text with the trained model", m.accuracy, ""],
+    ["Majority baseline", m.majority.accuracy, "baseline"],
+    ["Text classifier", m.accuracy, ""],
   ]
     .map(
       ([label, accuracy, cls]) =>
@@ -433,10 +428,12 @@ function render() {
   $("provenance").textContent =
     `Acquired ${data.manifest.acquired_utc.slice(0, 10)} UTC from five official FOIA archives. Seed 42. Private sample SHA-256 ${data.manifest.sample_sha256.slice(0, 16)}… Full hashes and reconciliation are in the repository.`;
   showExample();
+  if (model) predictExample();
   showQueue();
   document.querySelectorAll("[data-priority]").forEach((link) => {
     link.addEventListener("click", (event) => {
       if (matchMedia("(min-width: 1000px)").matches) event.preventDefault();
+      $("monthly-evidence").open = true;
       selectPriority(Number(link.dataset.priority));
       $("evidence-heading").focus({ preventScroll: true });
     });
@@ -516,19 +513,37 @@ Promise.allSettled([
     $("retry").addEventListener("click", () => location.reload());
   });
 
-const chapters = ["priorities", "data-methods", "routing", "method"];
-const chapterObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-    if (!visible) return;
-    document.querySelectorAll("nav a").forEach((link) => {
-      if (link.hash === `#${visible.target.id}`)
-        link.setAttribute("aria-current", "location");
-      else link.removeAttribute("aria-current");
-    });
+const chapters = [
+  "main",
+  "priorities",
+  "data-methods",
+  "routing",
+  "reliability",
+];
+let chapterUpdatePending = false;
+function updateChapter() {
+  chapterUpdatePending = false;
+  const threshold =
+    document.querySelector("header").getBoundingClientRect().bottom + 60;
+  const active =
+    chapters
+      .filter((id) => $(id).getBoundingClientRect().top <= threshold)
+      .at(-1) || "main";
+  document.querySelectorAll("nav a").forEach((link) => {
+    if (link.hash === `#${active}`)
+      link.setAttribute("aria-current", "location");
+    else link.removeAttribute("aria-current");
+  });
+}
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!chapterUpdatePending) {
+      chapterUpdatePending = true;
+      requestAnimationFrame(updateChapter);
+    }
   },
-  { rootMargin: "-15% 0px -55% 0px" },
+  { passive: true },
 );
-chapters.forEach((id) => chapterObserver.observe($(id)));
+window.addEventListener("resize", updateChapter);
+updateChapter();

@@ -66,3 +66,15 @@ Local validation passed at 1440×1000 and 390×844, including a desktop first-vi
 ![Dashboard-first desktop](12-dashboard-desktop.png)
 
 ![Dashboard-first mobile](13-dashboard-mobile.png)
+
+## Research-report release, 13 October 2026
+
+The approved editorial concept is implemented with a research question and held-out comparison, a common-scale complaint figure with interpretation, a methods table and chronological timeline, exact results with review coverage/discussion, and a working model prototype at the end. Technical disclosures, research references, archive links and contribution records remain accessible. No data or model choices were changed.
+
+All 13 local tests, Ruff, JavaScript syntax and the publication gate passed. Fresh desktop 1440×1000 and mobile 390×844 flows verified exact counts, finding handoffs, filtering, example controls/model parity, review pagination and file-load recovery, with no page overflow or JavaScript errors. Navigation highlighting was corrected and regression-checked. Source references and file targets were checked against the checkout. Rendered screenshots were inspected; this is not a usability or accessibility certification.
+
+![Research-report desktop](14-research-desktop.png)
+
+![Research-report mobile](15-research-mobile.png)
+
+![Full research journey](16-research-journey.png)

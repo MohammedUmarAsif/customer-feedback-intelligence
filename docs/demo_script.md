@@ -1,11 +1,9 @@
-# Dashboard-first walkthrough
+# Research-report walkthrough
 
-1. **Overview.** The first screen explains the purpose and presents 10,950 complaints, three priorities and 70.8% model accuracy. The source archive is linked beside the study period.
-2. **Explore the evidence.** Select a count bar. On desktop the adjacent monthly chart and investigation question change in place; on mobile the trend comes into view. The bars use the whole sample and the trend uses the selected product’s monthly sample. Open the chart dropdown for filters and exact counts.
-3. **Compare model results.** The next dashboard row compares 25.4% baseline accuracy with 70.8% text-model accuracy and shows the rounded 45/5/50 reliability breakdown. The above-cutoff subset is not the whole test set. Follow the example link to try the model.
-4. **Read the problem.** Two tasks are distinguished: choose an investigation and suggest a product category. Open the priorities dropdown for hypotheses, alternative explanations and evidence.
-5. **Inspect data and methods.** Follow the preparation flow and chronological experiment. Source, duplicate detection, SQL, TF-IDF, logistic regression and research dropdowns explain choices and link to primary evidence.
-6. **Challenge the result.** Try Clear message, Vague message and Model mistake. The examples are invented and separate from real evaluation data. Inspect category metrics, review policy, failures and anonymous review metadata.
-7. **Discuss action.** Follow a case review, proposed change, pilot and outcome measure. No operational savings or complaint reductions have been measured. Code, aggregate downloads and the methodology remain linked.
+1. **Research question.** Read the question and short abstract. Compare the majority baseline with the trained text model on the same locked June test. Both the task and data scope are stated before technical detail.
+2. **Evidence.** Figure 1 uses a zero-based common count scale for the three recorded product/issue combinations. Select a finding to reveal its monthly evidence and investigation question. Inspect filters, exact counts and alternative explanations. The source archive is linked beside the figure.
+3. **Methods.** Inspect the design decisions and chronological timeline. Open data preparation, model choices, tools and research disclosures. Check sampling, duplicate screening, train-only representations and the preselected cutoff.
+4. **Results and discussion.** Read exact numerator/denominator results alongside coverage. Above-cutoff accuracy covers only half the test set. Inspect rare-category failures, uncertainty and the full evaluation. Proposed service changes require a case review and a pilot; they have not established business impact.
+5. **Prototype.** Try a clear message, vague message and model mistake. The browser uses the trained model on fixed illustrative examples. Inspect its raw score and recognised vocabulary. Close with code, counts, research and contribution links.
 
-A short first read is the design goal. Comprehension and reading time have not been measured with participants.
+The design aims to make research reasoning inspectable. No timed comprehension study or operational improvement is claimed.

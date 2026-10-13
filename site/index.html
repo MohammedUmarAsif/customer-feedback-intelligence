@@ -13,41 +13,62 @@
     <script defer src="app.js"></script>
   </head>
   <body>
-    <a class="skip" href="#main">Skip to the dashboard</a>
+    <a class="skip" href="#main">Skip to the study</a>
     <header>
       <a class="brand" href="#main"
         >CFI <span>Customer Feedback Intelligence</span></a
       >
-      <nav aria-label="Story chapters">
-        <a href="#priorities">Overview</a
-        ><a href="#data-methods">Data &amp; methods</a
-        ><a href="#routing">Results</a><a href="#method">Discussion</a>
+      <nav aria-label="Study chapters">
+        <a href="#main">Study</a><a href="#priorities">Evidence</a
+        ><a href="#data-methods">Methods</a><a href="#routing">Results</a
+        ><a href="#reliability">Demo</a>
       </nav>
       <a
         class="header-code"
         href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
-        >GitHub <span aria-hidden="true">↗</span></a
+        >GitHub ↗</a
       >
     </header>
     <main id="main">
       <section class="intro" aria-labelledby="project-heading">
-        <div>
-          <p class="eyebrow">Customer feedback / A data-science case study</p>
+        <div class="abstract">
+          <p class="eyebrow">An empirical customer-service study</p>
           <h1 id="project-heading">
-            From customer complaints <br />to investigation priorities.
+            Can customer complaints guide better service decisions?
           </h1>
           <p class="lead">
-            Explore recurring problems in 10,950 public complaints and see how a
-            tested model sorts new messages.
+            I analysed 10,950 public complaints to identify recurring issues,
+            then tested whether a text model could suggest a product category
+            for new messages.
           </p>
+          <p class="research-question">
+            Which issues warrant investigation, and when should a model defer to
+            a person?
+          </p>
+          <p class="study-meta">
+            Public US complaint records · January to June 2026 · Independent
+            prototype
+          </p>
+          <div class="intro-links">
+            <a href="#priorities">Explore the evidence ↓</a
+            ><a
+              href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+              >Methods and reproducible code ↗</a
+            >
+          </div>
         </div>
-        <div class="study-meta">
-          <span>January to June 2026</span
-          ><a
-            href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
-            >Official US complaint archive ↗</a
-          >
-        </div>
+        <figure class="hero-figure">
+          <h2>Model accuracy on held-out June complaints</h2>
+          <div id="accuracy-comparison"></div>
+          <div class="accuracy-axis" aria-hidden="true">
+            <span>0</span><span>20</span><span>40</span><span>60</span
+            ><span>80</span><span>100%</span>
+          </div>
+          <figcaption>
+            Held-out June evaluation · 1,810 complaints.
+            <a href="metrics.json">Measured results ↗</a>
+          </figcaption>
+        </figure>
       </section>
       <noscript
         ><p>
@@ -60,33 +81,70 @@
       >
       <div id="status" role="status">Loading the study...</div>
       <div id="content" hidden>
-        <section
-          id="priorities"
-          class="dashboard"
-          aria-label="Interactive study overview"
-        >
-          <div class="overview-metrics" id="overview-metrics"></div>
-          <div class="dashboard-grid">
-            <article class="dashboard-panel findings-panel">
-              <div class="panel-heading">
-                <div>
-                  <p class="eyebrow">Investigation priorities</p>
-                  <h2>Where do problems recur?</h2>
-                </div>
-              </div>
-              <p class="panel-hint">
-                Select a problem to update the monthly evidence.
-              </p>
+        <section id="priorities" class="paper-section">
+          <h2 class="section-title">
+            <span>01</span> Evidence from real customer complaints.
+          </h2>
+          <div class="evidence-grid">
+            <figure class="findings-figure">
+              <figcaption>
+                <b>Figure 1</b
+                ><span
+                  >Most frequent product and issue combinations in the
+                  10,950-record sample. Recorded categories, not
+                  model-discovered topics.</span
+                >
+              </figcaption>
               <div id="brief" aria-label="Ranked complaint counts"></div>
-              <div class="finding-insight" aria-live="polite">
-                <span class="eyebrow">A question to investigate</span>
+              <div
+                id="finding-axis"
+                class="finding-axis"
+                aria-hidden="true"
+              ></div>
+              <p class="axis-title">
+                Number of sampled complaints (common scale)
+              </p>
+              <p class="source-line">
+                Source:
+                <a
+                  href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
+                  >Consumer Financial Protection Bureau historical archive ↗</a
+                >
+              </p>
+            </figure>
+            <aside class="interpretation">
+              <h3>Interpretation</h3>
+              <p>
+                High volume identifies where to review cases. It does not
+                establish the cause or a customer failure rate.
+              </p>
+              <div class="finding-question" aria-live="polite">
+                <h3>The next question</h3>
                 <p id="finding-question"></p>
               </div>
-              <p class="source-line">
-                Counts use all 10,950 sampled complaints, not all customers.
-                <a href="evidence.csv" download>Source counts</a>
+              <p class="figure-hint">
+                Select a finding to inspect its monthly evidence.
               </p>
-            </article>
+              <a class="text-action" href="evidence.csv" download
+                >Exact counts ↗</a
+              >
+              <details id="finding-details">
+                <summary>
+                  Why these priorities? What should a team check?
+                </summary>
+                <div id="finding-research"></div>
+                <h3>Does a different ranking change the shortlist?</h3>
+                <p>
+                  Volume ranks total sampled counts. Change ranks share movement
+                  between January to March and April to June, for issues with at
+                  least 50 records. Neither measures severity.
+                </p>
+                <div id="sensitivity" class="table-wrap"></div>
+              </details>
+            </aside>
+          </div>
+          <details id="monthly-evidence">
+            <summary>Explore monthly evidence and exact counts</summary>
             <div id="trends" class="dashboard-panel trend-panel">
               <h3 tabindex="-1" id="evidence-heading">
                 Does the pattern persist?
@@ -115,374 +173,293 @@
                 <div id="issue-table" class="table-wrap"></div>
               </details>
             </div>
-          </div>
-          <div class="evaluation-grid">
-            <div
-              class="comparison dashboard-panel"
-              aria-labelledby="comparison-heading"
-            >
-              <h3 id="comparison-heading">Can text improve message sorting?</h3>
-              <div id="accuracy-comparison"></div>
-              <p id="accuracy-gain"></p>
+          </details>
+        </section>
+        <section id="data-methods" class="paper-section">
+          <h2 class="section-title">
+            <span>02</span> An experiment designed to challenge the result.
+          </h2>
+          <div class="methods-grid">
+            <div>
+              <h3>Methods overview</h3>
+              <table class="methods-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Decision</th>
+                    <th scope="col">Rationale</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Monthly sampling</td>
+                    <td>Reproducible comparisons</td>
+                  </tr>
+                  <tr>
+                    <td>Duplicate screening</td>
+                    <td>Reduce repeated text</td>
+                  </tr>
+                  <tr>
+                    <td>TF-IDF + logistic regression</td>
+                    <td>Compact, inspectable baseline</td>
+                  </tr>
+                  <tr>
+                    <td>Later-month test</td>
+                    <td>Evaluate on unseen complaints</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="sample-note">
+                12,000 selected; 1,050 repeats removed; 10,950 retained.
+              </p>
+              <details id="quality">
+                <summary>
+                  Where did the data come from? How was it cleaned?
+                </summary>
+                <p>
+                  The Consumer Financial Protection Bureau, a US government
+                  agency, publishes complaints about financial products. This
+                  study uses its historical written accounts, not a live feed.
+                </p>
+                <p>
+                  We selected 12,000 complaints from January to June 2026 and
+                  removed 1,050 repeated or very similar entries, leaving
+                  10,950. People choose whether to complain and publish their
+                  account. This sample cannot represent all customers.
+                </p>
+                <p>
+                  <a
+                    href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
+                    >Official archive</a
+                  >
+                  ·
+                  <a href="https://cfpb.github.io/api/ccdb/fields.html"
+                    >Official field definitions</a
+                  >
+                </p>
+                <details>
+                  <summary>How the sample was selected and cleaned</summary>
+                  <p>
+                    Eligible written accounts have at least 40 non-whitespace
+                    characters. Within each month, the lowest seeded
+                    complaint-ID hashes select up to 2,000 records. This is an
+                    unweighted monthly sample.
+                  </p>
+                  <p>
+                    Exact duplicate checks normalise letter case and words.
+                    Near-duplicate screening uses seeded MinHash to find
+                    candidate pairs, then compares five-word sequences with
+                    exact Jaccard similarity of at least 0.85. Approximate
+                    screening can miss matches; it does not prove all
+                    paraphrases are removed.
+                  </p>
+                  <div id="audit" class="table-wrap"></div>
+                  <div id="quality-detail"></div>
+                </details>
+                <p id="provenance"></p>
+                <p>
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/reports/manifest.json"
+                    >Archive URLs, full hashes and acquisition record</a
+                  >
+                </p>
+              </details>
             </div>
-            <article class="dashboard-panel reliability-panel">
-              <div class="panel-heading">
-                <div>
-                  <p class="eyebrow">Human review</p>
-                  <h2>Keep uncertainty visible.</h2>
-                </div>
-              </div>
-              <div class="reliability-layout">
-                <div id="reliability-dots" class="dot-grid" role="img"></div>
-                <div id="reliability-legend" class="dot-legend"></div>
-              </div>
-              <p class="source-line">
-                Rounded June results per 100 messages. Exact counts:
-                <a href="metrics.json">model report</a>.
-              </p>
-              <a class="text-action" href="#reliability"
-                >Try a clear message, a vague message and a mistake
-                <span aria-hidden="true">→</span></a
-              >
-            </article>
-          </div>
-          <div class="dashboard-footnote">
-            <p>
-              Public complaints about bank accounts, cards and loans. The
-              findings describe a selected sample.
-            </p>
-            <a href="#problem">How did we get here? ↓</a>
-          </div>
-        </section>
-        <section id="problem" class="scene chapter">
-          <div class="chapter-label">
-            <p class="eyebrow">01 / The problem</p>
-            <span>From messages to decisions</span>
-          </div>
-          <div class="chapter-body">
-            <h2>Answer the person. <br />Notice the pattern.</h2>
-            <p>
-              Support teams need to respond to individual complaints and
-              recognise when the same problem keeps returning. This study asks
-              where to investigate and whether a model can suggest the next
-              message’s product category.
-            </p>
-            <ol class="process-flow">
-              <li>
-                <b>Count recurring issues</b
-                ><span>Choose a focused case review</span>
-              </li>
-              <li>
-                <b>Test message sorting</b
-                ><span>Suggest a product category</span>
-              </li>
-              <li><b>Flag uncertainty</b><span>Keep people involved</span></li>
-            </ol>
-            <details id="finding-details">
-              <summary>Why these priorities? What should a team check?</summary>
-              <div id="finding-research"></div>
-              <h3>Does a different ranking change the shortlist?</h3>
+            <div class="experiment">
+              <h3>Experimental timeline</h3>
+              <ol class="timeline" aria-label="Chronological evaluation">
+                <li><b>Jan to Mar</b><span>Train</span></li>
+                <li><b>April</b><span>Choose settings</span></li>
+                <li><b>May</b><span>Set review cutoff</span></li>
+                <li><b>June</b><span>Test once</span></li>
+              </ol>
               <p>
-                Volume ranks total sampled counts. Change ranks share movement
-                between January to March and April to June, for issues with at
-                least 50 records. Neither measures severity.
-              </p>
-              <div id="sensitivity" class="table-wrap"></div>
-            </details>
-          </div>
-        </section>
-        <section id="data-methods" class="scene chapter">
-          <div class="chapter-label">
-            <p class="eyebrow">02 / Data &amp; methods</p>
-            <span>Build evidence you can inspect</span>
-          </div>
-          <div class="chapter-body">
-            <h2>Prepare the data. <br />Protect the test.</h2>
-            <p>
-              A reproducible sample makes the analysis inspectable. Separate
-              months keep model development apart from the final evaluation.
-            </p>
-            <ol class="data-flow" aria-label="Data preparation">
-              <li>
-                <b>Official archive</b><span>Public written complaints</span>
-              </li>
-              <li><b>12,000 sampled</b><span>2,000 per month</span></li>
-              <li><b>10,950 usable</b><span>1,050 repeats removed</span></li>
-              <li>
-                <b>Analyse and model</b
-                ><span>SQL counts and text features</span>
-              </li>
-            </ol>
-            <ol class="timeline" aria-label="Chronological evaluation">
-              <li><b>Jan to Mar</b><span>Train</span></li>
-              <li><b>April</b><span>Choose settings</span></li>
-              <li><b>May</b><span>Set review cutoff</span></li>
-              <li><b>June</b><span>Test once</span></li>
-            </ol>
-            <details id="quality">
-              <summary>
-                Where did the data come from? How was it cleaned?
-              </summary>
-              <p>
-                The Consumer Financial Protection Bureau, a US government
-                agency, publishes complaints about financial products. This
-                study uses its historical written accounts, not a live feed.
-              </p>
-              <p>
-                We selected 12,000 complaints from January to June 2026 and
-                removed 1,050 repeated or very similar entries, leaving 10,950.
-                People choose whether to complain and publish their account.
-                This sample cannot represent all customers.
-              </p>
-              <p>
-                <a
-                  href="https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/"
-                  >Official archive</a
-                >
-                ·
-                <a href="https://cfpb.github.io/api/ccdb/fields.html"
-                  >Official field definitions</a
-                >
+                Vocabulary, settings and cutoff were fixed before June
+                evaluation.
               </p>
               <details>
-                <summary>How the sample was selected and cleaned</summary>
+                <summary>How does the model work? Why this method?</summary>
                 <p>
-                  Eligible written accounts have at least 40 non-whitespace
-                  characters. Within each month, the lowest seeded complaint-ID
-                  hashes select up to 2,000 records. This is an unweighted
-                  monthly sample.
+                  <b>TF-IDF turns words into numbers.</b> Words that distinguish
+                  messages receive more weight than words appearing everywhere.
+                  The vocabulary and word frequencies are learned from the
+                  training months only.
                 </p>
                 <p>
-                  Exact duplicate checks normalise letter case and words.
-                  Near-duplicate screening uses seeded MinHash to find candidate
-                  pairs, then compares five-word sequences with exact Jaccard
-                  similarity of at least 0.85. Approximate screening can miss
-                  matches; it does not prove all paraphrases are removed.
+                  <b>Logistic regression learns category scores.</b> It combines
+                  weighted words to choose one of 11 product categories. This
+                  established method gives a compact baseline that can run in a
+                  browser.
                 </p>
-                <div id="audit" class="table-wrap"></div>
-                <div id="quality-detail"></div>
+                <p>
+                  <b>Privacy affects the design.</b> Only 164 learned tokens
+                  from an approved generic vocabulary are exported. This keeps
+                  raw complaint vocabulary out of the public model, but limits
+                  what it can recognise.
+                </p>
+                <p>
+                  April selects regularisation strength C from 0.3, 1 and 3
+                  using macro-F1. C = 1 was selected. June never chooses the
+                  vocabulary, settings or review cutoff.
+                </p>
+                <p>
+                  <a
+                    href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction"
+                    >Text feature extraction documentation</a
+                  >
+                  ·
+                  <a
+                    href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
+                    >Logistic regression documentation</a
+                  >
+                  ·
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/pipeline.py"
+                    >Project training code</a
+                  >
+                </p>
               </details>
-              <p id="provenance"></p>
-              <p>
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/reports/manifest.json"
-                  >Archive URLs, full hashes and acquisition record</a
-                >
-              </p>
-            </details>
-            <details>
-              <summary>How do SQL counts become priorities?</summary>
-              <p>
-                SQL groups each usable complaint by month, product and recorded
-                issue. Ranking the product and issue combinations by count
-                creates the shortlist. These are source categories, not
-                model-generated topics.
-              </p>
-              <p>
-                The finding bars divide by all 10,950 usable records. A selected
-                trend divides each month’s issue count by that month’s
-                selected-product count. Equal monthly sampling caps mean these
-                are unweighted sample shares.
-              </p>
-              <p>
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/sql/metrics.sql"
-                  >Analysis SQL</a
-                >
-                · <a href="evidence.csv" download>Aggregate evidence</a>
-              </p>
-            </details>
-            <details>
-              <summary>How does the model work? Why this method?</summary>
-              <p>
-                <b>TF-IDF turns words into numbers.</b> Words that distinguish
-                messages receive more weight than words appearing everywhere.
-                The vocabulary and word frequencies are learned from the
-                training months only.
-              </p>
-              <p>
-                <b>Logistic regression learns category scores.</b> It combines
-                weighted words to choose one of 11 product categories. This
-                established method gives a compact baseline that can run in a
-                browser.
-              </p>
-              <p>
-                <b>Privacy affects the design.</b> Only 164 learned tokens from
-                an approved generic vocabulary are exported. This keeps raw
-                complaint vocabulary out of the public model, but limits what it
-                can recognise.
-              </p>
-              <p>
-                April selects regularisation strength C from 0.3, 1 and 3 using
-                macro-F1. C = 1 was selected. June never chooses the vocabulary,
-                settings or review cutoff.
-              </p>
-              <p>
+              <details>
+                <summary>Which tools solved which problem?</summary>
+                <dl class="tool-guide">
+                  <div>
+                    <dt>Python: prepare trustworthy data</dt>
+                    <dd>
+                      Sample reproducibly, validate fields and remove repeats.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>DuckDB and SQL: find patterns</dt>
+                    <dd>
+                      Count product and issue combinations, with explicit
+                      monthly denominators.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Scikit-learn: test classification</dt>
+                    <dd>
+                      Fit TF-IDF and logistic regression on earlier data.
+                      Compare against the most common category.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>HTML and JavaScript: explain the evidence</dt>
+                    <dd>
+                      Interactive charts and local model inference, without a
+                      paid API.
+                    </dd>
+                  </div>
+                </dl>
+                <p>
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/sql/metrics.sql"
+                    >Analysis SQL</a
+                  >
+                  ·
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
+                    >Contribution and validation record</a
+                  >
+                </p>
+              </details>
+              <details>
+                <summary>Research and ideas behind the approach</summary>
+                <p>
+                  <a
+                    href="https://scikit-learn.org/stable/auto_examples/text/plot_document_classification_20newsgroups.html"
+                    >Scikit-learn's text-classification example</a
+                  >
+                  explains turning words into features and comparing
+                  classifiers. This project uses TF-IDF and logistic regression
+                  as a compact baseline.
+                </p>
+                <p>
+                  <a href="https://arxiv.org/abs/2606.22664"
+                    >Wang, Zhu and Chen (June 2026 preprint)</a
+                  >
+                  studies complaint text using earlier data for development and
+                  later data for testing. It predicts monetary relief; this
+                  project predicts a product category. Its model and scores are
+                  not this project's results.
+                </p>
+                <p>
+                  A newer or larger model would need to beat this baseline on
+                  fresh data and justify its cost. No large language model is
+                  used for the classifier in this demo.
+                </p>
+              </details>
+              <p class="source-line">
                 <a
                   href="https://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction"
-                  >Text feature extraction documentation</a
+                  >scikit-learn documentation ↗</a
                 >
                 ·
-                <a
-                  href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html"
-                  >Logistic regression documentation</a
-                >
-                ·
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/pipeline.py"
-                  >Project training code</a
-                >
-              </p>
-            </details>
-            <details>
-              <summary>Which tools solved which problem?</summary>
-              <dl class="tool-guide">
-                <div>
-                  <dt>Python: prepare trustworthy data</dt>
-                  <dd>
-                    Sample reproducibly, validate fields and remove repeats.
-                  </dd>
-                </div>
-                <div>
-                  <dt>DuckDB and SQL: find patterns</dt>
-                  <dd>
-                    Count product and issue combinations, with explicit monthly
-                    denominators.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Scikit-learn: test classification</dt>
-                  <dd>
-                    Fit TF-IDF and logistic regression on earlier data. Compare
-                    against the most common category.
-                  </dd>
-                </div>
-                <div>
-                  <dt>HTML and JavaScript: explain the evidence</dt>
-                  <dd>
-                    Interactive charts and local model inference, without a paid
-                    API.
-                  </dd>
-                </div>
-              </dl>
-              <p>
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/sql/metrics.sql"
-                  >Analysis SQL</a
-                >
-                ·
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
-                  >Contribution and validation record</a
-                >
-              </p>
-            </details>
-            <details>
-              <summary>Research and ideas behind the approach</summary>
-              <p>
-                <a
-                  href="https://scikit-learn.org/stable/auto_examples/text/plot_document_classification_20newsgroups.html"
-                  >Scikit-learn's text-classification example</a
-                >
-                explains turning words into features and comparing classifiers.
-                This project uses TF-IDF and logistic regression as a compact
-                baseline.
-              </p>
-              <p>
                 <a href="https://arxiv.org/abs/2606.22664"
-                  >Wang, Zhu and Chen (June 2026 preprint)</a
+                  >Wang et al., 2026 preprint ↗</a
                 >
-                studies complaint text using earlier data for development and
-                later data for testing. It predicts monetary relief; this
-                project predicts a product category. Its model and scores are
-                not this project's results.
+                ·
+                <a
+                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+                  >Project methodology ↗</a
+                >
               </p>
-              <p>
-                A newer or larger model would need to beat this baseline on
-                fresh data and justify its cost. No large language model is used
-                for the classifier in this demo.
+              <p class="citation-note">
+                The cited preprint studies a different prediction target; all
+                results here are this project's.
               </p>
-            </details>
+            </div>
           </div>
         </section>
-        <section id="routing" class="scene chapter">
-          <div class="chapter-label">
-            <p class="eyebrow">03 / Results &amp; reliability</p>
-            <span>Test the result and its limits</span>
-          </div>
-          <div class="chapter-body">
-            <h2>A better suggestion. <br />Still a reason to review.</h2>
-            <p>
-              The text model matched 70.8% of published categories on 1,810
-              unseen June complaints, compared with 25.4% for always choosing
-              the most common training category.
-            </p>
-            <p id="routing-summary"></p>
-            <div id="reliability">
-              <article class="example-demo">
-                <h3>Try a message. See where it goes.</h3>
-                <div
-                  class="example-buttons"
-                  role="group"
-                  aria-label="Example messages"
+        <section id="routing" class="paper-section">
+          <h2 class="section-title">
+            <span>03</span> Useful signals, with explicit limits.
+          </h2>
+          <div class="results-grid">
+            <div>
+              <h3>June evaluation results</h3>
+              <div id="evaluation-summary" class="table-wrap"></div>
+              <h3 class="coverage-heading">
+                Test set breakdown (1,810 complaints)
+              </h3>
+              <div
+                id="review-coverage"
+                class="review-coverage"
+                role="img"
+              ></div>
+              <p class="source-line">
+                Higher-score accuracy covers only half the test set. Scores are
+                not calibrated probabilities.
+              </p>
+              <p id="accuracy-gain" class="source-line"></p>
+              <details>
+                <summary>How the model was tested · detailed results</summary>
+                <div class="metrics" id="model-metrics"></div>
+                <p>
+                  TF-IDF turns words into numeric features; logistic regression
+                  uses those features to choose a category. We compare
+                  predictions with the published product labels, which can
+                  themselves be imperfect.
+                </p>
+                <p id="model-note"></p>
+                <p id="technical-metrics"></p>
+                <p>
+                  <b>Reading the class results:</b> precision asks how often a
+                  suggested category was right. Recall asks how many actual
+                  cases in that category were found. F1 balances those two.
+                  Macro-F1 gives each category equal weight, so a common
+                  category cannot hide every rare-category failure.
+                </p>
+                <div id="class-table" class="table-wrap"></div>
+                <p>
+                  Confusion rows are observed categories; columns are predicted
+                  categories. Download the complete matrix and experiment
+                  settings.
+                </p>
+                <a href="metrics.json" download
+                  >Machine-readable model report</a
                 >
-                  <button
-                    class="secondary"
-                    data-example="mortgage"
-                    aria-pressed="true"
-                    type="button"
-                  >
-                    Clear message</button
-                  ><button
-                    class="secondary"
-                    data-example="ambiguous"
-                    aria-pressed="false"
-                    type="button"
-                  >
-                    Vague message</button
-                  ><button
-                    class="secondary"
-                    data-example="credit"
-                    aria-pressed="false"
-                    type="button"
-                  >
-                    Model mistake
-                  </button>
-                </div>
-                <blockquote id="example-text"></blockquote>
-                <button id="predict" type="button" disabled>
-                  Suggest a category
-                </button>
-                <p id="prediction" role="status"></p>
-                <details>
-                  <summary>What words does it use? Try another example</summary>
-                  <p>
-                    These messages are made-up examples, separate from the real
-                    test data. Predictions use the trained model in your
-                    browser.
-                  </p>
-                  <label
-                    >Example<select id="example">
-                      <option value="mortgage">
-                        A home-loan payment went wrong
-                      </option>
-                      <option value="card">An unfamiliar card purchase</option>
-                      <option value="credit">
-                        A credit report error: a model mistake
-                      </option>
-                      <option value="ambiguous">
-                        A vague message: not enough detail
-                      </option>
-                    </select></label
-                  >
-                  <p id="recognized-words"></p>
-                  <p>
-                    Recognised words are features, not a full explanation of a
-                    prediction. The score is not a calibrated probability of
-                    being correct.
-                  </p>
-                </details>
-              </article>
+                <div id="confusion" class="table-wrap"></div>
+                <div id="monthly-model" class="table-wrap"></div>
+              </details>
               <details>
                 <summary>
                   How was the review cutoff chosen? Where does it fail?
@@ -538,142 +515,178 @@
                   local inspection; it cannot establish the correct label.
                 </p>
               </details>
+            </div>
+            <div id="method" class="discussion">
+              <h3>Discussion</h3>
+              <p>
+                The classifier improves category matching, but rare categories
+                remain weak. Findings justify a focused case review and a
+                controlled pilot, not a claim of reduced complaints or costs.
+              </p>
               <details>
-                <summary>How the model was tested · detailed results</summary>
-                <div class="metrics" id="model-metrics"></div>
+                <summary>What can the evidence establish?</summary>
                 <p>
-                  TF-IDF turns words into numeric features; logistic regression
-                  uses those features to choose a category. We compare
-                  predictions with the published product labels, which can
-                  themselves be imperfect.
+                  Issue counts describe this selected sample. Without customer
+                  or transaction totals, they cannot measure customer failure
+                  rates, severity or causes. The categories are recorded source
+                  labels, not themes discovered by the model.
                 </p>
-                <p id="model-note"></p>
-                <p id="technical-metrics"></p>
                 <p>
-                  <b>Reading the class results:</b> precision asks how often a
-                  suggested category was right. Recall asks how many actual
-                  cases in that category were found. F1 balances those two.
-                  Macro-F1 gives each category equal weight, so a common
-                  category cannot hide every rare-category failure.
+                  Six months cannot establish seasonality or long-term model
+                  stability. Similar messages may remain after duplicate
+                  screening. Binomial intervals and month-block bootstrap
+                  intervals are descriptive: related complaints and only three
+                  months per comparison period limit inference.
                 </p>
-                <div id="class-table" class="table-wrap"></div>
                 <p>
-                  Confusion rows are observed categories; columns are predicted
-                  categories. Download the complete matrix and experiment
-                  settings.
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
+                    >Sampling, uncertainty and experiment design</a
+                  >
+                  ·
+                  <a
+                    href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/research.md"
+                    >Research ledger</a
+                  >
                 </p>
-                <a href="metrics.json" download
-                  >Machine-readable model report</a
-                >
-                <div id="confusion" class="table-wrap"></div>
-                <div id="monthly-model" class="table-wrap"></div>
               </details>
+              <h3 class="pilot-heading">Proposed pilot, not yet run.</h3>
+              <p>
+                Review disputed-purchase cases, test clearer instructions if the
+                review supports them, and measure repeat contacts.
+              </p>
+              <details>
+                <summary>
+                  What change would I test, and how would I measure it?
+                </summary>
+                <p>
+                  For disputed card purchases, first review case messages and
+                  service records to check whether unclear evidence requirements
+                  contribute to repeat contacts. The complaint count alone
+                  cannot confirm this.
+                </p>
+                <p>
+                  If that explanation is supported, test clearer dispute
+                  instructions against the current process in randomly assigned
+                  eligible cases, where feasible. Define a fixed follow-up
+                  window, compare repeat-contact rates, and monitor adverse
+                  outcomes and resolution time.
+                </p>
+                <p>
+                  For message sorting, begin with a shadow pilot: record model
+                  suggestions while staff keep control. Measure category
+                  accuracy, handoff corrections and handling time before
+                  considering automation. These pilots have not been run; no
+                  time savings or complaint reductions are claimed.
+                </p>
+              </details>
+              <p class="source-line">
+                <a href="metrics.json" download>Full measured results ↗</a> ·
+                <a
+                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
+                  >Contribution and validation record ↗</a
+                >
+              </p>
             </div>
           </div>
         </section>
-        <section id="method" class="scene chapter">
-          <div class="chapter-label">
-            <p class="eyebrow">04 / Discussion</p>
-            <span>Move from evidence to action</span>
-          </div>
-          <div class="chapter-body">
-            <h2>Turn a finding into a testable change.</h2>
-            <ol class="action-path">
-              <li>
-                <b>Review the cases</b><span>Understand a recurring issue</span>
-              </li>
-              <li>
-                <b>Propose a change</b><span>Address the verified cause</span>
-              </li>
-              <li>
-                <b>Run a small pilot</b
-                ><span>Compare with the current process</span>
-              </li>
-              <li>
-                <b>Measure the outcome</b
-                ><span>Repeat contacts and routing errors</span>
-              </li>
-            </ol>
-            <p>
-              The study delivers investigation priorities and a tested sorting
-              prototype. A service pilot would establish whether they improve
-              customer outcomes.
-            </p>
-            <details>
-              <summary>
-                What change would I test, and how would I measure it?
-              </summary>
-              <p>
-                For disputed card purchases, first review case messages and
-                service records to check whether unclear evidence requirements
-                contribute to repeat contacts. The complaint count alone cannot
-                confirm this.
-              </p>
-              <p>
-                If that explanation is supported, test clearer dispute
-                instructions against the current process in randomly assigned
-                eligible cases, where feasible. Define a fixed follow-up window,
-                compare repeat-contact rates, and monitor adverse outcomes and
-                resolution time.
-              </p>
-              <p>
-                For message sorting, begin with a shadow pilot: record model
-                suggestions while staff keep control. Measure category accuracy,
-                handoff corrections and handling time before considering
-                automation. These pilots have not been run; no time savings or
-                complaint reductions are claimed.
-              </p>
-            </details>
-
-            <details>
-              <summary>What can the evidence establish?</summary>
-              <p>
-                Issue counts describe this selected sample. Without customer or
-                transaction totals, they cannot measure customer failure rates,
-                severity or causes. The categories are recorded source labels,
-                not themes discovered by the model.
-              </p>
-              <p>
-                Six months cannot establish seasonality or long-term model
-                stability. Similar messages may remain after duplicate
-                screening. Binomial intervals and month-block bootstrap
-                intervals are descriptive: related complaints and only three
-                months per comparison period limit inference.
-              </p>
-              <p>
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
-                  >Sampling, uncertainty and experiment design</a
-                >
-                ·
-                <a
-                  href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/research.md"
-                  >Research ledger</a
-                >
-              </p>
-            </details>
-            <div class="actions">
-              <a
-                class="button"
-                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
-                >View code</a
-              ><a class="button secondary" href="evidence.csv" download
-                >Explore the data</a
-              ><a
-                href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/methodology.md"
-                >Read the methods</a
+        <section id="reliability" class="paper-section">
+          <h2 class="section-title"><span>04</span> Test the prototype.</h2>
+          <div class="demo-grid">
+            <div>
+              <h3>Select an example message</h3>
+              <div
+                class="example-buttons"
+                role="group"
+                aria-label="Example messages"
               >
+                <button
+                  type="button"
+                  class="secondary"
+                  data-example="mortgage"
+                  aria-pressed="true"
+                >
+                  Clear message</button
+                ><button
+                  type="button"
+                  class="secondary"
+                  data-example="ambiguous"
+                  aria-pressed="false"
+                >
+                  Vague message</button
+                ><button
+                  type="button"
+                  class="secondary"
+                  data-example="credit"
+                  aria-pressed="false"
+                >
+                  Model mistake
+                </button>
+              </div>
+              <blockquote id="example-text"></blockquote>
+              <p class="source-line">
+                Illustrative example, separate from real test data.
+              </p>
+              <details>
+                <summary>What words does it use? Try another example</summary>
+                <p>
+                  These messages are made-up examples, separate from the real
+                  test data. Predictions use the trained model in your browser.
+                </p>
+                <label
+                  >Example<select id="example">
+                    <option value="mortgage">
+                      A home-loan payment went wrong
+                    </option>
+                    <option value="card">An unfamiliar card purchase</option>
+                    <option value="credit">
+                      A credit report error: a model mistake
+                    </option>
+                    <option value="ambiguous">
+                      A vague message: not enough detail
+                    </option>
+                  </select></label
+                >
+                <p id="recognized-words"></p>
+                <p>
+                  Recognised words are features, not a full explanation of a
+                  prediction. The score is not a calibrated probability of being
+                  correct.
+                </p>
+              </details>
+            </div>
+            <div class="model-output">
+              <h3>Model output</h3>
+              <div class="output-surface">
+                <p id="prediction" role="status">
+                  Loading the example model...
+                </p>
+                <p id="prediction-score"></p>
+                <button id="predict" type="button" disabled>Run example</button>
+              </div>
+              <p class="source-line">
+                Fixed illustrative examples. Inference runs in your browser.
+              </p>
             </div>
           </div>
         </section>
       </div>
     </main>
     <footer>
-      A portfolio study by Mohammed Umar Asif Sayed. AI-assisted development.
-      <a
-        href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
-        >Contribution record</a
-      >
+      <div class="footer-links">
+        <a
+          href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence"
+          >Code ↗</a
+        ><a href="evidence.csv" download>Aggregate data ↗</a
+        ><a
+          href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/research.md"
+          >Research ledger ↗</a
+        ><a
+          href="https://github.com/MohammedUmarAsif/customer-feedback-intelligence/blob/main/docs/contributions.md"
+          >Contribution record ↗</a
+        >
+      </div>
+      <p>Mohammed Umar Asif Sayed <span>AI-assisted development</span></p>
     </footer>
   </body>
 </html>
